@@ -6,6 +6,4 @@ end
 
 target 'Marker_Tests', :exclusive => true do
   pod 'Marker', :path => '../'
-
-  pod 'FBSnapshotTestCase'
 end

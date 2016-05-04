@@ -1,0 +1,14 @@
+PODS:
+  - Marker (0.1.0)
+
+DEPENDENCIES:
+  - Marker (from `../`)
+
+EXTERNAL SOURCES:
+  Marker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Marker: e60f77160e6a1d1f1618895f5d918ebdb58501b6
+
+COCOAPODS: 0.39.0
