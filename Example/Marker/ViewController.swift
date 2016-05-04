@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import Marker
 
-class ViewController: UIViewController {
+internal final class ViewController: UIViewController {
+    
+    @IBOutlet private weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        label.font = UIFont.systemFontOfSize(23)
+        label.setMarkdownText("__THE LIFE OF     PABLO__\n__THE LIFE OF PABLO__\n__THE LIFE OF PABLO__\n_THE LIFE OF PABLO_\nWHICH / ONE",
+                              fonts: (boldFont: UIFont.boldSystemFontOfSize(23), italicFont: UIFont.italicSystemFontOfSize(23)))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
 }
