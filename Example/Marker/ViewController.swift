@@ -18,7 +18,7 @@ internal final class ViewController: UIViewController {
         
         label.font = UIFont.systemFontOfSize(23)
         label.setMarkdownText("__THE LIFE OF     PABLO__\n__THE LIFE OF PABLO__\n__THE LIFE OF PABLO__\n_THE LIFE OF PABLO_\nWHICH / ONE",
-                              fonts: (boldFont: UIFont.boldSystemFontOfSize(23), italicFont: UIFont.italicSystemFontOfSize(23)))
+                              textStyle: PabloTextStyle())
     }
     
     override func prefersStatusBarHidden() -> Bool {

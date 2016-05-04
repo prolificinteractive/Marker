@@ -13,10 +13,10 @@ public extension UILabel {
     /**
      Sets the label text to the specified Markdown text using given fonts.
      
-     - parameter markdownText: The Markdown text to be set.
-     - parameter fonts:        Fonts to be used when setting the text.
+     - parameter markdownText: Markdown text.
+     - parameter textStyle:    Text style.
      */
-    func setMarkdownText(markdownText: String, fonts: (boldFont: UIFont, italicFont: UIFont)) {
+    func setMarkdownText(markdownText: String, textStyle: TextStyle) {
         do {
             let (strippedString, tags) = try MarkdownParser.parseString(markdownText)
             let attributedString = NSMutableAttributedString(string: strippedString)
@@ -26,9 +26,9 @@ public extension UILabel {
                 
                 switch tag {
                 case .Em(_):
-                    font = fonts.italicFont
+                    font = textStyle.emFont
                 case .Strong(_):
-                    font = fonts.boldFont
+                    font = textStyle.strongFont
                 }
                 
                 if let font = font {
@@ -86,7 +86,7 @@ public extension UILabel {
         return currentParagraphStyle
     }
     
-    private func setLineHeight(lineHeight: CGFloat? = nil, paragraphSpacing: CGFloat?) {
+    private func setLineHeight(lineHeight: CGFloat? = nil, paragraphSpacing: CGFloat? = nil) {
         guard let currentText = attributedText else {
             return
         }
