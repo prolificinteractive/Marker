@@ -12,15 +12,28 @@ import Marker
 internal final class ViewController: UIViewController {
     
     @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var textView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         label.setMarkdownText("__THE LIFE OF       PABLO__\n" +
-                                "__THE LIFE OF   PABLO__\n" +
-                                "__THE LIFE OF   PABLO__\n" +
-                                "_THE LIFE OF   PABLO_\n" +
-                                "WHICH / ONE",
+            "__THE LIFE OF   PABLO__\n" +
+            "__THE LIFE OF   PABLO__\n" +
+            "_THE LIFE OF   PABLO_\n" +
+            "WHICH / ONE\n" +
+            "WHICH / ONE",
+                              textStyle: PabloTextStyle())
+        
+        textField.setMarkdownText("__THE LIFE OF       PABLO__\n", textStyle: PabloTextStyle())
+        
+        textView.setMarkdownText("__THE LIFE OF       PABLO__\n" +
+            "__THE LIFE OF   PABLO__\n" +
+            "__THE LIFE OF   PABLO__\n" +
+            "_THE LIFE OF   PABLO_\n" +
+            "WHICH / ONE\n" +
+            "WHICH / ONE",
                               textStyle: PabloTextStyle())
     }
     

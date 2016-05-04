@@ -1,5 +1,5 @@
 //
-//  MarkerLabel.swift
+//  MarkerTextView.swift
 //  Marker
 //
 //  Created by Htin Linn on 5/4/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UILabel {
+public extension UITextView {
     
     func setText(text: String, textStyle: TextStyle) {
         attributedText = NSAttributedString(string: text, attributes: textAttributesFromTextStyle(textStyle))
@@ -22,5 +22,5 @@ public extension UILabel {
             text = markdownText
         }
     }
-        
+    
 }
