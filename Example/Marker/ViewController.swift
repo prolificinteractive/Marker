@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Marker
 //
-//  Created by htinlinn on 05/04/2016.
-//  Copyright (c) 2016 htinlinn. All rights reserved.
+//  Created by Htin Linn on 05/04/2016.
+//  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
 import UIKit
