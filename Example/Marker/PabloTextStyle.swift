@@ -16,6 +16,6 @@ internal struct PabloTextStyle: TextStyle {
     
     let strongFont: UIFont = UIFont.boldSystemFontOfSize(23)
     
-    let textColor: UIColor = UIColor.blackColor()
+    let characterSpacing: CGFloat? = 2
     
 }

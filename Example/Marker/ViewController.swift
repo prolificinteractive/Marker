@@ -16,8 +16,11 @@ internal final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.font = UIFont.systemFontOfSize(23)
-        label.setMarkdownText("__THE LIFE OF     PABLO__\n__THE LIFE OF PABLO__\n__THE LIFE OF PABLO__\n_THE LIFE OF PABLO_\nWHICH / ONE",
+        label.setMarkdownText("__THE LIFE OF       PABLO__\n" +
+                                "__THE LIFE OF   PABLO__\n" +
+                                "__THE LIFE OF   PABLO__\n" +
+                                "_THE LIFE OF   PABLO_\n" +
+                                "WHICH / ONE",
                               textStyle: PabloTextStyle())
     }
     

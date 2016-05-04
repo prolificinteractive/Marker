@@ -10,23 +10,31 @@ import UIKit
 
 public protocol TextStyle {
     
+    var textColor: UIColor? { get }
+
     var font: UIFont { get }
     
     var emFont: UIFont { get }
     
     var strongFont: UIFont { get }
     
-    var textColor: UIColor { get }
+    var characterSpacing: CGFloat? { get }
+
+    var lineSpacing: CGFloat? { get }
+
+    var lineHeightMultiple: CGFloat? { get }
     
-    var lineHeight: CGFloat? { get }
+    var minimumLineHeight: CGFloat? { get }
+    
+    var maximumLineHeight: CGFloat? { get }
     
     var paragraphSpacing: CGFloat? { get }
+
+    var paragraphSpacingBefore: CGFloat? { get }
     
     var textAlignment: NSTextAlignment? { get }
     
     var lineBreakMode: NSLineBreakMode? { get }
-    
-    var characterSpacing: CGFloat? { get }
     
 }
 
@@ -40,11 +48,31 @@ public extension TextStyle {
         return font
     }
     
-    var lineHeight: CGFloat? {
+    var textColor: UIColor? {
+        return nil
+    }
+    
+    var lineSpacing: CGFloat? {
+        return nil
+    }
+    
+    var lineHeightMultiple: CGFloat? {
+        return nil
+    }
+    
+    var minimumLineHeight: CGFloat? {
+        return nil
+    }
+    
+    var maximumLineHeight: CGFloat? {
         return nil
     }
     
     var paragraphSpacing: CGFloat? {
+        return nil
+    }
+    
+    var paragraphSpacingBefore: CGFloat? {
         return nil
     }
     

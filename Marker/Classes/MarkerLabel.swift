@@ -10,16 +10,17 @@ import UIKit
 
 public extension UILabel {
     
-    /**
-     Sets the label text to the specified Markdown text using given fonts.
-     
-     - parameter markdownText: Markdown text.
-     - parameter textStyle:    Text style.
-     */
+    func setText(text: String, textStyle: TextStyle) {
+        attributedText = NSAttributedString(string: text, attributes: textAttributesFromTextStyle(textStyle))
+    }
+    
     func setMarkdownText(markdownText: String, textStyle: TextStyle) {
         do {
             let (strippedString, tags) = try MarkdownParser.parseString(markdownText)
             let attributedString = NSMutableAttributedString(string: strippedString)
+            
+            attributedString.addAttributes(textAttributesFromTextStyle(textStyle),
+                                           range: NSRange(location: 0, length: strippedString.characters.count))
             
             for tag in tags {
                 let font: UIFont?
@@ -41,75 +42,5 @@ public extension UILabel {
             text = markdownText
         }
     }
-    
-    /**
-     Sets line height for the receiver's text.
-     This function does nothing if the receiver's text property is nil.
-     
-     - parameter lineHeight: Line height.
-     */
-    func setLineHeight(lineHeight: CGFloat?) {
-        setLineHeight(lineHeight, paragraphSpacing: nil)
-    }
-    
-    /**
-     Sets paragraph spacing for the receiver's text.
-     This function does nothing if the receiver's text property is nil.
-     
-     - parameter paragraphSpacing: Paragraph spacing.
-     */
-    func setParagraphSpacing(paragraphSpacing: CGFloat?) {
-        setLineHeight(nil, paragraphSpacing: paragraphSpacing)
-    }
-    
-    // MARK: - Private functions
-    
-    private func fullStringParagraphStyle() -> NSParagraphStyle? {
-        guard let currentText = attributedText where currentText.string.characters.count > 0 else {
-            return nil
-        }
         
-        var currentParagraphStyle: NSParagraphStyle? = nil
-        let fullStringRange = NSRange(location: 0, length: currentText.string.characters.count)
-        
-        currentText.enumerateAttribute(NSParagraphStyleAttributeName,
-                                       inRange: fullStringRange,
-                                       options: []) { (value, effectiveRange, stop) -> Void in
-                                        if NSEqualRanges(effectiveRange, fullStringRange) {
-                                            if currentParagraphStyle == nil {
-                                                currentParagraphStyle = value as? NSParagraphStyle
-                                                return
-                                            }
-                                        }
-        }
-        
-        return currentParagraphStyle
-    }
-    
-    private func setLineHeight(lineHeight: CGFloat? = nil, paragraphSpacing: CGFloat? = nil) {
-        guard let currentText = attributedText else {
-            return
-        }
-        
-        let attributedString = NSMutableAttributedString(attributedString: currentText)
-        let paragraphStyle = NSMutableParagraphStyle()
-        
-        if let currentParagraphStyle = fullStringParagraphStyle() {
-            paragraphStyle.setParagraphStyle(currentParagraphStyle)
-        }
-        
-        if let lineHeight = lineHeight {
-            paragraphStyle.maximumLineHeight = lineHeight
-            paragraphStyle.minimumLineHeight = lineHeight
-        }
-        
-        if let paragraphSpacing = paragraphSpacing {
-            paragraphStyle.paragraphSpacing = paragraphSpacing
-        }
-        
-        attributedString.addAttributes([NSParagraphStyleAttributeName: paragraphStyle], range: NSRange(location: 0, length: currentText.string.characters.count))
-        
-        attributedText = attributedString
-    }
-    
 }
