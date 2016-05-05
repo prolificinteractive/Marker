@@ -8,6 +8,15 @@
 
 import Foundation
 
+/**
+ Returns formatted Markdown text as an attributed string.
+ 
+ - parameter parsedString: String stripped of markup.
+ - parameter tags:         Mark up tags.
+ - parameter textStyle:    Text style object containing markup fonts.
+ 
+ - returns: Formatted markdown text.
+ */
 internal func attributedStringFromParsedString(parsedString: String, tags: [MarkdownParser.Tag], textStyle: TextStyle) -> NSAttributedString {
     let attributedString = NSMutableAttributedString(string: parsedString)
     

@@ -11,18 +11,24 @@
  */
 internal struct MarkdownParser {
     
+    typealias Index = String.CharacterView.Index
+    
+    /**
+     Parser error.
+     
+     - TagMismatch:  Opening tag doesn't match closing tag.
+     - UnclosedTags: A tag was left unclosed.
+     */
     enum Error: ErrorType {
         case TagMismatch
         case UnclosedTags
     }
     
-    typealias Index = String.CharacterView.Index
-    
     /**
      Tags used when styling Markdown text.
      
-     - Em:     Emphasis tag. Rendered as italic.
-     - Strong: Strong tag. Rendered as bold.
+     - Em:     Emphasis tag.
+     - Strong: Strong tag.
      */
     enum Tag {
         case Em(Range<Index>)

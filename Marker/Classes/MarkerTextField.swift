@@ -10,10 +10,24 @@ import UIKit
 
 public extension UITextField {
 
+    /**
+     Sets the text field text to an attributed string created from the specified string and text style.
+     
+     - parameter text:      The text to be displayed in the text field.
+     - parameter textStyle: Text style object containing style information.
+     */
     func setText(text: String, textStyle: TextStyle) {
         attributedText = NSAttributedString(string: text, attributes: textAttributesFromTextStyle(textStyle))
     }
     
+    /**
+     Sets the text field text to an attributed string created from the specified string and text style.
+     This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
+     Refer to MarkerdownParser.Tag for a list of supported Markdown tags.
+     
+     - parameter markdownText: The Markdown text to be displayed in the text field.
+     - parameter textStyle:    Text style object containing style information.
+     */
     func setMarkdownText(markdownText: String, textStyle: TextStyle) {
         do {
             let (parsedString, tags) = try MarkdownParser.parseString(markdownText)

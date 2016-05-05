@@ -8,32 +8,48 @@
 
 import UIKit
 
+/**
+ *  Encapsulates style information to be applied when displaying text.
+ */
 public protocol TextStyle {
     
+    /// Text color.
     var textColor: UIColor? { get }
 
+    /// Font for displaying regular text.
     var font: UIFont { get }
     
+    /// Font for displaying emphasized text.
     var emFont: UIFont { get }
     
+    /// Font for displaying important text.
     var strongFont: UIFont { get }
     
+    /// Character spacing/kerning.
     var characterSpacing: CGFloat? { get }
 
+    /// Line spacing.
     var lineSpacing: CGFloat? { get }
 
+    /// Line height multiple.
     var lineHeightMultiple: CGFloat? { get }
     
+    /// Minimum line height.
     var minimumLineHeight: CGFloat? { get }
     
+    /// Maximum line height.
     var maximumLineHeight: CGFloat? { get }
     
+    /// Paragraph spacing.
     var paragraphSpacing: CGFloat? { get }
 
+    /// Paragraph spacing before.
     var paragraphSpacingBefore: CGFloat? { get }
     
+    /// Text alignment.
     var textAlignment: NSTextAlignment? { get }
     
+    /// Line break mode.
     var lineBreakMode: NSLineBreakMode? { get }
     
 }

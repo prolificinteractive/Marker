@@ -10,6 +10,13 @@ import UIKit
 
 internal typealias TextAttributes = [String: NSObject]
 
+/**
+ Returns a text attribute dictionary that can be used with attributed strings based on the specified text style.
+ 
+ - parameter textStyle: Text style object containing style information.
+ 
+ - returns: Text attribute dictionary.
+ */
 internal func textAttributesFromTextStyle(textStyle: TextStyle) -> TextAttributes {
     var textAttributes: TextAttributes = [:]
     
