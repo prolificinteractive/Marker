@@ -1,29 +1,38 @@
 # Marker
 
-[![CI Status](http://img.shields.io/travis/htinlinn/Marker.svg?style=flat)](https://travis-ci.org/htinlinn/Marker)
-[![Version](https://img.shields.io/cocoapods/v/Marker.svg?style=flat)](http://cocoapods.org/pods/Marker)
-[![License](https://img.shields.io/cocoapods/l/Marker.svg?style=flat)](http://cocoapods.org/pods/Marker)
-[![Platform](https://img.shields.io/cocoapods/p/Marker.svg?style=flat)](http://cocoapods.org/pods/Marker)
+[![Travis build status](https://img.shields.io/travis/prolificinteractive/PROJECT_NAME.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/PROJECT_NAME)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg?style=flat-square)](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg)
+[![Platform](https://img.shields.io/cocoapods/p/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
+[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
 
-## Example
+## Description
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Project description
 
 ## Requirements
 
+IDE, Tools etc. required for the project to run
+
 ## Installation
 
-Marker is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+CocoaPods, Carthage, Swift Package Manager, etc
 
-```ruby
-pod "Marker"
-```
+## Usage
 
-## Author
+How to use this project in 3rd party code
 
-htinlinn, linn@prolificinteractive.com
+## Contributing to Marker
+
+To report a bug or enhancement request, feel free to file an issue under the respective heading.
+
+If you wish to contribute to the project, fork this repo and submit a pull request.
 
 ## License
 
-Marker is available under the MIT license. See the LICENSE file for more info.
+![prolific](https://s3.amazonaws.com/prolificsitestaging/logos/Prolific_Logo_Full_Color.png)
+
+Copyright (c) 2016 Prolific Interactive
+
+Marker is maintained and sponsored by Prolific Interactive. It may be redistributed under the terms specified in the [LICENSE] file.
+
+[LICENSE]: ./LICENSE
