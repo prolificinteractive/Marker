@@ -1,19 +1,20 @@
 {
   "name": "Marker",
   "version": "0.1.0",
-  "summary": "A short description of Marker.",
+  "summary": "A light wrapper around NSAttributedString.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Marker",
+  "homepage": "https://github.com/prolificinteractive/Marker",
   "license": "MIT",
   "authors": {
-    "htinlinn": "linn@prolificinteractive.com"
+    "Htin Linn": "linn@prolificinteractive.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Marker.git",
+    "git": "https://github.com/prolificinteractive/Marker.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "8.0"
   },
+  "requires_arc": true,
   "source_files": "Marker/Classes/**/*"
 }

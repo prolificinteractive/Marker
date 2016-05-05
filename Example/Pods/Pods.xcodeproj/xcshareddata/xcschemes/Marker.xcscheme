@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '73D7EA911D31070A68B4BDF1'
+               BlueprintIdentifier = '5CF80F353A3967A5CAA97770'
                BlueprintName = 'Marker'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Marker.framework'>
