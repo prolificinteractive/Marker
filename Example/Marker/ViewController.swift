@@ -28,10 +28,10 @@ internal final class ViewController: UIViewController {
         
         textField.setMarkdownText("__THE LIFE OF       PABLO__\n", textStyle: PabloTextStyle())
         
-        textView.setMarkdownText("__THE LIFE OF       PABLO__\n" +
-            "__THE LIFE OF   PABLO__\n" +
-            "__THE LIFE OF   PABLO__\n" +
-            "_THE LIFE OF   PABLO_\n" +
+        textView.setMarkdownText("**THE LIFE OF       PABLO**\n" +
+            "**THE LIFE OF   PABLO**\n" +
+            "**THE LIFE OF   PABLO**\n" +
+            "*THE LIFE OF   PABLO*\n" +
             "WHICH / ONE\n" +
             "WHICH / ONE",
                               textStyle: PabloTextStyle())

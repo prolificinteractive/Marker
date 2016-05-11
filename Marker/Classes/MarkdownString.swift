@@ -17,7 +17,7 @@ import Foundation
  
  - returns: Formatted markdown text.
  */
-internal func attributedStringFromParsedString(parsedString: String, tags: [MarkdownParser.Tag], textStyle: TextStyle) -> NSAttributedString {
+internal func attributedStringFromParsedString(parsedString: String, tags: [MarkdownTag], textStyle: TextStyle) -> NSAttributedString {
     let attributedString = NSMutableAttributedString(string: parsedString)
     
     attributedString.addAttributes(textAttributesFromTextStyle(textStyle),
