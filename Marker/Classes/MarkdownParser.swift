@@ -21,7 +21,7 @@ internal struct MarkdownParser {
      - returns: Tuple containing string stripped of tags and an array of tags.
      */
     static func parseString(string: String) throws -> (strippedString: String, tags: [MarkdownTag]) {
-        let tags = try MarkdownTag.parseTagsFromString(string)
+        let tags = try MarkdownTag.parseString(string)
         
         guard tags.count > 0 else {
             return (string, [])
@@ -36,11 +36,11 @@ internal struct MarkdownParser {
             
             let openingIndex = strippedString.endIndex
             // Add the text that is in between the opening and closing tags to the new string.
-            strippedString += string.substringWithRange(tag.range().startIndex.advancedBy(tag.halfTagLength())..<tag.range().endIndex)
+            strippedString += string.substringWithRange(tag.range().startIndex.advancedBy(tag.openingTagLength())..<tag.range().endIndex)
             let closingIndex = strippedString.endIndex
             
             // Create a tag that would apply to the stripped out string.
-            let strippedTag = tag.setRange(openingIndex..<closingIndex)
+            let strippedTag = tag.tagWithRange(openingIndex..<closingIndex)
             strippedTags.append(strippedTag)
             
             // If there is text between the current tag and the next tag or the end of string, add it to the new string.
@@ -51,7 +51,7 @@ internal struct MarkdownParser {
             } else {
                 nextIndex = string.endIndex
             }
-            strippedString += string.substringWithRange(tag.range().endIndex.advancedBy(tag.halfTagLength())..<nextIndex)
+            strippedString += string.substringWithRange(tag.range().endIndex.advancedBy(tag.closingTagLength())..<nextIndex)
         }
         
         return (strippedString, strippedTags)

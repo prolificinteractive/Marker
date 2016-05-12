@@ -11,7 +11,7 @@ internal typealias Index = String.CharacterView.Index
 /**
  Tags used when styling Markdown text.
  
- - Em:     Emphasis tag.
+ - Em:     Em tag.
  - Strong: Strong tag.
  */
 internal enum MarkdownTag {
@@ -32,8 +32,53 @@ internal enum MarkdownTag {
     
     // MARK: - Static functions
     
-    static func parseTagsFromString(string: String) throws -> [MarkdownTag] {
-        let emphasisTags = EmphasisTag.parseEmphasisTagsFromString(string)
+    static func parseString(string: String) throws -> [MarkdownTag] {
+        let emphasisTags = try parseEmphasisTagsFromString(string)
+        return emphasisTags
+    }
+    
+    // MARK: - Instance functions
+    
+    func tagWithRange(range: Range<Index>) -> MarkdownTag {
+        switch self {
+        case .Em(_):
+            return .Em(range)
+        case .Strong(_):
+            return .Strong(range)
+        }
+    }
+    
+    func range() -> Range<Index> {
+        switch self {
+        case .Em(let range):
+            return range
+        case .Strong(let range):
+            return range
+        }
+    }
+    
+    func openingTagLength() -> Int {
+        switch self {
+        case .Em(_):
+            return EmphasisTag.Constants.EmTagLength
+        case .Strong(_):
+            return EmphasisTag.Constants.StrongTagLength
+        }
+    }
+    
+    func closingTagLength() -> Int {
+        switch self {
+        case .Em(_):
+            return EmphasisTag.Constants.EmTagLength
+        case .Strong(_):
+            return EmphasisTag.Constants.StrongTagLength
+        }
+    }
+    
+    // MARK: - Private functions
+    
+    private static func parseEmphasisTagsFromString(string: String) throws -> [MarkdownTag] {
+        let emphasisTags = EmphasisTag.parseString(string)
         
         guard emphasisTags.count % 2 == 0 else {
             throw Error.UnclosedTags
@@ -62,35 +107,6 @@ internal enum MarkdownTag {
         return tags
     }
     
-    // MARK: - Instance functions
-    
-    func range() -> Range<Index> {
-        switch self {
-        case .Em(let range):
-            return range
-        case .Strong(let range):
-            return range
-        }
-    }
-    
-    func setRange(range: Range<Index>) -> MarkdownTag {
-        switch self {
-        case .Em(_):
-            return .Em(range)
-        case .Strong(_):
-            return .Strong(range)
-        }
-    }
-    
-    func halfTagLength() -> Int {
-        switch self {
-        case .Em(_):
-            return 1
-        case .Strong(_):
-            return 2
-        }
-    }
-    
 }
 
 // MARK: - EmphasisTag
@@ -102,7 +118,12 @@ private enum EmphasisTag {
     case AsteriskStrong(Index)
     case UnderscoreStrong(Index)
     
-    static func parseEmphasisTagsFromString(string: String) -> [EmphasisTag] {
+    struct Constants {
+        static let EmTagLength = 1
+        static let StrongTagLength = 2
+    }
+    
+    static func parseString(string: String) -> [EmphasisTag] {
         var emphasisTags: [EmphasisTag] = []
         
         var i = 0
@@ -121,16 +142,16 @@ private enum EmphasisTag {
                 advanceBy = 1
             case (_, .Some("*"), .Some("*")):
                 emphasisTags.append(.AsteriskStrong(index))
-                advanceBy = 2
+                advanceBy = Constants.StrongTagLength
             case (_, .Some("_"), .Some("_")):
                 emphasisTags.append(.UnderscoreStrong(index))
-                advanceBy = 2
+                advanceBy = Constants.StrongTagLength
             case (_, .Some("*"), _):
                 emphasisTags.append(.AsteriskEm(index))
-                advanceBy = 1
+                advanceBy = Constants.EmTagLength
             case (_, .Some("_"), _):
                 emphasisTags.append(.UnderscoreEm(index))
-                advanceBy = 1
+                advanceBy = Constants.EmTagLength
             default:
                 advanceBy = 1
             }
