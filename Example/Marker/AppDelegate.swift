@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         if let viewController = window?.rootViewController as? ViewController {
-            let fonts: Fonts = PabloFonts()
-            let fontTheme: FontTheme = PabloFontTheme(fonts: fonts)
+            let fonts: Fonts = HelveticaFonts()
+            let fontTheme: FontTheme = MarkerExampleFontTheme(fonts: fonts)
             
             viewController.fontTheme = fontTheme
         }

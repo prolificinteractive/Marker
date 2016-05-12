@@ -1,5 +1,5 @@
 //
-//  PabloFonts.swift
+//  HelveticaFonts.swift
 //  Marker
 //
 //  Created by Htin Linn on 5/12/16.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-internal struct PabloFonts: Fonts {
+internal struct HelveticaFonts: Fonts {
     
     // MARK: - Protocol conformance
     
     // MARK: Fonts
     
     var headlineFont: UIFont {
-        return .systemFontOfSize(headlineFontSize)
+        return UIFont(name: "HelveticaNeue", size: headlineFontSize)!
     }
     
     var headlineFontBold: UIFont {
-        return .boldSystemFontOfSize(headlineFontSize)
+        return UIFont(name: "HelveticaNeue-Bold", size: headlineFontSize)!
     }
     
     var headlineFontItalic: UIFont {
-        return .italicSystemFontOfSize(headlineFontSize)
+        return UIFont(name: "HelveticaNeue-Italic", size: headlineFontSize)!
     }
     
 }

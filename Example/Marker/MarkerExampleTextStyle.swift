@@ -1,5 +1,5 @@
 //
-//  PabloTextStyle.swift
+//  MarkerExampleTextStyle.swift
 //  Marker
 //
 //  Created by Htin Linn on 5/4/16.
@@ -8,7 +8,7 @@
 
 import Marker
 
-internal struct PabloTextStyle: TextStyle {
+internal struct MarkerExampleTextStyle: TextStyle {
     
     var font: UIFont
     var emFont: UIFont
