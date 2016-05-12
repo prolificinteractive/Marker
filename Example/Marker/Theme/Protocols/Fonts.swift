@@ -20,8 +20,23 @@ internal protocol Fonts {
 
 extension Fonts {
     
-    var headlineFontSize: CGFloat {
-        return 23
+    var headlineFontSize: CGFloat {        
+        switch UIApplication.sharedApplication().preferredContentSizeCategory {
+        case UIContentSizeCategoryExtraSmall, UIContentSizeCategorySmall:
+            return 17
+        case UIContentSizeCategoryMedium, UIContentSizeCategoryLarge:
+            return 23
+        case UIContentSizeCategoryExtraLarge, UIContentSizeCategoryExtraExtraLarge:
+            return 26
+        case UIContentSizeCategoryExtraExtraExtraLarge, UIContentSizeCategoryAccessibilityMedium:
+            return 29
+        case UIContentSizeCategoryAccessibilityLarge, UIContentSizeCategoryAccessibilityExtraLarge:
+            return 32
+        case UIContentSizeCategoryAccessibilityExtraExtraLarge, UIContentSizeCategoryAccessibilityExtraExtraExtraLarge:
+            return 38
+        default:
+            return 23
+        }
     }
     
 }
