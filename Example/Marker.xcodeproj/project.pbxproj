@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		01E1104E8AAC691808C0206D /* Pods_Marker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66039FFFCAE02010D578FC81 /* Pods_Marker_Tests.framework */; };
-		480FCD0E1CDA99E30025944A /* MarkerExampleTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480FCD0D1CDA99E30025944A /* MarkerExampleTextStyle.swift */; };
-		4862165B1CE50B0400686557 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4862165A1CE50B0400686557 /* Fonts.swift */; };
-		4862165D1CE50B8100686557 /* HelveticaFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4862165C1CE50B8100686557 /* HelveticaFonts.swift */; };
-		4862165F1CE50C8B00686557 /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4862165E1CE50C8B00686557 /* FontTheme.swift */; };
-		486216611CE50D4800686557 /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216601CE50D4800686557 /* MarkerExampleFontTheme.swift */; };
+		486216691CE51F5400686557 /* HelveticaFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216631CE51F5400686557 /* HelveticaFonts.swift */; };
+		4862166A1CE51F5400686557 /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216641CE51F5400686557 /* MarkerExampleFontTheme.swift */; };
+		4862166B1CE51F5400686557 /* MarkerExampleTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216651CE51F5400686557 /* MarkerExampleTextStyle.swift */; };
+		4862166C1CE51F5400686557 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216671CE51F5400686557 /* Fonts.swift */; };
+		4862166D1CE51F5400686557 /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216681CE51F5400686557 /* FontTheme.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,11 +36,11 @@
 		08F1825B7EA29E36898092FB /* Marker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Marker.podspec; path = ../Marker.podspec; sourceTree = "<group>"; };
 		12693670F781286478E6EB16 /* Pods-Marker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marker_Tests/Pods-Marker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		31D2DC9BD8B466270B5299FF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		480FCD0D1CDA99E30025944A /* MarkerExampleTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleTextStyle.swift; sourceTree = "<group>"; };
-		4862165A1CE50B0400686557 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		4862165C1CE50B8100686557 /* HelveticaFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaFonts.swift; sourceTree = "<group>"; };
-		4862165E1CE50C8B00686557 /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
-		486216601CE50D4800686557 /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
+		486216631CE51F5400686557 /* HelveticaFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaFonts.swift; sourceTree = "<group>"; };
+		486216641CE51F5400686557 /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
+		486216651CE51F5400686557 /* MarkerExampleTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleTextStyle.swift; sourceTree = "<group>"; };
+		486216671CE51F5400686557 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		486216681CE51F5400686557 /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Marker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +79,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		486216621CE51F5400686557 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				486216661CE51F5400686557 /* Protocols */,
+				486216631CE51F5400686557 /* HelveticaFonts.swift */,
+				486216641CE51F5400686557 /* MarkerExampleFontTheme.swift */,
+				486216651CE51F5400686557 /* MarkerExampleTextStyle.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		486216661CE51F5400686557 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				486216671CE51F5400686557 /* Fonts.swift */,
+				486216681CE51F5400686557 /* FontTheme.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +125,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				480FCD0D1CDA99E30025944A /* MarkerExampleTextStyle.swift */,
-				4862165E1CE50C8B00686557 /* FontTheme.swift */,
-				486216601CE50D4800686557 /* MarkerExampleFontTheme.swift */,
-				4862165A1CE50B0400686557 /* Fonts.swift */,
-				4862165C1CE50B8100686557 /* HelveticaFonts.swift */,
+				486216621CE51F5400686557 /* Theme */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -374,13 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4862165F1CE50C8B00686557 /* FontTheme.swift in Sources */,
-				4862165D1CE50B8100686557 /* HelveticaFonts.swift in Sources */,
-				4862165B1CE50B0400686557 /* Fonts.swift in Sources */,
-				480FCD0E1CDA99E30025944A /* MarkerExampleTextStyle.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				4862166D1CE51F5400686557 /* FontTheme.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				486216611CE50D4800686557 /* MarkerExampleFontTheme.swift in Sources */,
+				486216691CE51F5400686557 /* HelveticaFonts.swift in Sources */,
+				4862166B1CE51F5400686557 /* MarkerExampleTextStyle.swift in Sources */,
+				4862166C1CE51F5400686557 /* Fonts.swift in Sources */,
+				4862166A1CE51F5400686557 /* MarkerExampleFontTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
