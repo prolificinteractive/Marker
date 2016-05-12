@@ -14,14 +14,14 @@ internal struct MarkdownParser {
     // MARK: - Static functions
     
     /**
-     Parses a given string for Markdown tags.
+     Parses specified string and returns a tuple containing string stripped of tag characters and an array of Markdown tags.
      
-     - parameter string: string to be parsed.
+     - parameter string: String to be parsed.
      
-     - returns: Tuple containing string stripped of tags and an array of tags.
+     - returns: Tuple containing string stripped of tag characters and an array of Markdown tags.
      */
     static func parseString(string: String) throws -> (strippedString: String, tags: [MarkdownTag]) {
-        let tags = try MarkdownTag.parseString(string)
+        let tags = try MarkdownTag.Parser.parseString(string)
         
         guard tags.count > 0 else {
             return (string, [])
@@ -39,7 +39,7 @@ internal struct MarkdownParser {
             strippedString += string.substringWithRange(tag.range().startIndex.advancedBy(tag.openingTagLength())..<tag.range().endIndex)
             let closingIndex = strippedString.endIndex
             
-            // Create a tag that would apply to the stripped out string.
+            // Create a tag that would apply to the new string.
             let strippedTag = tag.tagWithRange(openingIndex..<closingIndex)
             strippedTags.append(strippedTag)
             
