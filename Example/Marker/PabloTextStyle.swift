@@ -10,9 +10,23 @@ import Marker
 
 internal struct PabloTextStyle: TextStyle {
     
-    let font: UIFont = UIFont.systemFontOfSize(23)
-    let emFont: UIFont = UIFont.italicSystemFontOfSize(23)
-    let strongFont: UIFont = UIFont.boldSystemFontOfSize(23)
-    let characterSpacing: CGFloat? = 2
+    var font: UIFont
+    var emFont: UIFont
+    var strongFont: UIFont
+    var characterSpacing: CGFloat?
+    var lineSpacing: CGFloat?
+    
+    init(font: UIFont,
+         emFont: UIFont? = nil,
+         strongFont: UIFont? = nil,
+         characterSpacing: CGFloat? = nil,
+         lineSpacing: CGFloat? = nil) {
+
+        self.font = font
+        self.emFont = (emFont == nil) ? font : emFont!
+        self.strongFont = (strongFont == nil) ? font : strongFont!
+        self.characterSpacing = characterSpacing
+        self.lineSpacing = lineSpacing
+    }
     
 }

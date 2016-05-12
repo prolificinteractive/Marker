@@ -11,10 +11,18 @@ import Marker
 
 internal final class ViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var fontTheme: FontTheme!
+    
+    // MARK: - Private properties
+    
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var textView: UITextView!
 
+    // MARK: - Override functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,9 +32,10 @@ internal final class ViewController: UIViewController {
             "_THE LIFE OF   PABLO_\n" +
             "WHICH / ONE\n" +
             "WHICH / ONE",
-                              textStyle: PabloTextStyle())
+                              textStyle: fontTheme.labelTextStyle)
         
-        textField.setMarkdownText("__THE LIFE OF       PABLO__\n", textStyle: PabloTextStyle())
+        textField.setMarkdownText("__THE LIFE OF PABLO__\n",
+                                  textStyle: fontTheme.textFieldTextStyle)
         
         textView.setMarkdownText("**THE LIFE OF       PABLO**\n" +
             "**THE LIFE OF   PABLO**\n" +
@@ -34,7 +43,7 @@ internal final class ViewController: UIViewController {
             "*THE LIFE OF   PABLO*\n" +
             "WHICH / ONE\n" +
             "WHICH / ONE",
-                              textStyle: PabloTextStyle())
+                              textStyle: fontTheme.textViewTextStyle)
     }
     
     override func prefersStatusBarHidden() -> Bool {
