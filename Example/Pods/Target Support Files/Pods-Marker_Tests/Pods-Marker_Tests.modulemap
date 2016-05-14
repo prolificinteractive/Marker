@@ -1,6 +1,0 @@
-framework module Pods_Marker_Tests {
-  umbrella header "Pods-Marker_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
