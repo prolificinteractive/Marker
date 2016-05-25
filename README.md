@@ -1,31 +1,94 @@
 # Marker
 
-[![Travis build status](https://img.shields.io/travis/prolificinteractive/PROJECT_NAME.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/PROJECT_NAME)
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg?style=flat-square)](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg)
-[![Platform](https://img.shields.io/cocoapods/p/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
-[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
+[![Travis build status](https://img.shields.io/travis/prolificinteractive/Marker.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/Marker)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/Marker.svg?style=flat-square)](https://img.shields.io/cocoapods/v/Marker.svg)
+[![Platform](https://img.shields.io/cocoapods/p/Marker.svg?style=flat-square)](http://cocoadocs.org/docsets/Marker)
+[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/Marker.svg?style=flat-square)](http://cocoadocs.org/docsets/Marker)
 
 ## Description
 
-Project description
+Marker is a light wrapper for creating and setting `NSAttirbutedString` values.
 
 ## Requirements
 
-IDE, Tools etc. required for the project to run
+* iOS 8.0+
 
 ## Installation
 
-CocoaPods, Carthage, Swift Package Manager, etc
+Marker is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your `Podfile`:
+
+```ruby
+pod "Marker"
+```
 
 ## Usage
 
-How to use this project in 3rd party code
+### TextStyle
+
+Marker abstracts the most common attributed text properties into a data object called `TextStyle`, which it can use to create `NSAttributedString`s. A `TextStyle` can have:
+
+* Text color
+* Regular font
+* Italic font
+* Bold font
+* Character spacing
+* Line spacing
+* Line height multiple
+* Minimum line height
+* Paragraph spacing
+* Paragraph spacing before
+* Text alignment
+* Line break mode
+
+`TextStyle` objects are a simple way of aggregating style infomation. For example:
+
+```swift
+struct MyTextStyle: TextStyle {
+    
+    let font: UIFont = UIFont.systemFontOfSize(23)
+    let emFont: UIFont = UIFont.italicSystemFontOfSize(23)
+    let strongFont: UIFont = UIFont.boldSystemFontOfSize(23)
+    let characterSpacing: CGFloat? = 2
+    
+}
+```
+
+### Setting Attributed Text
+
+Marker has convenience extensions for setting `attributedText` on common UI elements: 
+
+* `UILabel`
+* `UITextField`
+* `UITextView`
+
+To set text on these elements, use `setText:textSyle`:
+
+```swift
+let myTextStyle = MyTextStyle()
+
+label.setText("Hello World", textStyle: myTextStyle)
+```
+
+#### Markdown
+
+Marker also supports setting text with common Markdown tags:
+
+* Bold (`__` or `**`)
+* Italic (`_` or `*`)
+
+To set Markdown text on these elements, use `setMarkdownText:textStyle:`
+
+```swift
+let textStyle = MyTextStyle()
+
+textField.setMarkdownText("_Hello World_", textStyle: textStyle)
+```
 
 ## Contributing to Marker
 
 To report a bug or enhancement request, feel free to file an issue under the respective heading.
 
-If you wish to contribute to the project, fork this repo and submit a pull request.
+If you wish to contribute to the project, fork this repo and submit a pull request. Code contributions should follow the standards specified in the [Prolific Swift Style Guide](https://github.com/prolificinteractive/swift-style-guide).
 
 ## License
 
