@@ -70,9 +70,9 @@ internal final class ViewController: UIViewController {
             fatalError("App Delegate is not of type AppDelegate")
         }
         
-        label.setMarkdownText(labelText, textStyle:  themeFactory.fontTheme().coverTextStyle)
-        textField.setText(textFieldText, textStyle: themeFactory.fontTheme().bodyTextStyle)
-        textView.setText(textViewText, textStyle: themeFactory.fontTheme().captionTextStyle)
+        label.setMarkdownText(labelText, textStyle:  themeFactory.fontTheme().headlineTextStyle)
+        textField.setText(textFieldText, textStyle: themeFactory.fontTheme().titleTextStyle)
+        textView.setText(textViewText, textStyle: themeFactory.fontTheme().bodyTextStyle)
     }
     
 }

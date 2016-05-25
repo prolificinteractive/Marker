@@ -18,10 +18,10 @@ internal struct MarkerExampleFontTheme: FontTheme {
     
     // MARK: FontTheme
     
-    var coverTextStyle: MarkerExampleTextStyle {
-        let font = fonts.headlineFont
-        let emFont = fonts.headlineFontItalic
-        let strongFont = fonts.headlineFontBold
+    var headlineTextStyle: MarkerExampleTextStyle {
+        let font = fonts.regularFont(headlineFontSize)
+        let emFont = fonts.italicFont(headlineFontSize)
+        let strongFont = fonts.boldFont(headlineFontSize)
         let characterSpacing: CGFloat = 2
         
         return MarkerExampleTextStyle(font: font,
@@ -30,18 +30,16 @@ internal struct MarkerExampleFontTheme: FontTheme {
                                       characterSpacing: characterSpacing)
     }
     
-    var bodyTextStyle: MarkerExampleTextStyle {
-        let font = fonts.headlineFontBold
-        
-        return MarkerExampleTextStyle(font: font)
+    var titleTextStyle: MarkerExampleTextStyle {
+        return MarkerExampleTextStyle(font: fonts.boldFont(titleFontSize))
     }
 
-    var captionTextStyle: MarkerExampleTextStyle {
-        var captionTextStyle = coverTextStyle
-        captionTextStyle.characterSpacing = 0
-        captionTextStyle.paragraphSpacing = -3
+    var bodyTextStyle: MarkerExampleTextStyle {
+        var bodyTextStyle = headlineTextStyle
+        bodyTextStyle.characterSpacing = 0
+        bodyTextStyle.paragraphSpacing = -3
         
-        return captionTextStyle
+        return bodyTextStyle
     }
     
 }

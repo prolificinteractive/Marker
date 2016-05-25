@@ -14,16 +14,16 @@ internal struct HelveticaFonts: Fonts {
     
     // MARK: Fonts
     
-    var headlineFont: UIFont {
-        return UIFont(name: "HelveticaNeue", size: headlineFontSize)!
+    func regularFont(size: CGFloat) -> UIFont {
+        return UIFont(name: "HelveticaNeue", size: size)!
     }
     
-    var headlineFontBold: UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: headlineFontSize)!
+    func boldFont(size: CGFloat) -> UIFont {
+        return UIFont(name: "HelveticaNeue-Bold", size: size)!
     }
     
-    var headlineFontItalic: UIFont {
-        return UIFont(name: "HelveticaNeue-Italic", size: headlineFontSize)!
+    func italicFont(size: CGFloat) -> UIFont {
+        return UIFont(name: "HelveticaNeue-Italic", size: size)!
     }
     
 }

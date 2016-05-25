@@ -18,6 +18,7 @@ internal struct MarkerExampleTextStyle: TextStyle {
     var characterSpacing: CGFloat?
     var lineSpacing: CGFloat?
     var paragraphSpacing: CGFloat?
+    var lineBreakMode: NSLineBreakMode?
     
     // MARK: - Init/Deinit
     
@@ -26,7 +27,8 @@ internal struct MarkerExampleTextStyle: TextStyle {
          strongFont: UIFont? = nil,
          characterSpacing: CGFloat? = nil,
          lineSpacing: CGFloat? = nil,
-         paragraphSpacing: CGFloat? = nil) {
+         paragraphSpacing: CGFloat? = nil,
+         lineBreakMode: NSLineBreakMode? = .ByTruncatingTail) {
 
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
@@ -34,6 +36,7 @@ internal struct MarkerExampleTextStyle: TextStyle {
         self.characterSpacing = characterSpacing
         self.lineSpacing = lineSpacing
         self.paragraphSpacing = paragraphSpacing
+        self.lineBreakMode = lineBreakMode
     }
     
 }
