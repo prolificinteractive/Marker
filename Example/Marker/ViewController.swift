@@ -27,17 +27,20 @@ internal final class ViewController: UIViewController {
     
     private let labelText = "__THE LIFE OF       PABLO__\n" +
         "__THE LIFE OF   PABLO__\n" +
-        "__THE LIFE OF   PABLO__\n" +
+        "**THE LIFE OF   PABLO**\n" +
+        "**THE LIFE OF   PABLO**\n\n" +
         "_THE LIFE OF   PABLO_\n" +
         "WHICH / ONE\n" +
-        "WHICH / ONE"
-    private let textFieldText = "__THE LIFE OF PABLO__\n"
-    private let textViewText = "**THE LIFE OF       PABLO**\n" +
-        "**THE LIFE OF   PABLO**\n" +
-        "**THE LIFE OF   PABLO**\n" +
-        "*THE LIFE OF   PABLO*\n" +
         "WHICH / ONE\n" +
         "WHICH / ONE"
+    private let textFieldText = "Track Listing"
+    private let textViewText = "Waves\n" +
+        "Wolves\n" +
+        "Facts\n" +
+        "Fade\n" +
+        ".\n" +
+        ".\n" +
+        ".\n"
 
     // MARK: - Init/Deinit
     
@@ -65,9 +68,9 @@ internal final class ViewController: UIViewController {
     // MARK: - Private functions
     
     @objc private func updateViews() {
-        label.setMarkdownText(labelText, textStyle: fontTheme.labelTextStyle)
-        textField.setMarkdownText(textFieldText, textStyle: fontTheme.textFieldTextStyle)
-        textView.setMarkdownText(textViewText, textStyle: fontTheme.textViewTextStyle)
+        label.setMarkdownText(labelText, textStyle: fontTheme.coverTextStyle)
+        textField.setText(textFieldText, textStyle: fontTheme.bodyTextStyle)
+        textView.setText(textViewText, textStyle: fontTheme.captionTextStyle)
     }
     
 }

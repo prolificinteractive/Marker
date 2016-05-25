@@ -23,19 +23,19 @@ extension Fonts {
     var headlineFontSize: CGFloat {        
         switch UIApplication.sharedApplication().preferredContentSizeCategory {
         case UIContentSizeCategoryExtraSmall, UIContentSizeCategorySmall:
-            return 17
+            return 13
         case UIContentSizeCategoryMedium, UIContentSizeCategoryLarge:
-            return 23
+            return 17
         case UIContentSizeCategoryExtraLarge, UIContentSizeCategoryExtraExtraLarge:
-            return 26
+            return 20
         case UIContentSizeCategoryExtraExtraExtraLarge, UIContentSizeCategoryAccessibilityMedium:
-            return 29
-        case UIContentSizeCategoryAccessibilityLarge, UIContentSizeCategoryAccessibilityExtraLarge:
-            return 32
-        case UIContentSizeCategoryAccessibilityExtraExtraLarge, UIContentSizeCategoryAccessibilityExtraExtraExtraLarge:
-            return 38
-        default:
             return 23
+        case UIContentSizeCategoryAccessibilityLarge, UIContentSizeCategoryAccessibilityExtraLarge:
+            return 26
+        case UIContentSizeCategoryAccessibilityExtraExtraLarge, UIContentSizeCategoryAccessibilityExtraExtraExtraLarge:
+            return 32
+        default:
+            return 17
         }
     }
     

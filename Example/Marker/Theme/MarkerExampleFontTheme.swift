@@ -18,30 +18,30 @@ internal struct MarkerExampleFontTheme: FontTheme {
     
     // MARK: FontTheme
     
-    var labelTextStyle: MarkerExampleTextStyle {
+    var coverTextStyle: MarkerExampleTextStyle {
         let font = fonts.headlineFont
         let emFont = fonts.headlineFontItalic
         let strongFont = fonts.headlineFontBold
-        let chacterSpacing: CGFloat = 2
+        let characterSpacing: CGFloat = 2
         
         return MarkerExampleTextStyle(font: font,
                                       emFont: emFont,
                                       strongFont: strongFont,
-                                      characterSpacing: chacterSpacing)
+                                      characterSpacing: characterSpacing)
     }
     
-    var textFieldTextStyle: MarkerExampleTextStyle {
-        let font = fonts.headlineFont
-        let chacterSpacing: CGFloat = 5
+    var bodyTextStyle: MarkerExampleTextStyle {
+        let font = fonts.headlineFontBold
         
-        return MarkerExampleTextStyle(font: font, characterSpacing: chacterSpacing)
+        return MarkerExampleTextStyle(font: font)
     }
 
-    var textViewTextStyle: MarkerExampleTextStyle {
-        var textViewTextStyle = labelTextStyle
-        textViewTextStyle.lineSpacing = 3
+    var captionTextStyle: MarkerExampleTextStyle {
+        var captionTextStyle = coverTextStyle
+        captionTextStyle.characterSpacing = 0
+        captionTextStyle.paragraphSpacing = -3
         
-        return textViewTextStyle
+        return captionTextStyle
     }
     
 }

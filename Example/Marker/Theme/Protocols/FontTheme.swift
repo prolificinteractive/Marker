@@ -10,9 +10,9 @@ import UIKit
 
 internal protocol FontTheme {
     
-    var labelTextStyle: MarkerExampleTextStyle { get }
-    var textFieldTextStyle: MarkerExampleTextStyle { get }
-    var textViewTextStyle: MarkerExampleTextStyle { get }
+    var coverTextStyle: MarkerExampleTextStyle { get }
+    var bodyTextStyle: MarkerExampleTextStyle { get }
+    var captionTextStyle: MarkerExampleTextStyle { get }
     
 }
 
