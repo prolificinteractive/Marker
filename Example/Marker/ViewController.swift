@@ -11,10 +11,6 @@ import Marker
 
 internal final class ViewController: UIViewController {
     
-    // MARK: - Properties
-    
-    var fontTheme: FontTheme!
-    
     // MARK: - Private properties
     
     @IBOutlet private weak var label: UILabel!
@@ -33,7 +29,7 @@ internal final class ViewController: UIViewController {
         "WHICH / ONE\n" +
         "WHICH / ONE\n" +
         "WHICH / ONE"
-    private let textFieldText = "Track Listing"
+    private let textFieldText = "Track List"
     private let textViewText = "Waves\n" +
         "Wolves\n" +
         "Facts\n" +
@@ -68,9 +64,15 @@ internal final class ViewController: UIViewController {
     // MARK: - Private functions
     
     @objc private func updateViews() {
-        label.setMarkdownText(labelText, textStyle: fontTheme.coverTextStyle)
-        textField.setText(textFieldText, textStyle: fontTheme.bodyTextStyle)
-        textView.setText(textViewText, textStyle: fontTheme.captionTextStyle)
+        guard
+            let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate,
+            let themeFactory = appDelegate.themeFactory else {
+            fatalError("App Delegate is not of type AppDelegate")
+        }
+        
+        label.setMarkdownText(labelText, textStyle:  themeFactory.fontTheme.coverTextStyle)
+        textField.setText(textFieldText, textStyle: themeFactory.fontTheme.bodyTextStyle)
+        textView.setText(textViewText, textStyle: themeFactory.fontTheme.captionTextStyle)
     }
     
 }

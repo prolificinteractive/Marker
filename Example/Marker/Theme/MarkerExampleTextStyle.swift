@@ -10,12 +10,16 @@ import Marker
 
 internal struct MarkerExampleTextStyle: TextStyle {
     
+    // MARK: - Properties
+    
     var font: UIFont
     var emFont: UIFont
     var strongFont: UIFont
     var characterSpacing: CGFloat?
     var lineSpacing: CGFloat?
     var paragraphSpacing: CGFloat?
+    
+    // MARK: - Init/Deinit
     
     init(font: UIFont,
          emFont: UIFont? = nil,

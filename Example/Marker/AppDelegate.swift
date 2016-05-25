@@ -11,15 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - Properties
+    
     var window: UIWindow?
+    
+    private(set) var themeFactory: ThemeFactory!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        if let viewController = window?.rootViewController as? ViewController {
-            let fonts: Fonts = HelveticaFonts()
-            let fontTheme: FontTheme = MarkerExampleFontTheme(fonts: fonts)
-            
-            viewController.fontTheme = fontTheme
-        }
+        // Initialize the shared theme factory
+        themeFactory = ThemeFactory()
         
         return true
     }
