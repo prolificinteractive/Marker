@@ -21,8 +21,8 @@ internal func textAttributesFromTextStyle(textStyle: TextStyle) -> TextAttribute
     var textAttributes: TextAttributes = [:]
     
     
-    textAttributes[NSForegroundColorAttributeName] = textStyle.textColor
     textAttributes[NSFontAttributeName] = textStyle.font
+    textAttributes[NSForegroundColorAttributeName] = textStyle.textColor
     textAttributes[NSKernAttributeName] = textStyle.characterSpacing
 
     

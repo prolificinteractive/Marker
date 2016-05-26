@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Marker
 
 internal protocol FontTheme {
     
-    var headlineTextStyle: MarkerExampleTextStyle { get }
-    var titleTextStyle: MarkerExampleTextStyle { get }
-    var bodyTextStyle: MarkerExampleTextStyle { get }
+    var headlineTextStyle: TextStyle { get }
+    var titleTextStyle: TextStyle { get }
+    var bodyTextStyle: TextStyle { get }
     
     var headlineFontSize: CGFloat { get }
     var titleFontSize: CGFloat { get }
