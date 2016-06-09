@@ -1,5 +1,5 @@
 //
-//  HelveticaFonts.swift
+//  HelveticaNeueFonts.swift
 //  Marker
 //
 //  Created by Htin Linn on 5/12/16.
@@ -8,11 +8,15 @@
 
 import UIKit
 
-internal struct HelveticaFonts: Fonts {
+internal struct HelveticaNeueFonts: Fonts {
     
     // MARK: - Protocol conformance
     
     // MARK: Fonts
+    
+    var familyName: String {
+        return "Helvetica Neue"
+    }
     
     func regularFont(size: CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue", size: size)!

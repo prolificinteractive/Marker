@@ -10,6 +10,8 @@ import UIKit
 
 internal protocol Fonts {
     
+    var familyName: String { get }
+    
     func regularFont(size: CGFloat) -> UIFont
     func boldFont(size: CGFloat) -> UIFont
     func italicFont(size: CGFloat) -> UIFont

@@ -52,9 +52,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8h-84-gv0">
+                                <rect key="frame" x="321" y="613" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="0Zc-0n-sgD"/>
+                                    <constraint firstAttribute="height" constant="44" id="gCM-Kk-QZk"/>
+                                </constraints>
+                                <state key="normal" image="Theme"/>
+                                <connections>
+                                    <segue destination="V2B-rh-h9j" kind="presentation" id="OGI-dj-fFE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="L8h-84-gv0" secondAttribute="trailing" constant="10" id="01C-nB-5DH"/>
                             <constraint firstItem="qVE-bI-SP6" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="3FS-Ey-5uw"/>
                             <constraint firstAttribute="trailing" secondItem="ZqX-gf-rQg" secondAttribute="trailing" constant="10" id="3nn-Vg-0oB"/>
                             <constraint firstItem="qVE-bI-SP6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="8TR-ch-8eP"/>
@@ -65,6 +77,7 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZqX-gf-rQg" secondAttribute="bottom" id="lVZ-eF-Y41"/>
                             <constraint firstItem="pty-Yy-N3W" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="15" id="oen-JB-3HC"/>
                             <constraint firstItem="ZqX-gf-rQg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="r6P-uS-YTG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="L8h-84-gv0" secondAttribute="bottom" constant="10" id="y5s-NR-AA3"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -79,5 +92,76 @@
             </objects>
             <point key="canvasLocation" x="504" y="428"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qpr-wF-WWg">
+            <objects>
+                <navigationController id="V2B-rh-h9j" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TVb-Gj-hkC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BNd-kj-0HA" kind="relationship" relationship="rootViewController" id="1QN-1b-bVW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adq-Zh-hYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966.5" y="427.5"/>
+        </scene>
+        <!--Theme-->
+        <scene sceneID="ens-aL-JFQ">
+            <objects>
+                <viewController storyboardIdentifier="ThemeSettingsViewController" id="BNd-kj-0HA" customClass="ThemeSettingsViewController" customModule="Marker_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gw3-pE-4jb"/>
+                        <viewControllerLayoutGuide type="bottom" id="vEc-hC-5Wq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rce-gz-Ecy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EPN-ha-LIw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BNd-kj-0HA" id="8SY-mQ-EbE"/>
+                                    <outlet property="delegate" destination="BNd-kj-0HA" id="aEy-0a-uJ3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EPN-ha-LIw" secondAttribute="trailing" id="X4J-03-pBV"/>
+                            <constraint firstItem="vEc-hC-5Wq" firstAttribute="top" secondItem="EPN-ha-LIw" secondAttribute="bottom" id="Y9q-KP-OYU"/>
+                            <constraint firstItem="EPN-ha-LIw" firstAttribute="top" secondItem="Rce-gz-Ecy" secondAttribute="top" id="d42-4m-9XM"/>
+                            <constraint firstItem="EPN-ha-LIw" firstAttribute="top" secondItem="gw3-pE-4jb" secondAttribute="bottom" id="eTz-Ty-0l5"/>
+                            <constraint firstItem="EPN-ha-LIw" firstAttribute="leading" secondItem="Rce-gz-Ecy" secondAttribute="leading" id="jv9-Fh-JYu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eTz-Ty-0l5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Theme" id="ffK-XE-CJn">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="UyT-x5-AHh">
+                            <connections>
+                                <action selector="didTapCloseButton:" destination="BNd-kj-0HA" id="GJ5-j7-ygm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHA-Yp-J1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444.5" y="427.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Theme" width="20" height="20"/>
+    </resources>
 </document>

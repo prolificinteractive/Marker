@@ -30,7 +30,7 @@ internal final class AppEnvironment {
     // MARK: - Init/Deinit
     
     init() {
-        fonts = AvenirNextFonts()
+        fonts = HelveticaNeueFonts()
         themeFactory = ThemeFactory(fonts: fonts)
     }
     

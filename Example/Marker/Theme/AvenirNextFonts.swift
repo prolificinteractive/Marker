@@ -14,6 +14,10 @@ internal struct AvenirNextFonts: Fonts {
     
     // MARK: Fonts
     
+    var familyName: String {
+        return "Avenir Next"
+    }
+    
     func regularFont(size: CGFloat) -> UIFont {
         return UIFont(name: "AvenirNext-Regular", size: size)!
     }
