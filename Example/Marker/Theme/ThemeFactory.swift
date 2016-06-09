@@ -10,16 +10,12 @@ import UIKit
 
 internal struct ThemeFactory {
     
+    let fonts: Fonts
+    
     // MARK: - Instance functions
     
     func fontTheme() -> FontTheme {
-        return MarkerExampleFontTheme(fonts: fonts())
-    }
-    
-    // MARK: - Private functions
-    
-    private func fonts() -> Fonts {
-        return HelveticaFonts()
+        return MarkerExampleFontTheme(fonts: fonts)
     }
     
 }

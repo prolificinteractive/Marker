@@ -55,6 +55,10 @@ internal final class ViewController: UIViewController {
                                                          selector: #selector(ViewController.updateViews),
                                                          name: UIContentSizeCategoryDidChangeNotification,
                                                          object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(ViewController.updateViews),
+                                                         name: AppEnvironment.Constants.FontThemeDidChangeNotification,
+                                                         object: nil)
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -64,15 +68,11 @@ internal final class ViewController: UIViewController {
     // MARK: - Private functions
     
     @objc private func updateViews() {
-        guard
-            let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate,
-            let themeFactory = appDelegate.themeFactory else {
-            fatalError("App Delegate is not of type AppDelegate")
-        }
+        let fontTheme = AppEnvironment.sharedEnvironment.themeFactory.fontTheme()
         
-        label.setMarkdownText(labelText, textStyle:  themeFactory.fontTheme().headlineTextStyle)
-        textField.setText(textFieldText, textStyle: themeFactory.fontTheme().titleTextStyle)
-        textView.setText(textViewText, textStyle: themeFactory.fontTheme().bodyTextStyle)
+        label.setMarkdownText(labelText, textStyle:  fontTheme.headlineTextStyle)
+        textField.setText(textFieldText, textStyle: fontTheme.titleTextStyle)
+        textView.setText(textViewText, textStyle: fontTheme.bodyTextStyle)
     }
     
 }

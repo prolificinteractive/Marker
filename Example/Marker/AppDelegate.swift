@@ -14,12 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Properties
     
     var window: UIWindow?
-    
-    private(set) var themeFactory: ThemeFactory!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Initialize the shared theme factory
-        themeFactory = ThemeFactory()
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+            AppEnvironment.sharedEnvironment.fonts = HelveticaFonts()
+        }
         
         return true
     }
