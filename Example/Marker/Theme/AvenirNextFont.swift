@@ -1,5 +1,5 @@
 //
-//  AvenirNextFonts.swift
+//  AvenirNextFont.swift
 //  Marker
 //
 //  Created by Htin Linn on 6/9/16.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-internal struct AvenirNextFonts: Fonts {
+internal struct AvenirNextFont: Font {
     
     // MARK: - Protocol conformance
     
-    // MARK: Fonts
+    // MARK: Font
     
     var familyName: String {
         return "Avenir Next"

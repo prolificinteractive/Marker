@@ -1,5 +1,5 @@
 //
-//  Fonts.swift
+//  Font.swift
 //  Marker
 //
 //  Created by Htin Linn on 5/12/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal protocol Fonts {
+internal protocol Font {
     
     var familyName: String { get }
     

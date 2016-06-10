@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		01E1104E8AAC691808C0206D /* Pods_Marker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66039FFFCAE02010D578FC81 /* Pods_Marker_Tests.framework */; };
 		485ED1111D09E48B00119D5D /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485ED1101D09E48B00119D5D /* AppEnvironment.swift */; };
-		485ED1131D09E89F00119D5D /* AvenirNextFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485ED1121D09E89F00119D5D /* AvenirNextFonts.swift */; };
+		485ED1131D09E89F00119D5D /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485ED1121D09E89F00119D5D /* AvenirNextFont.swift */; };
 		485ED1151D09EDDE00119D5D /* ThemeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485ED1141D09EDDE00119D5D /* ThemeFactory.swift */; };
 		485ED1181D0A091800119D5D /* ThemeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485ED1171D0A091800119D5D /* ThemeSettingsViewController.swift */; };
-		486216691CE51F5400686557 /* HelveticaNeueFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216631CE51F5400686557 /* HelveticaNeueFonts.swift */; };
+		486216691CE51F5400686557 /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216631CE51F5400686557 /* HelveticaNeueFont.swift */; };
 		4862166A1CE51F5400686557 /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216641CE51F5400686557 /* MarkerExampleFontTheme.swift */; };
-		4862166C1CE51F5400686557 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216671CE51F5400686557 /* Fonts.swift */; };
+		4862166C1CE51F5400686557 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216671CE51F5400686557 /* Font.swift */; };
 		4862166D1CE51F5400686557 /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486216681CE51F5400686557 /* FontTheme.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -40,12 +40,12 @@
 		12693670F781286478E6EB16 /* Pods-Marker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marker_Tests/Pods-Marker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		31D2DC9BD8B466270B5299FF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		485ED1101D09E48B00119D5D /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
-		485ED1121D09E89F00119D5D /* AvenirNextFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvenirNextFonts.swift; sourceTree = "<group>"; };
+		485ED1121D09E89F00119D5D /* AvenirNextFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvenirNextFont.swift; sourceTree = "<group>"; };
 		485ED1141D09EDDE00119D5D /* ThemeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeFactory.swift; sourceTree = "<group>"; };
 		485ED1171D0A091800119D5D /* ThemeSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeSettingsViewController.swift; sourceTree = "<group>"; };
-		486216631CE51F5400686557 /* HelveticaNeueFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaNeueFonts.swift; sourceTree = "<group>"; };
+		486216631CE51F5400686557 /* HelveticaNeueFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaNeueFont.swift; sourceTree = "<group>"; };
 		486216641CE51F5400686557 /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
-		486216671CE51F5400686557 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		486216671CE51F5400686557 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		486216681CE51F5400686557 /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Marker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				486216661CE51F5400686557 /* Protocols */,
-				486216631CE51F5400686557 /* HelveticaNeueFonts.swift */,
-				485ED1121D09E89F00119D5D /* AvenirNextFonts.swift */,
+				486216631CE51F5400686557 /* HelveticaNeueFont.swift */,
+				485ED1121D09E89F00119D5D /* AvenirNextFont.swift */,
 				486216641CE51F5400686557 /* MarkerExampleFontTheme.swift */,
 				485ED1141D09EDDE00119D5D /* ThemeFactory.swift */,
 			);
@@ -100,7 +100,7 @@
 		486216661CE51F5400686557 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				486216671CE51F5400686557 /* Fonts.swift */,
+				486216671CE51F5400686557 /* Font.swift */,
 				486216681CE51F5400686557 /* FontTheme.swift */,
 			);
 			path = Protocols;
@@ -402,12 +402,12 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				4862166D1CE51F5400686557 /* FontTheme.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				486216691CE51F5400686557 /* HelveticaNeueFonts.swift in Sources */,
+				486216691CE51F5400686557 /* HelveticaNeueFont.swift in Sources */,
 				485ED1111D09E48B00119D5D /* AppEnvironment.swift in Sources */,
 				485ED1151D09EDDE00119D5D /* ThemeFactory.swift in Sources */,
-				4862166C1CE51F5400686557 /* Fonts.swift in Sources */,
+				4862166C1CE51F5400686557 /* Font.swift in Sources */,
 				4862166A1CE51F5400686557 /* MarkerExampleFontTheme.swift in Sources */,
-				485ED1131D09E89F00119D5D /* AvenirNextFonts.swift in Sources */,
+				485ED1131D09E89F00119D5D /* AvenirNextFont.swift in Sources */,
 				485ED1181D0A091800119D5D /* ThemeSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,7 @@ import Foundation
  
  - parameter parsedString: String stripped of markup.
  - parameter tags:         Mark up tags.
- - parameter textStyle:    Text style object containing markup fonts.
+ - parameter textStyle:    Text style object containing markup font.
  
  - returns: Formatted markdown text.
  */

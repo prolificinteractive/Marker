@@ -18,9 +18,9 @@ internal final class AppEnvironment {
 
     static private(set) var sharedEnvironment = AppEnvironment()
 
-    var fonts: Fonts {
+    var font: Font {
         didSet {
-            themeFactory = ThemeFactory(fonts: fonts)
+            themeFactory = ThemeFactory(font: font)
             
             NSNotificationCenter.defaultCenter().postNotificationName(Constants.FontThemeDidChangeNotification, object: nil)
         }
@@ -30,8 +30,8 @@ internal final class AppEnvironment {
     // MARK: - Init/Deinit
     
     init() {
-        fonts = HelveticaNeueFonts()
-        themeFactory = ThemeFactory(fonts: fonts)
+        font = HelveticaNeueFont()
+        themeFactory = ThemeFactory(font: font)
     }
     
 }

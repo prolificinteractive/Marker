@@ -13,26 +13,26 @@ internal struct MarkerExampleFontTheme: FontTheme {
     
     // MARK: - Properties
     
-    let fonts: Fonts
+    let font: Font
     
     // MARK: - Protocol conformance
     
     // MARK: FontTheme
     
     var headlineTextStyle: TextStyle {
-        let font = fonts.regularFont(headlineFontSize)
-        let emFont = fonts.italicFont(headlineFontSize)
-        let strongFont = fonts.boldFont(headlineFontSize)
+        let regularFont = font.regularFont(headlineFontSize)
+        let emFont = font.italicFont(headlineFontSize)
+        let strongFont = font.boldFont(headlineFontSize)
         let characterSpacing: CGFloat = 2
         
-        return TextStyle(font: font,
+        return TextStyle(font: regularFont,
                          emFont: emFont,
                          strongFont: strongFont,
                          characterSpacing: characterSpacing)
     }
     
     var titleTextStyle: TextStyle {
-        return TextStyle(font: fonts.boldFont(titleFontSize))
+        return TextStyle(font: font.boldFont(titleFontSize))
     }
 
     var bodyTextStyle: TextStyle {

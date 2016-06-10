@@ -44,12 +44,12 @@ extension ThemeSettingsViewController: UITableViewDataSource {
         cell.textLabel?.text = fontNames[indexPath.row]
 
         if cell.textLabel?.text == "Helvetica Neue" {
-            cell.textLabel?.font = HelveticaNeueFonts().regularFont(17)
+            cell.textLabel?.font = HelveticaNeueFont().regularFont(17)
         } else if cell.textLabel?.text == "Avenir Next" {
-            cell.textLabel?.font = AvenirNextFonts().regularFont(17)
+            cell.textLabel?.font = AvenirNextFont().regularFont(17)
         }
         
-        if cell.textLabel?.text == AppEnvironment.sharedEnvironment.fonts.familyName {
+        if cell.textLabel?.text == AppEnvironment.sharedEnvironment.font.familyName {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -72,9 +72,9 @@ extension ThemeSettingsViewController: UITableViewDelegate {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
         if cell?.textLabel?.text == "Helvetica Neue" {
-            AppEnvironment.sharedEnvironment.fonts = HelveticaNeueFonts()
+            AppEnvironment.sharedEnvironment.font = HelveticaNeueFont()
         } else if cell?.textLabel?.text == "Avenir Next" {
-            AppEnvironment.sharedEnvironment.fonts = AvenirNextFonts()
+            AppEnvironment.sharedEnvironment.font = AvenirNextFont()
         }
         
         dismissViewControllerAnimated(true, completion: nil)
