@@ -54,6 +54,25 @@ public struct TextStyle {
     
     // MARK: - Init/Deinit
     
+    /**
+     Initializes a text style object with given parameters.
+     
+     - parameter font:                   Regualar font.
+     - parameter emFont:                 Emphasis font.
+     - parameter strongFont:             Strong font.
+     - parameter textColor:              Text color.
+     - parameter characterSpacing:       Character spacing (kerning).
+     - parameter lineSpacing:            Line spacing.
+     - parameter lineHeightMultiple:     Line height mulitple.
+     - parameter minimumLineHeight:      Minimum line height.
+     - parameter maximumLineHeight:      Maximum line height.
+     - parameter paragraphSpacing:       Paragraph spacing.
+     - parameter paragraphSpacingBefore: Paragraph spacing before.
+     - parameter textAlignment:          Text alignment.
+     - parameter lineBreakMode:          Line break node.
+     
+     - returns: An initialized text style object.
+     */
     public init(font: UIFont,
                 emFont: UIFont? = nil,
                 strongFont: UIFont? = nil,
