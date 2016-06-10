@@ -60,7 +60,7 @@
                                 </constraints>
                                 <state key="normal" image="Theme"/>
                                 <connections>
-                                    <segue destination="V2B-rh-h9j" kind="presentation" id="OGI-dj-fFE"/>
+                                    <segue destination="V2B-rh-h9j" kind="presentation" identifier="ThemeSettingsSegue" id="OGI-dj-fFE"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -1,5 +1,5 @@
 //
-//  AppEnvironment.swift
+//  AppTheme.swift
 //  Marker
 //
 //  Created by Htin Linn on 6/9/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal final class AppEnvironment {
+internal final class AppTheme {
     
     struct Constants {
         static let FontThemeDidChangeNotification = "FontThemeDidChange"
@@ -16,22 +16,20 @@ internal final class AppEnvironment {
     
     // MARK: - Properties
 
-    static private(set) var sharedEnvironment = AppEnvironment()
-
     var font: Font {
         didSet {
-            themeFactory = ThemeFactory(font: font)
+            fontTheme = MarkerExampleFontTheme(font: font)
             
             NSNotificationCenter.defaultCenter().postNotificationName(Constants.FontThemeDidChangeNotification, object: nil)
         }
     }
-    private(set) var themeFactory: ThemeFactory
+    private(set) var fontTheme: FontTheme
     
     // MARK: - Init/Deinit
     
     init() {
         font = HelveticaNeueFont()
-        themeFactory = ThemeFactory(font: font)
+        fontTheme = MarkerExampleFontTheme(font: font)
     }
     
 }

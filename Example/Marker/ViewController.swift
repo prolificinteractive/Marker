@@ -6,10 +6,12 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
 import Marker
+import UIKit
 
 internal final class ViewController: UIViewController {
+    
+    weak var theme: AppTheme!
     
     // MARK: - Private properties
     
@@ -57,7 +59,7 @@ internal final class ViewController: UIViewController {
                                                          object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector: #selector(ViewController.updateViews),
-                                                         name: AppEnvironment.Constants.FontThemeDidChangeNotification,
+                                                         name: AppTheme.Constants.FontThemeDidChangeNotification,
                                                          object: nil)
     }
     
@@ -65,10 +67,19 @@ internal final class ViewController: UIViewController {
         return true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if
+            let navigationController = segue.destinationViewController as? UINavigationController,
+            let themeSettingsViewController = navigationController.viewControllers.first as? ThemeSettingsViewController
+            where segue.identifier == "ThemeSettingsSegue" {
+                themeSettingsViewController.theme = theme
+        }
+    }
+    
     // MARK: - Private functions
     
     @objc private func updateViews() {
-        let fontTheme = AppEnvironment.sharedEnvironment.themeFactory.fontTheme()
+        let fontTheme = theme.fontTheme
         
         label.setMarkdownText(labelText, textStyle:  fontTheme.headlineTextStyle)
         textField.setText(textFieldText, textStyle: fontTheme.titleTextStyle)

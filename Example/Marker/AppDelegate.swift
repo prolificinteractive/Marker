@@ -14,8 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Properties
     
     var window: UIWindow?
+    
+    // MARK: - Private properties
+    
+    private var theme: AppTheme!
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {        
+    // MARK: - Instance functions
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        theme = AppTheme()
+        
+        if let viewController = window?.rootViewController as? ViewController {
+            viewController.theme = theme
+        }
+        
         return true
     }
 

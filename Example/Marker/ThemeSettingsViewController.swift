@@ -14,6 +14,10 @@ internal final class ThemeSettingsViewController: UIViewController {
         static let CellIdentifier = "ThemeSettingsTableViewCell"
     }
     
+    // MARK: - Properties
+    
+    weak var theme: AppTheme!
+    
     // MARK: - Private properties
 
     private let fontNames = ["Helvetica Neue", "Avenir Next"]
@@ -49,7 +53,7 @@ extension ThemeSettingsViewController: UITableViewDataSource {
             cell.textLabel?.font = AvenirNextFont().regularFont(17)
         }
         
-        if cell.textLabel?.text == AppEnvironment.sharedEnvironment.font.familyName {
+        if cell.textLabel?.text == theme.font.familyName {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -72,9 +76,9 @@ extension ThemeSettingsViewController: UITableViewDelegate {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
         if cell?.textLabel?.text == "Helvetica Neue" {
-            AppEnvironment.sharedEnvironment.font = HelveticaNeueFont()
+            theme.font = HelveticaNeueFont()
         } else if cell?.textLabel?.text == "Avenir Next" {
-            AppEnvironment.sharedEnvironment.font = AvenirNextFont()
+            theme.font = AvenirNextFont()
         }
         
         dismissViewControllerAnimated(true, completion: nil)
