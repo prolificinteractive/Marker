@@ -7,7 +7,7 @@
 
 ## Description
 
-Marker is a light wrapper for creating and setting `NSAttirbutedString` values.
+Marker is a light wrapper for creating and setting `NSAttributedString` values.
 
 ## Requirements
 
