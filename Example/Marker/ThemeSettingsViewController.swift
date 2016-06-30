@@ -12,7 +12,7 @@ internal final class ThemeSettingsViewController: UIViewController {
     
     // MARK: - Properties
     
-    weak var theme: AppTheme!
+    var theme: AppTheme!
     
     // MARK: - Private properties
 

@@ -11,7 +11,7 @@ import UIKit
 
 internal final class ViewController: UIViewController {
     
-    weak var theme: AppTheme!
+    var theme: AppTheme!
     
     // MARK: - Private properties
     
