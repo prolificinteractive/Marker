@@ -11,97 +11,94 @@ import UIKit
 /**
  *  Encapsulates style information to be applied when displaying text.
  */
-public protocol TextStyle {
-    
-    /// Text color.
-    var textColor: UIColor? { get }
+public struct TextStyle {
 
     /// Font for displaying regular text.
-    var font: UIFont { get }
+    public var font: UIFont
     
     /// Font for displaying emphasized text.
-    var emFont: UIFont { get }
+    public var emFont: UIFont
     
     /// Font for displaying important text.
-    var strongFont: UIFont { get }
+    public var strongFont: UIFont
+    
+    /// Text color.
+    public var textColor: UIColor?
     
     /// Character spacing/kerning.
-    var characterSpacing: CGFloat? { get }
+    public var characterSpacing: CGFloat?
 
     /// Line spacing.
-    var lineSpacing: CGFloat? { get }
+    public var lineSpacing: CGFloat?
 
     /// Line height multiple.
-    var lineHeightMultiple: CGFloat? { get }
+    public var lineHeightMultiple: CGFloat?
     
     /// Minimum line height.
-    var minimumLineHeight: CGFloat? { get }
+    public var minimumLineHeight: CGFloat?
     
     /// Maximum line height.
-    var maximumLineHeight: CGFloat? { get }
+    public var maximumLineHeight: CGFloat?
     
     /// Paragraph spacing.
-    var paragraphSpacing: CGFloat? { get }
+    public var paragraphSpacing: CGFloat?
 
     /// Paragraph spacing before.
-    var paragraphSpacingBefore: CGFloat? { get }
+    public var paragraphSpacingBefore: CGFloat?
     
     /// Text alignment.
-    var textAlignment: NSTextAlignment? { get }
+    public var textAlignment: NSTextAlignment?
     
     /// Line break mode.
-    var lineBreakMode: NSLineBreakMode? { get }
+    public var lineBreakMode: NSLineBreakMode?
     
-}
-
-public extension TextStyle {
+    // MARK: - Init/Deinit
     
-    var emFont: UIFont {
-        return font
-    }
-    
-    var strongFont: UIFont {
-        return font
-    }
-    
-    var textColor: UIColor? {
-        return nil
-    }
-    
-    var lineSpacing: CGFloat? {
-        return nil
-    }
-    
-    var lineHeightMultiple: CGFloat? {
-        return nil
-    }
-    
-    var minimumLineHeight: CGFloat? {
-        return nil
-    }
-    
-    var maximumLineHeight: CGFloat? {
-        return nil
-    }
-    
-    var paragraphSpacing: CGFloat? {
-        return nil
-    }
-    
-    var paragraphSpacingBefore: CGFloat? {
-        return nil
-    }
-    
-    var textAlignment: NSTextAlignment? {
-        return nil
-    }
-    
-    var lineBreakMode: NSLineBreakMode? {
-        return nil
-    }
-    
-    var characterSpacing: CGFloat? {
-        return nil
+    /**
+     Initializes a text style object with given parameters.
+     
+     - parameter font:                   Regualar font.
+     - parameter emFont:                 Emphasis font.
+     - parameter strongFont:             Strong font.
+     - parameter textColor:              Text color.
+     - parameter characterSpacing:       Character spacing (kerning).
+     - parameter lineSpacing:            Line spacing.
+     - parameter lineHeightMultiple:     Line height mulitple.
+     - parameter minimumLineHeight:      Minimum line height.
+     - parameter maximumLineHeight:      Maximum line height.
+     - parameter paragraphSpacing:       Paragraph spacing.
+     - parameter paragraphSpacingBefore: Paragraph spacing before.
+     - parameter textAlignment:          Text alignment.
+     - parameter lineBreakMode:          Line break node.
+     
+     - returns: An initialized text style object.
+     */
+    public init(font: UIFont,
+                emFont: UIFont? = nil,
+                strongFont: UIFont? = nil,
+                textColor: UIColor? = nil,
+                characterSpacing: CGFloat? = nil,
+                lineSpacing: CGFloat? = nil,
+                lineHeightMultiple: CGFloat? = nil,
+                minimumLineHeight: CGFloat? = nil,
+                maximumLineHeight: CGFloat? = nil,
+                paragraphSpacing: CGFloat? = nil,
+                paragraphSpacingBefore: CGFloat? = nil,
+                textAlignment: NSTextAlignment? = nil,
+                lineBreakMode: NSLineBreakMode? = nil) {
+        self.font = font
+        self.emFont = (emFont == nil) ? font : emFont!
+        self.strongFont = (strongFont == nil) ? font : strongFont!
+        self.textColor = textColor
+        self.characterSpacing = characterSpacing
+        self.lineSpacing = lineSpacing
+        self.lineHeightMultiple = lineHeightMultiple
+        self.minimumLineHeight = minimumLineHeight
+        self.maximumLineHeight = maximumLineHeight
+        self.paragraphSpacing = paragraphSpacing
+        self.paragraphSpacingBefore = paragraphSpacingBefore
+        self.textAlignment = textAlignment
+        self.lineBreakMode = lineBreakMode
     }
     
 }

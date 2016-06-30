@@ -11,11 +11,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - Properties
+    
     var window: UIWindow?
+    
+    // MARK: - Private properties
+    
+    private let theme = AppTheme()
 
-
+    // MARK: - Instance functions
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        if let viewController = window?.rootViewController as? ViewController {
+            viewController.theme = theme
+        }
+        
         return true
     }
 
