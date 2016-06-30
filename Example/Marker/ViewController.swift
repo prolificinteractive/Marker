@@ -16,11 +16,7 @@ internal final class ViewController: UIViewController {
     // MARK: - Private properties
     
     @IBOutlet private weak var label: UILabel!
-    @IBOutlet private weak var textField: UITextField! {
-        didSet {
-            textField.adjustsFontSizeToFitWidth = false
-        }
-    }
+    @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var textView: UITextView!
     
     private let labelText = "__THE LIFE OF       PABLO__\n" +
@@ -52,15 +48,7 @@ internal final class ViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(ViewController.updateViews),
-                                                         name: UIContentSizeCategoryDidChangeNotification,
-                                                         object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(ViewController.updateViews),
-                                                         name: AppTheme.Constants.FontThemeDidChangeNotification,
-                                                         object: nil)
+        registerForNotifications()
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -77,6 +65,17 @@ internal final class ViewController: UIViewController {
     }
     
     // MARK: - Private functions
+    
+    private func registerForNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(ViewController.updateViews),
+                                                         name: UIContentSizeCategoryDidChangeNotification,
+                                                         object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(ViewController.updateViews),
+                                                         name: AppTheme.Constants.FontThemeDidChangeNotification,
+                                                         object: nil)
+    }
     
     @objc private func updateViews() {
         let fontTheme = theme.fontTheme

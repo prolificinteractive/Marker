@@ -10,10 +10,6 @@ import UIKit
 
 internal final class ThemeSettingsViewController: UIViewController {
     
-    private struct Constants {
-        static let CellIdentifier = "ThemeSettingsTableViewCell"
-    }
-    
     // MARK: - Properties
     
     weak var theme: AppTheme!
@@ -37,12 +33,8 @@ extension ThemeSettingsViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell
-        
-        if let reusableCell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier) {
-            cell = reusableCell
-        } else {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: Constants.CellIdentifier)
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("ThemeSettingsTableViewCell") else {
+            fatalError("Cannot dequeue reusable cell...")
         }
         
         cell.textLabel?.text = fontNames[indexPath.row]
@@ -53,12 +45,8 @@ extension ThemeSettingsViewController: UITableViewDataSource {
             cell.textLabel?.font = AvenirNextFont().regularFont(17)
         }
         
-        if cell.textLabel?.text == theme.font.familyName {
-            cell.accessoryType = .Checkmark
-        } else {
-            cell.accessoryType = .None
-        }
-        
+        cell.accessoryType = (cell.textLabel?.text == theme.font.familyName) ? .Checkmark : .None
+
         return cell
     }
     
