@@ -8,10 +8,15 @@
 
 import UIKit
 
+/// Text attributes.
+public typealias TextAttributes = [String: NSObject]
+
 /**
  *  Encapsulates style information to be applied when displaying text.
  */
 public struct TextStyle {
+    
+    // MARK: - Properties
 
     /// Font for displaying regular text.
     public var font: UIFont
@@ -51,6 +56,54 @@ public struct TextStyle {
     
     /// Line break mode.
     public var lineBreakMode: NSLineBreakMode?
+    
+    // MARK: - Computed properties
+    
+    /// Text attribute dictionary representation of the receiver.
+    var attributes: TextAttributes {
+        var attributes: TextAttributes = [:]
+        
+        
+        attributes[NSFontAttributeName] = font
+        attributes[NSForegroundColorAttributeName] = textColor
+        attributes[NSKernAttributeName] = characterSpacing
+        
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        
+        if let lineSpacing = lineSpacing {
+            paragraphStyle.lineSpacing = lineSpacing
+        }
+        if let lineHeightMultiple = lineHeightMultiple {
+            paragraphStyle.lineHeightMultiple = lineHeightMultiple
+        }
+        if let minimumLineHeight = minimumLineHeight {
+            paragraphStyle.minimumLineHeight = minimumLineHeight
+        }
+        if let maximumLineHeight = maximumLineHeight {
+            paragraphStyle.maximumLineHeight = maximumLineHeight
+        }
+        
+        if let paragraphSpacing = paragraphSpacing {
+            paragraphStyle.paragraphSpacing = paragraphSpacing
+        }
+        if let paragraphSpacingBefore = paragraphSpacingBefore {
+            paragraphStyle.paragraphSpacingBefore = paragraphSpacingBefore
+        }
+        
+        if let alignment = textAlignment {
+            paragraphStyle.alignment = alignment
+        }
+        
+        if let lineBreakMode = lineBreakMode {
+            paragraphStyle.lineBreakMode = lineBreakMode
+        }
+        
+        attributes[NSParagraphStyleAttributeName] = paragraphStyle
+        
+        
+        return attributes
+    }
     
     // MARK: - Init/Deinit
     
