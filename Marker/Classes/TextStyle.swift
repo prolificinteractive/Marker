@@ -60,7 +60,7 @@ public struct TextStyle {
     // MARK: - Computed properties
     
     /// Text attribute dictionary representation of the receiver.
-    var attributes: TextAttributes {
+    public var attributes: TextAttributes {
         var attributes: TextAttributes = [:]
         
         
