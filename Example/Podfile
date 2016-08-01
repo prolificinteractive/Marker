@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'Marker_Example', :exclusive => true do
+target 'Marker_Example' do
   pod 'Marker', :path => '../'
 end
 
-target 'Marker_Tests', :exclusive => true do
+target 'Marker_Tests' do
   pod 'Marker', :path => '../'
 end
