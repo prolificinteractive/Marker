@@ -20,7 +20,7 @@ import Foundation
 internal func attributedStringFromParsedString(parsedString: String, tags: [MarkdownTag], textStyle: TextStyle) -> NSAttributedString {
     let attributedString = NSMutableAttributedString(string: parsedString)
     
-    attributedString.addAttributes(textAttributesFromTextStyle(textStyle),
+    attributedString.addAttributes(textStyle.attributes,
                                    range: NSRange(location: 0, length: parsedString.characters.count))
     
     for tag in tags {

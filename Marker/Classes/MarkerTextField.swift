@@ -17,7 +17,7 @@ public extension UITextField {
      - parameter textStyle: Text style object containing style information.
      */
     func setText(text: String, textStyle: TextStyle) {
-        attributedText = NSAttributedString(string: text, attributes: textAttributesFromTextStyle(textStyle))
+        attributedText = NSAttributedString(string: text, attributes: textStyle.attributes)
     }
     
     /**
