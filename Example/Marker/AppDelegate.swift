@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Instance functions
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         if let viewController = window?.rootViewController as? ViewController {
             viewController.theme = theme
         }

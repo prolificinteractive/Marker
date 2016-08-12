@@ -18,15 +18,15 @@ internal struct HelveticaNeueFont: Font {
         return "Helvetica Neue"
     }
     
-    func regularFont(size: CGFloat) -> UIFont {
+    func regularFont(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue", size: size)!
     }
     
-    func boldFont(size: CGFloat) -> UIFont {
+    func boldFont(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue-Bold", size: size)!
     }
     
-    func italicFont(size: CGFloat) -> UIFont {
+    func italicFont(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue-Italic", size: size)!
     }
     

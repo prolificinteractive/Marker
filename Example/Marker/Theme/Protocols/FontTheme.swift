@@ -23,18 +23,18 @@ internal protocol FontTheme {
 extension FontTheme {
     
     var headlineFontSize: CGFloat {
-        switch UIApplication.sharedApplication().preferredContentSizeCategory {
-        case UIContentSizeCategoryExtraSmall, UIContentSizeCategorySmall:
+        switch UIApplication.shared.preferredContentSizeCategory {
+        case UIContentSizeCategory.extraSmall, UIContentSizeCategory.small:
             return 13
-        case UIContentSizeCategoryMedium, UIContentSizeCategoryLarge:
+        case UIContentSizeCategory.medium, UIContentSizeCategory.large:
             return 17
-        case UIContentSizeCategoryExtraLarge, UIContentSizeCategoryExtraExtraLarge:
+        case UIContentSizeCategory.extraLarge, UIContentSizeCategory.extraExtraLarge:
             return 20
-        case UIContentSizeCategoryExtraExtraExtraLarge, UIContentSizeCategoryAccessibilityMedium:
+        case UIContentSizeCategory.extraExtraExtraLarge, UIContentSizeCategory.accessibilityMedium:
             return 23
-        case UIContentSizeCategoryAccessibilityLarge, UIContentSizeCategoryAccessibilityExtraLarge:
+        case UIContentSizeCategory.accessibilityLarge, UIContentSizeCategory.accessibilityExtraLarge:
             return 26
-        case UIContentSizeCategoryAccessibilityExtraExtraLarge, UIContentSizeCategoryAccessibilityExtraExtraExtraLarge:
+        case UIContentSizeCategory.accessibilityExtraExtraLarge, UIContentSizeCategory.accessibilityExtraExtraExtraLarge:
             return 32
         default:
             return 17
@@ -42,16 +42,16 @@ extension FontTheme {
     }
     
     var titleFontSize: CGFloat {
-        switch UIApplication.sharedApplication().preferredContentSizeCategory {
-        case UIContentSizeCategoryExtraSmall, UIContentSizeCategorySmall:
+        switch UIApplication.shared.preferredContentSizeCategory {
+        case UIContentSizeCategory.extraSmall, UIContentSizeCategory.small:
             return 15
-        case UIContentSizeCategoryMedium, UIContentSizeCategoryLarge:
+        case UIContentSizeCategory.medium, UIContentSizeCategory.large:
             return 19
-        case UIContentSizeCategoryExtraLarge, UIContentSizeCategoryExtraExtraLarge:
+        case UIContentSizeCategory.extraLarge, UIContentSizeCategory.extraExtraLarge:
             return 23
-        case UIContentSizeCategoryExtraExtraExtraLarge, UIContentSizeCategoryAccessibilityMedium,
-             UIContentSizeCategoryAccessibilityLarge, UIContentSizeCategoryAccessibilityExtraLarge,
-             UIContentSizeCategoryAccessibilityExtraExtraLarge, UIContentSizeCategoryAccessibilityExtraExtraExtraLarge:
+        case UIContentSizeCategory.extraExtraExtraLarge, UIContentSizeCategory.accessibilityMedium,
+             UIContentSizeCategory.accessibilityLarge, UIContentSizeCategory.accessibilityExtraLarge,
+             UIContentSizeCategory.accessibilityExtraExtraLarge, UIContentSizeCategory.accessibilityExtraExtraExtraLarge:
             return 30
         default:
             return 19

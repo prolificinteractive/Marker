@@ -17,7 +17,7 @@ import Foundation
  
  - returns: Formatted markdown text.
  */
-internal func attributedStringFromParsedString(parsedString: String, tags: [MarkdownTag], textStyle: TextStyle) -> NSAttributedString {
+internal func attributedString(from parsedString: String, with tags: [MarkdownTag], using textStyle: TextStyle) -> NSAttributedString {
     let attributedString = NSMutableAttributedString(string: parsedString)
     
     attributedString.addAttributes(textStyle.attributes,
@@ -27,9 +27,9 @@ internal func attributedStringFromParsedString(parsedString: String, tags: [Mark
         let font: UIFont?
         
         switch tag {
-        case .Em(_):
+        case .em(_):
             font = textStyle.emFont
-        case .Strong(_):
+        case .strong(_):
             font = textStyle.strongFont
         }
         
@@ -44,11 +44,11 @@ internal func attributedStringFromParsedString(parsedString: String, tags: [Mark
 // Source: http://stackoverflow.com/questions/25138339/nsrange-to-rangestring-index/30404532#30404532
 private extension String {
     
-    func NSRangeFromRange(range: Range<String.Index>) -> NSRange {
-        let from = String.UTF16View.Index(range.startIndex, within: utf16)
-        let to = String.UTF16View.Index(range.endIndex, within: utf16)
+    func NSRangeFromRange(_ range: Range<String.Index>) -> NSRange {
+        let from = String.UTF16View.Index(range.lowerBound, within: utf16)
+        let to = String.UTF16View.Index(range.upperBound, within: utf16)
         
-        return NSRange(location: utf16.startIndex.distanceTo(from), length: from.distanceTo(to))
+        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from), length: utf16.distance(from: from, to: to))
     }
     
 }
