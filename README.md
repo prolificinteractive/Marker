@@ -43,12 +43,17 @@ Marker abstracts the most common attributed text properties into a data object c
 `TextStyle` objects are a simple way of aggregating style infomation. For example:
 
 ```swift
-struct MyTextStyle: TextStyle {
+var headlineTextStyle: TextStyle {
     
     let font: UIFont = UIFont.systemFontOfSize(23)
     let emFont: UIFont = UIFont.italicSystemFontOfSize(23)
     let strongFont: UIFont = UIFont.boldSystemFontOfSize(23)
     let characterSpacing: CGFloat? = 2
+    
+    return TextStyle(font: regularFont,
+                     emFont: emFont,
+                     strongFont: strongFont,
+                     characterSpacing: characterSpacing)
     
 }
 ```
@@ -64,9 +69,7 @@ Marker has convenience extensions for setting `attributedText` on common UI elem
 To set text on these elements, use `setText:textSyle`:
 
 ```swift
-let myTextStyle = MyTextStyle()
-
-label.setText("Hello World", textStyle: myTextStyle)
+label.setText("Hello World", textStyle: headlineTextStyle)
 ```
 
 #### Markdown
@@ -79,9 +82,7 @@ Marker also supports setting text with common Markdown tags:
 To set Markdown text on these elements, use `setMarkdownText:textStyle:`
 
 ```swift
-let textStyle = MyTextStyle()
-
-textField.setMarkdownText("_Hello World_", textStyle: textStyle)
+textField.setMarkdownText("_Hello World_", textStyle: headlineTextStyle)
 ```
 
 ## Contributing to Marker
