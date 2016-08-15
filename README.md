@@ -66,10 +66,10 @@ Marker has convenience extensions for setting `attributedText` on common UI elem
 * `UITextField`
 * `UITextView`
 
-To set text on these elements, use `setText:textSyle`:
+To set text on these elements, use `setText(_:using:)` function.
 
 ```swift
-label.setText("Hello World", textStyle: headlineTextStyle)
+label.setText("Hello World", using: headlineTextStyle)
 ```
 
 #### Markdown
@@ -79,10 +79,10 @@ Marker also supports setting text with common Markdown tags:
 * Bold (`__` or `**`)
 * Italic (`_` or `*`)
 
-To set Markdown text on these elements, use `setMarkdownText:textStyle:`
+To set Markdown text on these elements, use `setMarkdownText(_:using:)` function.
 
 ```swift
-textField.setMarkdownText("_Hello World_", textStyle: headlineTextStyle)
+textField.setMarkdownText("_Hello World_", using: headlineTextStyle)
 ```
 
 ## Contributing to Marker
