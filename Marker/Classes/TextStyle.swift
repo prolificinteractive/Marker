@@ -66,7 +66,7 @@ public struct TextStyle {
         
         attributes[NSFontAttributeName] = font
         attributes[NSForegroundColorAttributeName] = textColor
-        attributes[NSKernAttributeName] = characterSpacing
+        attributes[NSKernAttributeName] = characterSpacing as NSObject?
         
         
         let paragraphStyle = NSMutableParagraphStyle()

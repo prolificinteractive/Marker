@@ -59,7 +59,7 @@ internal final class ViewController: UIViewController {
         registerForNotifications()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
             let navigationController = segue.destination as? UINavigationController,
             let themeSettingsViewController = navigationController.viewControllers.first as? ThemeSettingsViewController,

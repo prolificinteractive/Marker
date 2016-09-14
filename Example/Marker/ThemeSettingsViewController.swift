@@ -16,7 +16,7 @@ internal final class ThemeSettingsViewController: UIViewController {
     
     // MARK: - Private properties
 
-    private let fontNames = ["Helvetica Neue", "Avenir Next"]
+    fileprivate let fontNames = ["Helvetica Neue", "Avenir Next"]
 
     // MARK: - Instance functions
     
