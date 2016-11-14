@@ -31,7 +31,7 @@ public extension UITextView {
     func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
         do {
             let (parsedString, tags) = try MarkdownParser.parse(markdownText)
-            attributedText = attributedString(from: parsedString, with: tags, using: textStyle)
+            attributedText = attributedMarkdownString(from: parsedString, with: tags, using: textStyle)
         } catch {
             text = markdownText
         }
