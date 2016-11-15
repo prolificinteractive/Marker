@@ -34,7 +34,7 @@ internal func attributedMarkdownString(from parsedString: String, with tags: [Ma
         }
         
         if let font = font {
-            attributedString.addAttributes([NSFontAttributeName: font], range: parsedString.NSRangeFromRange(tag.range()))
+            attributedString.addAttributes([NSFontAttributeName: font], range: parsedString.range(from: tag.range()))
         }
     }
     
@@ -44,7 +44,7 @@ internal func attributedMarkdownString(from parsedString: String, with tags: [Ma
 // Source: http://stackoverflow.com/questions/25138339/nsrange-to-rangestring-index/30404532#30404532
 private extension String {
     
-    func NSRangeFromRange(_ range: Range<String.Index>) -> NSRange {
+    func range(from range: Range<String.Index>) -> NSRange {
         let from = String.UTF16View.Index(range.lowerBound, within: utf16)
         let to = String.UTF16View.Index(range.upperBound, within: utf16)
         
