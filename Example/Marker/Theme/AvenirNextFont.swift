@@ -18,15 +18,15 @@ internal struct AvenirNextFont: Font {
         return "Avenir Next"
     }
     
-    func regularFont(size: CGFloat) -> UIFont {
+    func regularFont(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "AvenirNext-Regular", size: size)!
     }
     
-    func boldFont(size: CGFloat) -> UIFont {
+    func boldFont(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "AvenirNext-Bold", size: size)!
     }
     
-    func italicFont(size: CGFloat) -> UIFont {
+    func italicFont(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "AvenirNext-Italic", size: size)!
     }
     

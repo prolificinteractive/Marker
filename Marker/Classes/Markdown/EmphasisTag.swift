@@ -16,17 +16,17 @@
  */
 internal enum EmphasisTag {
     
-    case AsteriskEm(Index)
-    case UnderscoreEm(Index)
-    case AsteriskStrong(Index)
-    case UnderscoreStrong(Index)
+    case asteriskEm(Index)
+    case underscoreEm(Index)
+    case asteriskStrong(Index)
+    case underscoreStrong(Index)
     
     /**
      *  Emphasis tag constants.
      */
     struct Constants {
-        static let EmTagLength = 1
-        static let StrongTagLength = 2
+        static let emTagLength = 1
+        static let strongTagLength = 2
     }
     
     /**
@@ -41,40 +41,41 @@ internal enum EmphasisTag {
          
          - returns: Array of emphasis tags.
          */
-        static func parseString(string: String) -> [EmphasisTag] {
+        static func parse(_ string: String) -> [EmphasisTag] {
             var emphasisTags: [EmphasisTag] = []
             
             var i = 0
-            var advanceBy = 0
+            var offset = 0
             var previousIndex = string.startIndex
             
             while i < string.characters.count {
-                let index = previousIndex.advancedBy(advanceBy)
+                let index = string.characters.index(previousIndex, offsetBy: offset)
                 
                 let character: Character? = string[index]
-                let precedingCharacter: Character? = (i > 0) ? string[index.predecessor()] : nil
-                let succedingCharacter: Character? = (i + 1 < string.characters.count) ? string[index.successor()] : nil
+                let precedingCharacter: Character? = (i > 0) ? string[string.characters.index(before: index)] : nil
+                let succeedingCharacter: Character? = (i + 1 < string.characters.count) ?
+                    string[string.characters.index(after: index)] : nil
                 
-                switch (precedingCharacter, character, succedingCharacter) {
-                case (.Some(" "), .Some("*"), .Some(" ")), (.Some(" "), .Some("_"), .Some(" ")):
-                    advanceBy = 1
-                case (_, .Some("*"), .Some("*")):
-                    emphasisTags.append(.AsteriskStrong(index))
-                    advanceBy = Constants.StrongTagLength
-                case (_, .Some("_"), .Some("_")):
-                    emphasisTags.append(.UnderscoreStrong(index))
-                    advanceBy = Constants.StrongTagLength
-                case (_, .Some("*"), _):
-                    emphasisTags.append(.AsteriskEm(index))
-                    advanceBy = Constants.EmTagLength
-                case (_, .Some("_"), _):
-                    emphasisTags.append(.UnderscoreEm(index))
-                    advanceBy = Constants.EmTagLength
+                switch (precedingCharacter, character, succeedingCharacter) {
+                case (.some(" "), .some("*"), .some(" ")), (.some(" "), .some("_"), .some(" ")):
+                    offset = 1
+                case (_, .some("*"), .some("*")):
+                    emphasisTags.append(.asteriskStrong(index))
+                    offset = Constants.strongTagLength
+                case (_, .some("_"), .some("_")):
+                    emphasisTags.append(.underscoreStrong(index))
+                    offset = Constants.strongTagLength
+                case (_, .some("*"), _):
+                    emphasisTags.append(.asteriskEm(index))
+                    offset = Constants.emTagLength
+                case (_, .some("_"), _):
+                    emphasisTags.append(.underscoreEm(index))
+                    offset = Constants.emTagLength
                 default:
-                    advanceBy = 1
+                    offset = 1
                 }
                 
-                i = i + advanceBy
+                i = i + offset
                 previousIndex = index
             }
             

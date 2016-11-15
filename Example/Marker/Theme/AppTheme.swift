@@ -11,7 +11,7 @@ import Foundation
 internal final class AppTheme {
     
     struct Constants {
-        static let FontThemeDidChangeNotification = "FontThemeDidChange"
+        static let fontThemeDidChangeNotification = "FontThemeDidChange"
     }
     
     // MARK: - Properties
@@ -20,7 +20,7 @@ internal final class AppTheme {
         didSet {
             fontTheme = MarkerExampleFontTheme(font: font)
             
-            NSNotificationCenter.defaultCenter().postNotificationName(Constants.FontThemeDidChangeNotification, object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.fontThemeDidChangeNotification), object: nil)
         }
     }
     private(set) var fontTheme: FontTheme

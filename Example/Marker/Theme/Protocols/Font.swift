@@ -12,8 +12,8 @@ internal protocol Font {
     
     var familyName: String { get }
     
-    func regularFont(size: CGFloat) -> UIFont
-    func boldFont(size: CGFloat) -> UIFont
-    func italicFont(size: CGFloat) -> UIFont
+    func regularFont(ofSize size: CGFloat) -> UIFont
+    func boldFont(ofSize size: CGFloat) -> UIFont
+    func italicFont(ofSize size: CGFloat) -> UIFont
     
 }

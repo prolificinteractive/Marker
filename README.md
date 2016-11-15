@@ -44,32 +44,33 @@ Marker abstracts the most common attributed text properties into a data object c
 
 ```swift
 var headlineTextStyle: TextStyle {
-    
+
     let font: UIFont = UIFont.systemFontOfSize(23)
     let emFont: UIFont = UIFont.italicSystemFontOfSize(23)
     let strongFont: UIFont = UIFont.boldSystemFontOfSize(23)
     let characterSpacing: CGFloat? = 2
-    
+
     return TextStyle(font: regularFont,
                      emFont: emFont,
                      strongFont: strongFont,
                      characterSpacing: characterSpacing)
-    
+
 }
 ```
 
 ### Setting Attributed Text
 
-Marker has convenience extensions for setting `attributedText` on common UI elements: 
+Marker has convenience extensions for setting `attributedText` on common UI elements:
 
+* `UIButton`
 * `UILabel`
 * `UITextField`
 * `UITextView`
 
-To set text on these elements, use `setText:textSyle`:
+To set text on these elements, use `setText(_:using:)` (or `setTitleText(_:using:)` in the case of `UIButton`) function.
 
 ```swift
-label.setText("Hello World", textStyle: headlineTextStyle)
+label.setText("Hello World", using: headlineTextStyle)
 ```
 
 #### Markdown
@@ -79,10 +80,10 @@ Marker also supports setting text with common Markdown tags:
 * Bold (`__` or `**`)
 * Italic (`_` or `*`)
 
-To set Markdown text on these elements, use `setMarkdownText:textStyle:`
+To set Markdown text on these elements, use `setMarkdownText(_:using:)` (or `setMarkdownTitleText(_:using:)` for `UIButton`) function.
 
 ```swift
-textField.setMarkdownText("_Hello World_", textStyle: headlineTextStyle)
+textField.setMarkdownText("_Hello World_", using: headlineTextStyle)
 ```
 
 ## Contributing to Marker

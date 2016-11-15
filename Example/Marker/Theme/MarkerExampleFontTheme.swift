@@ -20,9 +20,9 @@ internal struct MarkerExampleFontTheme: FontTheme {
     // MARK: FontTheme
     
     var headlineTextStyle: TextStyle {
-        let regularFont = font.regularFont(headlineFontSize)
-        let emFont = font.italicFont(headlineFontSize)
-        let strongFont = font.boldFont(headlineFontSize)
+        let regularFont = font.regularFont(ofSize: headlineFontSize)
+        let emFont = font.italicFont(ofSize: headlineFontSize)
+        let strongFont = font.boldFont(ofSize: headlineFontSize)
         let characterSpacing: CGFloat = 2
         
         return TextStyle(font: regularFont,
@@ -32,7 +32,7 @@ internal struct MarkerExampleFontTheme: FontTheme {
     }
     
     var titleTextStyle: TextStyle {
-        return TextStyle(font: font.boldFont(titleFontSize))
+        return TextStyle(font: font.boldFont(ofSize: titleFontSize))
     }
 
     var bodyTextStyle: TextStyle {

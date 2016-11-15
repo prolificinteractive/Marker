@@ -11,6 +11,14 @@ import UIKit
 
 internal final class ViewController: UIViewController {
     
+    // MARK: - Override properties
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    // MARK: - Instance properties
+    
     var theme: AppTheme!
     
     // MARK: - Private properties
@@ -39,7 +47,7 @@ internal final class ViewController: UIViewController {
     // MARK: - Init/Deinit
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Override functions
@@ -51,15 +59,11 @@ internal final class ViewController: UIViewController {
         registerForNotifications()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
-            let navigationController = segue.destinationViewController as? UINavigationController,
-            let themeSettingsViewController = navigationController.viewControllers.first as? ThemeSettingsViewController
-            where segue.identifier == "ThemeSettingsSegue" {
+            let navigationController = segue.destination as? UINavigationController,
+            let themeSettingsViewController = navigationController.viewControllers.first as? ThemeSettingsViewController,
+            segue.identifier == "ThemeSettingsSegue" {
                 themeSettingsViewController.theme = theme
         }
     }
@@ -67,22 +71,22 @@ internal final class ViewController: UIViewController {
     // MARK: - Private functions
     
     private func registerForNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(ViewController.updateViews),
-                                                         name: UIContentSizeCategoryDidChangeNotification,
-                                                         object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(ViewController.updateViews),
-                                                         name: AppTheme.Constants.FontThemeDidChangeNotification,
-                                                         object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ViewController.updateViews),
+                                               name: NSNotification.Name.UIContentSizeCategoryDidChange,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ViewController.updateViews),
+                                               name: NSNotification.Name(rawValue: AppTheme.Constants.fontThemeDidChangeNotification),
+                                               object: nil)
     }
     
     @objc private func updateViews() {
         let fontTheme = theme.fontTheme
         
-        label.setMarkdownText(labelText, textStyle:  fontTheme.headlineTextStyle)
-        textField.setText(textFieldText, textStyle: fontTheme.titleTextStyle)
-        textView.setText(textViewText, textStyle: fontTheme.bodyTextStyle)
+        label.setMarkdownText(labelText, using: fontTheme.headlineTextStyle)
+        textField.setText(textFieldText, using: fontTheme.titleTextStyle)
+        textView.setText(textViewText, using: fontTheme.bodyTextStyle)
     }
     
 }

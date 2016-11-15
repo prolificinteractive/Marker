@@ -20,14 +20,14 @@ internal struct MarkdownParser {
      
      - returns: Tuple containing string stripped of tag characters and an array of Markdown tags.
      */
-    static func parseString(string: String) throws -> (strippedString: String, tags: [MarkdownTag]) {
-        let tags = try MarkdownTag.Parser.parseString(string)
+    static func parse(_ string: String) throws -> (strippedString: String, tags: [MarkdownTag]) {
+        let tags = try MarkdownTag.Parser.parse(string)
         
         guard tags.count > 0 else {
             return (string, [])
         }
         
-        var strippedString = string.substringWithRange(string.startIndex..<tags[0].range().startIndex)
+        var strippedString = string.substring(with: string.startIndex..<tags[0].range().lowerBound)
         var strippedTags: [MarkdownTag] = []
         
         // Construct a new string without the markdown tags by using the original string and list of tags.
@@ -36,22 +36,25 @@ internal struct MarkdownParser {
             
             let openingIndex = strippedString.endIndex
             // Add the text that is in between the opening and closing tags to the new string.
-            strippedString += string.substringWithRange(tag.range().startIndex.advancedBy(tag.openingTagLength())..<tag.range().endIndex)
+            strippedString += string.substring(with:
+                string.characters.index(tag.range().lowerBound, offsetBy: tag.openingTagLength())..<tag.range().upperBound)
             let closingIndex = strippedString.endIndex
             
             // Create a tag that would apply to the new string.
-            let strippedTag = tag.tagWithRange(openingIndex..<closingIndex)
+            let strippedTag = tag.replacingRange(with: openingIndex..<closingIndex)
             strippedTags.append(strippedTag)
             
             // If there is text between the current tag and the next tag or the end of string, add it to the new string.
             var nextIndex: Index
             if i + 1 < tags.count {
                 let nextTag = tags[i + 1]
-                nextIndex = nextTag.range().startIndex
+                nextIndex = nextTag.range().lowerBound
             } else {
                 nextIndex = string.endIndex
             }
-            strippedString += string.substringWithRange(tag.range().endIndex.advancedBy(tag.closingTagLength())..<nextIndex)
+            
+            strippedString += string.substring(with:
+                string.characters.index(tag.range().upperBound, offsetBy: tag.closingTagLength())..<nextIndex)
         }
         
         return (strippedString, strippedTags)
