@@ -1,4 +1,4 @@
-# Marker
+![Marker](Images/Marker_Banner.jpg)
 
 [![Travis build status](https://img.shields.io/travis/prolificinteractive/Marker.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/Marker)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/Marker.svg?style=flat-square)](https://img.shields.io/cocoapods/v/Marker.svg)
