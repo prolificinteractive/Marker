@@ -14,12 +14,14 @@ import Foundation
 /// - lowercased: Transform given string into lowercased string.
 /// - uppercased: Transform given string into uppercased string.
 /// - capitalized: Transform given string into capitalized string.
+/// - custom: Transform given string using custom transform function.
 public enum TextTransform {
     
     case none
     case lowercased
     case uppercased
     case capitalized
+    case custom((String) -> String)
     
     /// Returns argument string with transformation applied
     ///
@@ -35,6 +37,8 @@ public enum TextTransform {
             return string.uppercased()
         case .capitalized:
             return string.capitalized
+        case .custom(let transform):
+            return transform(string)
         }
     }
     
