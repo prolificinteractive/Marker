@@ -17,7 +17,7 @@ public extension UIButton {
      - parameter textStyle: Text style object containing style information.
      */
     func setTitleText(_ text: String, using textStyle: TextStyle) {
-        setAttributedTitle(NSAttributedString(string: text, attributes: textStyle.attributes), for: .normal)
+        setAttributedTitle(NSAttributedString(string: text, textStyle: textStyle), for: .normal)
     }
     
     /**
@@ -38,4 +38,3 @@ public extension UIButton {
     }
     
 }
-

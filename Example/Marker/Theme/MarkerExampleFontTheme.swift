@@ -28,17 +28,19 @@ internal struct MarkerExampleFontTheme: FontTheme {
         return TextStyle(font: regularFont,
                          emFont: emFont,
                          strongFont: strongFont,
-                         characterSpacing: characterSpacing)
+                         characterSpacing: characterSpacing,
+                         textTransform: .uppercased)
     }
     
     var titleTextStyle: TextStyle {
-        return TextStyle(font: font.boldFont(ofSize: titleFontSize))
+        return TextStyle(font: font.boldFont(ofSize: titleFontSize), textTransform: .capitalized)
     }
 
     var bodyTextStyle: TextStyle {
         var bodyTextStyle = headlineTextStyle
         bodyTextStyle.characterSpacing = 0
         bodyTextStyle.paragraphSpacing = -3
+        bodyTextStyle.textTransform = .capitalized
         
         return bodyTextStyle
     }

@@ -17,7 +17,7 @@ public extension UILabel {
      - parameter textStyle: Text style object containing style information.
      */
     func setText(_ text: String, using textStyle: TextStyle) {
-        attributedText = NSAttributedString(string: text, attributes: textStyle.attributes)
+        attributedText = NSAttributedString(string: text, textStyle: textStyle)
     }
     
     /**
