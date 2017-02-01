@@ -1,5 +1,5 @@
 PODS:
-  - Marker (0.2.0)
+  - Marker (0.5.0)
 
 DEPENDENCIES:
   - Marker (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Marker: e8649f832e7e54c698a339c525ba3bb12961af41
+  Marker: c37ccbabbee7c0f6e185672da6696dfd0d25d819
 
 PODFILE CHECKSUM: 45266526d30db91cabc463fbb914a59f5bf60d94
 
-COCOAPODS: 1.1.0.rc.3
+COCOAPODS: 1.1.1

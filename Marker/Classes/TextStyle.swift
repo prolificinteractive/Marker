@@ -57,6 +57,9 @@ public struct TextStyle {
     /// Line break mode.
     public var lineBreakMode: NSLineBreakMode?
     
+    /// Text transform.
+    public var textTransform: TextTransform
+    
     // MARK: - Computed properties
     
     /// Text attribute dictionary representation of the receiver.
@@ -123,6 +126,7 @@ public struct TextStyle {
      - parameter paragraphSpacingBefore: Paragraph spacing before.
      - parameter textAlignment:          Text alignment.
      - parameter lineBreakMode:          Line break node.
+     - parameter textTransform:          Text transform option.
      
      - returns: An initialized text style object.
      */
@@ -138,7 +142,8 @@ public struct TextStyle {
                 paragraphSpacing: CGFloat? = nil,
                 paragraphSpacingBefore: CGFloat? = nil,
                 textAlignment: NSTextAlignment? = nil,
-                lineBreakMode: NSLineBreakMode? = nil) {
+                lineBreakMode: NSLineBreakMode? = nil,
+                textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
         self.strongFont = (strongFont == nil) ? font : strongFont!
@@ -152,6 +157,7 @@ public struct TextStyle {
         self.paragraphSpacingBefore = paragraphSpacingBefore
         self.textAlignment = textAlignment
         self.lineBreakMode = lineBreakMode
+        self.textTransform = textTransform
     }
     
 }

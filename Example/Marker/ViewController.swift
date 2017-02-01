@@ -27,19 +27,19 @@ internal final class ViewController: UIViewController {
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var textView: UITextView!
     
-    private let labelText = "__THE LIFE OF       PABLO__\n" +
-        "__THE LIFE OF   PABLO__\n" +
-        "**THE LIFE OF   PABLO**\n" +
-        "**THE LIFE OF   PABLO**\n\n" +
-        "_THE LIFE OF   PABLO_\n" +
-        "WHICH / ONE\n" +
-        "WHICH / ONE\n" +
-        "WHICH / ONE"
-    private let textFieldText = "Track List"
-    private let textViewText = "Waves\n" +
-        "Wolves\n" +
-        "Facts\n" +
-        "Fade\n" +
+    private let labelText = "__the life of       pablo__\n" +
+        "__the life of   pablo__\n" +
+        "**the life of   pablo**\n" +
+        "**the life of   pablo**\n\n" +
+        "_the life of   pablo_\n" +
+        "which / one\n" +
+        "which / one\n" +
+        "which / one"
+    private let textFieldText = "track list"
+    private let textViewText = "waves\n" +
+        "wolves\n" +
+        "facts\n" +
+        "fade\n" +
         ".\n" +
         ".\n" +
         ".\n"
