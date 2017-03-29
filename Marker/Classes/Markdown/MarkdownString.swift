@@ -32,7 +32,7 @@ internal func attributedMarkdownString(from parsedString: String, with tags: [Ma
             font = textStyle.emFont
         case .strong(_):
             font = textStyle.strongFont
-        case .strikeThough(_):
+        case .strikethrough(_):
             strikeThroughStyle = textStyle.strikeThroughStyle
         }
         

@@ -189,7 +189,7 @@ private extension MarkdownTag {
     
     func isStrikeThoughTag() -> Bool {
         switch self {
-        case .strikeThough(_):
+        case .strikethrough(_):
             return true
         default:
             return false
