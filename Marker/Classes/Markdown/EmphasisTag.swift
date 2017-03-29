@@ -28,7 +28,7 @@ internal enum EmphasisTag {
     struct Constants {
         static let emTagLength = 1
         static let strongTagLength = 2
-        static let tildeLength = 1
+        static let tildeLength = 2
     }
     
     /**
@@ -73,7 +73,7 @@ internal enum EmphasisTag {
                 case (_, .some("_"), _):
                     emphasisTags.append(.underscoreEm(index))
                     offset = Constants.emTagLength
-                case (_, .some("~"), _):
+                case (_, .some("~"), .some("~")):
                     emphasisTags.append(.tilde(index))
                     offset = Constants.tildeLength
                 default:
