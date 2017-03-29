@@ -85,7 +85,7 @@ internal final class ViewController: UIViewController {
         let fontTheme = theme.fontTheme
         
         label.setMarkdownText(labelText, using: fontTheme.headlineTextStyle)
-        textField.setText(textFieldText, using: fontTheme.titleTextStyle)
+        textField.setText(textFieldText, using: fontTheme.titleTextStyle.strikeThrough())
         textView.setText(textViewText, using: fontTheme.bodyTextStyle)
     }
     
