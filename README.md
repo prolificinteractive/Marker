@@ -40,6 +40,7 @@ Marker abstracts the most common attributed text properties into a data object c
 * Text alignment
 * Line break mode
 * Text transformation option
+* Strikethrough style
 
 `TextStyle` objects are a simple way of aggregating style infomation. For example:
 
@@ -50,11 +51,13 @@ var headlineTextStyle: TextStyle {
     let emFont: UIFont = UIFont.italicSystemFontOfSize(23)
     let strongFont: UIFont = UIFont.boldSystemFontOfSize(23)
     let characterSpacing: CGFloat? = 2
+    let strikethroughStyle: NSUnderlineStyle = .styleSingle
 
     return TextStyle(font: regularFont,
                      emFont: emFont,
                      strongFont: strongFont,
-                     characterSpacing: characterSpacing)
+                     characterSpacing: characterSpacing,
+                     strikethroughStyle: strikethroughStyle)
 
 }
 ```
