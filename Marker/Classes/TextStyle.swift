@@ -58,7 +58,7 @@ public struct TextStyle {
     public var lineBreakMode: NSLineBreakMode?
     
     /// Underline style for strike through.
-    public var underLineStyle: NSUnderlineStyle?
+    public var strikeThroughStyle: NSUnderlineStyle?
     
     /// Text transform.
     public var textTransform: TextTransform
@@ -69,7 +69,7 @@ public struct TextStyle {
     public var attributes: TextAttributes {
         var attributes: TextAttributes = [:]
         
-        
+
         attributes[NSFontAttributeName] = font
         attributes[NSForegroundColorAttributeName] = textColor
         attributes[NSKernAttributeName] = characterSpacing as NSObject?
@@ -103,10 +103,6 @@ public struct TextStyle {
         
         if let lineBreakMode = lineBreakMode {
             paragraphStyle.lineBreakMode = lineBreakMode
-        }
-        
-        if let underLineStyle = underLineStyle {
-            attributes[NSStrikethroughStyleAttributeName] = NSNumber(value: underLineStyle.rawValue)
         }
         
         attributes[NSParagraphStyleAttributeName] = paragraphStyle
@@ -149,6 +145,7 @@ public struct TextStyle {
                 paragraphSpacingBefore: CGFloat? = nil,
                 textAlignment: NSTextAlignment? = nil,
                 lineBreakMode: NSLineBreakMode? = nil,
+                strikeThroughStyle: NSUnderlineStyle? = nil,
                 textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
@@ -163,19 +160,20 @@ public struct TextStyle {
         self.paragraphSpacingBefore = paragraphSpacingBefore
         self.textAlignment = textAlignment
         self.lineBreakMode = lineBreakMode
+        self.strikeThroughStyle = strikeThroughStyle
         self.textTransform = textTransform
     }
 }
-
-extension TextStyle {
-    
-    /// Updates the text style strike through style and return the text style.
-    ///
-    /// - Parameter style: Underline style to set as the strike through style.
-    /// - Returns: Updated text style with a strike through.
-    public func strikeThrough(style: NSUnderlineStyle = .styleSingle) -> TextStyle {
-        var textStyle = self
-        textStyle.underLineStyle = style
-        return textStyle
-    }
-}
+//
+//extension TextStyle {
+//    
+//    /// Updates the text style strike through style and return the text style.
+//    ///
+//    /// - Parameter style: Underline style to set as the strike through style.
+//    /// - Returns: Updated text style with a strike through.
+//    public func strikeThrough(style: NSUnderlineStyle = .styleSingle) -> TextStyle {
+//        var textStyle = self
+//        textStyle.underlineStyle = style
+//        return textStyle
+//    }
+//}
