@@ -58,7 +58,7 @@ public struct TextStyle {
     public var lineBreakMode: NSLineBreakMode?
     
     /// Underline style for strike through.
-    public var strikeThroughStyle: NSUnderlineStyle?
+    public var strikethroughStyle: NSUnderlineStyle?
     
     /// Text transform.
     public var textTransform: TextTransform
@@ -145,7 +145,7 @@ public struct TextStyle {
                 paragraphSpacingBefore: CGFloat? = nil,
                 textAlignment: NSTextAlignment? = nil,
                 lineBreakMode: NSLineBreakMode? = nil,
-                strikeThroughStyle: NSUnderlineStyle? = nil,
+                strikethroughStyle: NSUnderlineStyle? = nil,
                 textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
@@ -160,7 +160,7 @@ public struct TextStyle {
         self.paragraphSpacingBefore = paragraphSpacingBefore
         self.textAlignment = textAlignment
         self.lineBreakMode = lineBreakMode
-        self.strikeThroughStyle = strikeThroughStyle
+        self.strikethroughStyle = strikethroughStyle
         self.textTransform = textTransform
     }
 }
