@@ -164,16 +164,3 @@ public struct TextStyle {
         self.textTransform = textTransform
     }
 }
-//
-//extension TextStyle {
-//    
-//    /// Updates the text style strike through style and return the text style.
-//    ///
-//    /// - Parameter style: Underline style to set as the strike through style.
-//    /// - Returns: Updated text style with a strike through.
-//    public func strikeThrough(style: NSUnderlineStyle = .styleSingle) -> TextStyle {
-//        var textStyle = self
-//        textStyle.underlineStyle = style
-//        return textStyle
-//    }
-//}
