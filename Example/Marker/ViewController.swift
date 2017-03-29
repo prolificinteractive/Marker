@@ -34,7 +34,7 @@ internal final class ViewController: UIViewController {
         "_the life of   pablo_\n" +
         "which / one\n" +
         "which / one\n" +
-        "which / one"
+        "~which / one~"
     private let textFieldText = "track list"
     private let textViewText = "waves\n" +
         "wolves\n" +
@@ -85,7 +85,7 @@ internal final class ViewController: UIViewController {
         let fontTheme = theme.fontTheme
         
         label.setMarkdownText(labelText, using: fontTheme.headlineTextStyle)
-        textField.setText(textFieldText, using: fontTheme.titleTextStyle.strikeThrough())
+        textField.setText(textFieldText, using: fontTheme.titleTextStyle)
         textView.setText(textViewText, using: fontTheme.bodyTextStyle)
     }
     
