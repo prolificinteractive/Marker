@@ -57,6 +57,9 @@ public struct TextStyle {
     /// Line break mode.
     public var lineBreakMode: NSLineBreakMode?
     
+    /// Underline style for strike through.
+    public var underLineStyle: NSUnderlineStyle?
+    
     /// Text transform.
     public var textTransform: TextTransform
     
@@ -102,8 +105,11 @@ public struct TextStyle {
             paragraphStyle.lineBreakMode = lineBreakMode
         }
         
-        attributes[NSParagraphStyleAttributeName] = paragraphStyle
+        if let underLineStyle = underLineStyle {
+            attributes[NSStrikethroughStyleAttributeName] = NSNumber(value: underLineStyle.rawValue)
+        }
         
+        attributes[NSParagraphStyleAttributeName] = paragraphStyle
         
         return attributes
     }
@@ -159,5 +165,17 @@ public struct TextStyle {
         self.lineBreakMode = lineBreakMode
         self.textTransform = textTransform
     }
+}
+
+extension TextStyle {
     
+    /// Updates the text style strike through style and return the text style.
+    ///
+    /// - Parameter style: Underline style to set as the strike through style.
+    /// - Returns: Updated text style with a strike through.
+    public func strikeThrough(style: NSUnderlineStyle = .styleSingle) -> TextStyle {
+        var textStyle = self
+        textStyle.underLineStyle = style
+        return textStyle
+    }
 }
