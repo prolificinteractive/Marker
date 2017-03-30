@@ -9,7 +9,7 @@
 import UIKit
 
 /// Text attributes.
-public typealias TextAttributes = [String: NSObject]
+public typealias TextAttributes = [String: Any]
 
 /**
  *  Encapsulates style information to be applied when displaying text.
@@ -57,8 +57,11 @@ public struct TextStyle {
     /// Line break mode.
     public var lineBreakMode: NSLineBreakMode?
     
-    /// Underline style for strike through.
+    /// Underline style for strikethrough text.
     public var strikethroughStyle: NSUnderlineStyle?
+    
+    /// Stroke color for strikethough text.
+    public var strikethroughColor: UIColor?
     
     /// Text transform.
     public var textTransform: TextTransform
@@ -66,6 +69,7 @@ public struct TextStyle {
     // MARK: - Computed properties
     
     /// Text attribute dictionary representation of the receiver.
+    /// NOTE: This variable does not include attributes that only apply to ranges such as `emFont`, `strikethroughStyle`, etc.
     public var attributes: TextAttributes {
         var attributes: TextAttributes = [:]
         
@@ -128,6 +132,8 @@ public struct TextStyle {
      - parameter paragraphSpacingBefore: Paragraph spacing before.
      - parameter textAlignment:          Text alignment.
      - parameter lineBreakMode:          Line break node.
+     - parameter strikethroughStyle:     Strikethrough style.
+     - parameter strikethroughColor:     Strikethrough color.
      - parameter textTransform:          Text transform option.
      
      - returns: An initialized text style object.
@@ -146,6 +152,7 @@ public struct TextStyle {
                 textAlignment: NSTextAlignment? = nil,
                 lineBreakMode: NSLineBreakMode? = nil,
                 strikethroughStyle: NSUnderlineStyle? = nil,
+                strikethroughColor: UIColor? = nil,
                 textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
@@ -161,6 +168,7 @@ public struct TextStyle {
         self.textAlignment = textAlignment
         self.lineBreakMode = lineBreakMode
         self.strikethroughStyle = strikethroughStyle
+        self.strikethroughColor = strikethroughColor
         self.textTransform = textTransform
     }
 }

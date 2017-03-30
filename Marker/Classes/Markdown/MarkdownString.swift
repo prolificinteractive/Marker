@@ -25,7 +25,7 @@ internal func attributedMarkdownString(from parsedString: String, with tags: [Ma
     
     for tag in tags {
         var font: UIFont? = nil
-        var strikeThroughStyle: NSUnderlineStyle? = nil
+        var strikethroughStyle: NSUnderlineStyle? = nil
         
         switch tag {
         case .em(_):
@@ -33,16 +33,21 @@ internal func attributedMarkdownString(from parsedString: String, with tags: [Ma
         case .strong(_):
             font = textStyle.strongFont
         case .strikethrough(_):
-            strikeThroughStyle = textStyle.strikethroughStyle
+            strikethroughStyle = textStyle.strikethroughStyle
         }
         
         if let font = font {
             attributedString.addAttributes([NSFontAttributeName: font], range: parsedString.range(from: tag.range()))
         }
         
-        if let strikeThroughStyle = strikeThroughStyle {
-            attributedString.addAttributes([NSStrikethroughStyleAttributeName: NSNumber(value: strikeThroughStyle.rawValue)],
+        if let strikethroughStyle = strikethroughStyle {
+            attributedString.addAttributes([NSStrikethroughStyleAttributeName: strikethroughStyle.rawValue],
                                            range: parsedString.range(from: tag.range()))
+            
+            if let strikethroughColor = textStyle.strikethroughColor {
+                attributedString.addAttributes([NSStrikethroughColorAttributeName: strikethroughColor],
+                                               range: parsedString.range(from: tag.range()))
+            }
         }
     }
     

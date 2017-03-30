@@ -39,10 +39,11 @@ Marker abstracts the most common attributed text properties into a data object c
 * Paragraph spacing before
 * Text alignment
 * Line break mode
-* Text transformation option
 * Strikethrough style
+* Strikethrough color
+* Text transformation option
 
-`TextStyle` objects are a simple way of aggregating style infomation. For example:
+`TextStyle` objects are a simple way of aggregating style information. For example:
 
 ```swift
 var headlineTextStyle: TextStyle {
