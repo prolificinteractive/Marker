@@ -18,6 +18,7 @@ internal enum MarkdownTag {
     
     case em(Range<Index>)
     case strong(Range<Index>)
+    case strikethrough(Range<Index>)
     
     /**
      Parser error.
@@ -72,6 +73,8 @@ internal enum MarkdownTag {
                     tags.append(.strong(openingIndex..<closingIndex))
                 case let (.underscoreStrong(openingIndex), .underscoreStrong(closingIndex)):
                     tags.append(.strong(openingIndex..<closingIndex))
+                case let (.tildeStrikethrough(openingIndex), .tildeStrikethrough(closingIndex)):
+                    tags.append(.strikethrough(openingIndex..<closingIndex))
                 default:
                     throw ParserError.tagMismatch
                 }
@@ -98,6 +101,8 @@ internal enum MarkdownTag {
             return .em(range)
         case .strong(_):
             return .strong(range)
+        case .strikethrough(_):
+            return .strikethrough(range)
         }
     }
     
@@ -111,6 +116,8 @@ internal enum MarkdownTag {
         case .em(let range):
             return range
         case .strong(let range):
+            return range
+        case .strikethrough(let range):
             return range
         }
     }
@@ -126,6 +133,8 @@ internal enum MarkdownTag {
             return EmphasisTag.Constants.emTagLength
         case .strong(_):
             return EmphasisTag.Constants.strongTagLength
+        case .strikethrough(_):
+            return EmphasisTag.Constants.strikethroughTagLength
         }
     }
     
@@ -140,6 +149,8 @@ internal enum MarkdownTag {
             return EmphasisTag.Constants.emTagLength
         case .strong(_):
             return EmphasisTag.Constants.strongTagLength
+        case .strikethrough(_):
+            return EmphasisTag.Constants.strikethroughTagLength
         }
     }
     

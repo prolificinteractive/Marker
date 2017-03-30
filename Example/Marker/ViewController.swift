@@ -34,7 +34,7 @@ internal final class ViewController: UIViewController {
         "_the life of   pablo_\n" +
         "which / one\n" +
         "which / one\n" +
-        "which / one"
+        "~~which / one~~"
     private let textFieldText = "track list"
     private let textViewText = "waves\n" +
         "wolves\n" +

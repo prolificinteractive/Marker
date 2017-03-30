@@ -20,6 +20,7 @@ internal enum EmphasisTag {
     case underscoreEm(Index)
     case asteriskStrong(Index)
     case underscoreStrong(Index)
+    case tildeStrikethrough(Index)
     
     /**
      *  Emphasis tag constants.
@@ -27,6 +28,7 @@ internal enum EmphasisTag {
     struct Constants {
         static let emTagLength = 1
         static let strongTagLength = 2
+        static let strikethroughTagLength = 2
     }
     
     /**
@@ -71,6 +73,9 @@ internal enum EmphasisTag {
                 case (_, .some("_"), _):
                     emphasisTags.append(.underscoreEm(index))
                     offset = Constants.emTagLength
+                case (_, .some("~"), .some("~")):
+                    emphasisTags.append(.tildeStrikethrough(index))
+                    offset = Constants.strikethroughTagLength
                 default:
                     offset = 1
                 }

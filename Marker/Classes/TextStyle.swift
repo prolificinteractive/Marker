@@ -57,6 +57,9 @@ public struct TextStyle {
     /// Line break mode.
     public var lineBreakMode: NSLineBreakMode?
     
+    /// Underline style for strike through.
+    public var strikethroughStyle: NSUnderlineStyle?
+    
     /// Text transform.
     public var textTransform: TextTransform
     
@@ -66,7 +69,7 @@ public struct TextStyle {
     public var attributes: TextAttributes {
         var attributes: TextAttributes = [:]
         
-        
+
         attributes[NSFontAttributeName] = font
         attributes[NSForegroundColorAttributeName] = textColor
         attributes[NSKernAttributeName] = characterSpacing as NSObject?
@@ -103,7 +106,6 @@ public struct TextStyle {
         }
         
         attributes[NSParagraphStyleAttributeName] = paragraphStyle
-        
         
         return attributes
     }
@@ -143,6 +145,7 @@ public struct TextStyle {
                 paragraphSpacingBefore: CGFloat? = nil,
                 textAlignment: NSTextAlignment? = nil,
                 lineBreakMode: NSLineBreakMode? = nil,
+                strikethroughStyle: NSUnderlineStyle? = nil,
                 textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
@@ -157,7 +160,7 @@ public struct TextStyle {
         self.paragraphSpacingBefore = paragraphSpacingBefore
         self.textAlignment = textAlignment
         self.lineBreakMode = lineBreakMode
+        self.strikethroughStyle = strikethroughStyle
         self.textTransform = textTransform
     }
-    
 }
