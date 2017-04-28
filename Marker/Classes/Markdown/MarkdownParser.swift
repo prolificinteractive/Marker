@@ -21,7 +21,7 @@ internal struct MarkdownParser {
      - returns: Tuple containing string stripped of tag characters and an array of Markdown tags.
      */
     static func parse(_ string: String) throws -> (strippedString: String, tags: [MarkdownTag]) {
-        let tags = try MarkdownTag.Parser.parse(string)
+        let tags = try MarkdownTagParser.parse(string)
         
         guard tags.count > 0 else {
             return (string, [])
