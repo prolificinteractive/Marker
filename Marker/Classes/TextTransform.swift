@@ -27,7 +27,7 @@ public enum TextTransform {
     ///
     /// - Parameter string: String to be transformed.
     /// - Returns: Transformed string.
-    internal func apply(to string: String) -> String {
+    internal func applied(to string: String) -> String {
         switch self {
         case .none:
             return string
