@@ -16,8 +16,8 @@ internal struct MarkdownTagParser {
     /**
      Parser error.
      
-     - TagMismatch:  Opening tag doesn't match closing tag.
-     - UnclosedTags: A tag was left unclosed.
+     - tagMismatch:  Opening tag doesn't match closing tag.
+     - unclosedTags: A tag was left unclosed.
      */
     enum ParserError: Error {
         case tagMismatch
@@ -34,42 +34,46 @@ internal struct MarkdownTagParser {
      - returns: Array of Markdown tags.
      */
     static func parse(_ string: String) throws -> [MarkdownTag] {
-        let emphasisTags = try parseEmphasisTags(string)
-        return emphasisTags
-    }
-    
-    // MARK: - Private functions
-    
-    private static func parseEmphasisTags(_ string: String) throws -> [MarkdownTag] {
-        let emphasisTags = EmphasisTag.Parser.parse(string)
+        guard
+            let underscoreEmSymbol = Symbol(rawValue: "_"),
+            let asteriskEmSymbol = Symbol(rawValue: "*"),
+            let underscoreStrongSymbol = Symbol(rawValue: "__"),
+            let asteriskStrongSymbol = Symbol(rawValue: "**"),
+            let tildeStrikethroughSymbol = Symbol(rawValue: "~~") else {
+                return []
+        }
         
-        guard emphasisTags.count % 2 == 0 else {
+        let symbols = [underscoreEmSymbol,
+                       asteriskEmSymbol,
+                       underscoreStrongSymbol,
+                       asteriskStrongSymbol,
+                       tildeStrikethroughSymbol]
+        
+        let parser = TagParser(symbols: symbols)
+        let tags = parser.parse(string)
+        
+        guard tags.count % 2 == 0 else {
             throw ParserError.unclosedTags
         }
         
-        var tags: [MarkdownTag] = []
-        for i in stride(from: 0, to: emphasisTags.count, by: 2) {
-            let openingTag = emphasisTags[i]
-            let closingTag = emphasisTags[i+1]
+        var markdownTags: [MarkdownTag] = []
+        for i in stride(from: 0, to: tags.count, by: 2) {
+            let openingTag = tags[i]
+            let closingTag = tags[i+1]
             
-            switch (openingTag, closingTag) {
-            case let (.asteriskEm(openingIndex), .asteriskEm(closingIndex)):
-                tags.append(.em(openingIndex..<closingIndex))
-            case let (.underscoreEm(openingIndex), .underscoreEm(closingIndex)):
-                tags.append(.em(openingIndex..<closingIndex))
-            case let (.asteriskStrong(openingIndex), .asteriskStrong(closingIndex)):
-                tags.append(.strong(openingIndex..<closingIndex))
-            case let (.underscoreStrong(openingIndex), .underscoreStrong(closingIndex)):
-                tags.append(.strong(openingIndex..<closingIndex))
-            case let (.tildeStrikethrough(openingIndex), .tildeStrikethrough(closingIndex)):
-                tags.append(.strikethrough(openingIndex..<closingIndex))
+            switch (openingTag.symbol, closingTag.symbol) {
+            case (underscoreEmSymbol, underscoreEmSymbol), (asteriskEmSymbol, asteriskEmSymbol):
+                markdownTags.append(.em(openingTag.index..<closingTag.index))
+            case (underscoreStrongSymbol, underscoreStrongSymbol), (asteriskStrongSymbol, asteriskStrongSymbol):
+                markdownTags.append(.strong(openingTag.index..<closingTag.index))
+            case (tildeStrikethroughSymbol, tildeStrikethroughSymbol):
+                markdownTags.append(.strikethrough(openingTag.index..<closingTag.index))
             default:
                 throw ParserError.tagMismatch
             }
-            
         }
         
-        return tags
+        return markdownTags
     }
     
 }

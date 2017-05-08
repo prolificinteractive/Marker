@@ -23,15 +23,15 @@ public extension UITextView {
     /**
      Sets the text view text to an attributed string created from the specified string and text style.
      This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
-     Refer to MarkerdownParser.Tag for a list of supported Markdown tags.
+     Refer to MarkerdownElement for a list of supported Markdown tags.
      
      - parameter markdownText: The Markdown text to be displayed in the text view.
      - parameter textStyle:    Text style object containing style information.
      */
     func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
         do {
-            let (parsedString, tags) = try MarkdownParser.parse(markdownText)
-            attributedText = attributedMarkdownString(from: parsedString, with: tags, using: textStyle)
+            let (parsedString, elements) = try MarkdownParser.parse(markdownText)
+            attributedText = attributedMarkdownString(from: parsedString, with: elements, using: textStyle)
         } catch {
             text = markdownText
         }
