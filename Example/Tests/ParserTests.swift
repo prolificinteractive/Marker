@@ -141,13 +141,13 @@ class ParserTests: XCTestCase {
         do {
             let _ = try MarkdownParser.parse("This _won't__ work because the tags don't match.")
         } catch {
-            XCTAssert(error as! MarkdownTagParser.ParserError == MarkdownTagParser.ParserError.tagMismatch)
+            XCTAssert(error as! ElementParser.ParserError == ElementParser.ParserError.tagMismatch)
         }
         
         do {
             let _ = try MarkdownParser.parse("Neither **should* this.")
         } catch {
-            XCTAssert(error as! MarkdownTagParser.ParserError == MarkdownTagParser.ParserError.tagMismatch)
+            XCTAssert(error as! ElementParser.ParserError == ElementParser.ParserError.tagMismatch)
         }
     }
     
@@ -155,13 +155,13 @@ class ParserTests: XCTestCase {
         do {
             let _ = try MarkdownParser.parse("Please *don't _do_ this.")
         } catch {
-            XCTAssert(error as! MarkdownTagParser.ParserError == MarkdownTagParser.ParserError.unclosedTags)
+            XCTAssert(error as! ElementParser.ParserError == ElementParser.ParserError.unclosedTags)
         }
         
         do {
             let _ = try MarkdownParser.parse("Finish this __sentenc")
         } catch {
-            XCTAssert(error as! MarkdownTagParser.ParserError == MarkdownTagParser.ParserError.unclosedTags)
+            XCTAssert(error as! ElementParser.ParserError == ElementParser.ParserError.unclosedTags)
         }
     }
     

@@ -6,58 +6,54 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-/**
- *  Simple bare-bones markdown parser.
- */
+/// Simple bare-bones markdown parser.
 internal struct MarkdownParser {
-        
+    
+    /// Parser error.
+    ///
+    /// - tagMismatch: Opening tag doesn't match closing tag.
+    /// - unclosedTags: A tag was left unclosed.
+    enum ParserError: Error {
+        case invalidTagSymbol
+    }
+    
     // MARK: - Static functions
     
-    /**
-     Parses specified string and returns a tuple containing string stripped of tag characters and an array of Markdown tags.
-     
-     - parameter string: String to be parsed.
-     
-     - returns: Tuple containing string stripped of tag characters and an array of Markdown elements.
-     */
+    /// Parses specified string and returns a tuple containing string stripped of tag characters and an array of Markdown elements.
+    ///
+    /// - Parameter string: String to be parsed.
+    /// - Returns: Tuple containing string stripped of tag characters and an array of Markdown elements.
+    /// - Throws: Parser error.
     static func parse(_ string: String) throws -> (strippedString: String, elements: [MarkdownElement]) {
-        let tags = try MarkdownTagParser.parse(string)
-        
-        guard tags.count > 0 else {
-            return (string, [])
+        guard
+            let underscoreEmSymbol = Symbol(rawValue: "_"),
+            let asteriskEmSymbol = Symbol(rawValue: "*"),
+            let underscoreStrongSymbol = Symbol(rawValue: "__"),
+            let asteriskStrongSymbol = Symbol(rawValue: "**"),
+            let tildeStrikethroughSymbol = Symbol(rawValue: "~~") else {
+                return (string, [])
         }
         
-        var strippedString = string.substring(with: string.startIndex..<tags[0].range.lowerBound)
-        var elements: [MarkdownElement] = []
-        
-        // Construct a new string without the markdown tags by using the original string and list of tags.
-        for i in 0..<tags.count {
-            let tag = tags[i]
-            
-            let openingIndex = strippedString.endIndex
-            // Add the text that is in between the opening and closing tags to the new string.
-            strippedString += string.substring(with:
-                string.characters.index(tag.range.lowerBound, offsetBy: tag.openingTagLength())..<tag.range.upperBound)
-            let closingIndex = strippedString.endIndex
-            
-            // Create a tag that would apply to the new string.
-            let element = tag.element(with: openingIndex..<closingIndex)
-            elements.append(element)
-            
-            // If there is text between the current tag and the next tag or the end of string, add it to the new string.
-            var nextIndex: Index
-            if i + 1 < tags.count {
-                let nextTag = tags[i + 1]
-                nextIndex = nextTag.range.lowerBound
-            } else {
-                nextIndex = string.endIndex
+        func transformToMarkdownElement(_ element: Element) throws -> MarkdownElement {
+            switch element.symbol {
+            case underscoreEmSymbol, asteriskEmSymbol:
+                return .em(element.range)
+            case underscoreStrongSymbol, asteriskStrongSymbol:
+                return .strong(element.range)
+            case tildeStrikethroughSymbol:
+                return .strikethrough(element.range)
+            default:
+                throw ParserError.invalidTagSymbol
             }
-            
-            strippedString += string.substring(with:
-                string.characters.index(tag.range.upperBound, offsetBy: tag.closingTagLength())..<nextIndex)
         }
         
-        return (strippedString, elements)
+        let (strippedString, elements) = try ElementParser.parse(string,
+                                                                 for: [underscoreEmSymbol,
+                                                                       asteriskEmSymbol,
+                                                                       underscoreStrongSymbol,
+                                                                       asteriskStrongSymbol,
+                                                                       tildeStrikethroughSymbol])
+        return try (strippedString, elements.map(transformToMarkdownElement))
     }
     
 }
