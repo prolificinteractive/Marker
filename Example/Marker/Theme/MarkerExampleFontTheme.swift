@@ -10,9 +10,9 @@ import UIKit
 import Marker
 
 internal struct MarkerExampleFontTheme: FontTheme {
-    
+
     // MARK: - Properties
-    
+
     let font: Font
     
     // MARK: - Protocol conformance
@@ -39,7 +39,7 @@ internal struct MarkerExampleFontTheme: FontTheme {
     }
 
     var bodyTextStyle: TextStyle {
-        var bodyTextStyle = headlineTextStyle
+        let bodyTextStyle = headlineTextStyle
         bodyTextStyle.characterSpacing = 0
         bodyTextStyle.paragraphSpacing = -3
         bodyTextStyle.textTransform = .capitalized

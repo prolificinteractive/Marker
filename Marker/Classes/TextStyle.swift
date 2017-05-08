@@ -14,7 +14,7 @@ public typealias TextAttributes = [String: Any]
 /**
  *  Encapsulates style information to be applied when displaying text.
  */
-public struct TextStyle {
+public final class TextStyle: NSObject {
     
     // MARK: - Properties
 
