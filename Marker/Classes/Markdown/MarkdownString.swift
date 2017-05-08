@@ -12,22 +12,22 @@ import Foundation
  Returns formatted Markdown text as an attributed string.
  
  - parameter parsedString: String stripped of markup.
- - parameter tags:         Mark up tags.
+ - parameter elements:     Markdown elements.
  - parameter textStyle:    Text style object containing markup font.
  
  - returns: Formatted markdown text.
  */
-internal func attributedMarkdownString(from parsedString: String, with tags: [MarkdownTag], using textStyle: TextStyle) -> NSAttributedString {
+internal func attributedMarkdownString(from parsedString: String, with elements: [MarkdownElement], using textStyle: TextStyle) -> NSAttributedString {
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     
     attributedString.addAttributes(textStyle.attributes,
                                    range: NSRange(location: 0, length: parsedString.characters.count))
     
-    for tag in tags {
+    for element in elements {
         var font: UIFont? = nil
         var strikethroughStyle: NSUnderlineStyle? = nil
         
-        switch tag {
+        switch element {
         case .em(_):
             font = textStyle.emFont
         case .strong(_):
@@ -37,16 +37,16 @@ internal func attributedMarkdownString(from parsedString: String, with tags: [Ma
         }
         
         if let font = font {
-            attributedString.addAttributes([NSFontAttributeName: font], range: parsedString.range(from: tag.range()))
+            attributedString.addAttributes([NSFontAttributeName: font], range: parsedString.range(from: element.range))
         }
         
         if let strikethroughStyle = strikethroughStyle {
             attributedString.addAttributes([NSStrikethroughStyleAttributeName: strikethroughStyle.rawValue],
-                                           range: parsedString.range(from: tag.range()))
+                                           range: parsedString.range(from: element.range))
             
             if let strikethroughColor = textStyle.strikethroughColor {
                 attributedString.addAttributes([NSStrikethroughColorAttributeName: strikethroughColor],
-                                               range: parsedString.range(from: tag.range()))
+                                               range: parsedString.range(from: element.range))
             }
         }
     }

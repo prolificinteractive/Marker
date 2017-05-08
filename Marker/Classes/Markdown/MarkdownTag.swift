@@ -20,17 +20,26 @@ internal enum MarkdownTag {
     case em(Range<Index>)
     case strong(Range<Index>)
     case strikethrough(Range<Index>)
-        
+    
+    /// Range of the tag.
+    var range: Range<Index> {
+        switch self {
+        case .em(let range):
+            return range
+        case .strong(let range):
+            return range
+        case .strikethrough(let range):
+            return range
+        }
+    }
+    
     // MARK: - Instance functions
     
-    /**
-     Creates and returns a new MarkdownTag enum of the same type with specified range.
-     
-     - parameter range: New range.
-     
-     - returns: New MarkdownTag enum of the same type with specified range.
-     */
-    func replacingRange(with range: Range<Index>) -> MarkdownTag {
+    /// Returns a corresponding Markdown element with given range.
+    ///
+    /// - Parameter range: Range.
+    /// - Returns: Markdown element.
+    func element(with range: Range<Index>) -> MarkdownElement {
         switch self {
         case .em(_):
             return .em(range)
@@ -42,22 +51,6 @@ internal enum MarkdownTag {
     }
     
     /**
-     Returns range that the receiver applies to.
-     
-     - returns: Range that the receiver applies to.
-     */
-    func range() -> Range<Index> {
-        switch self {
-        case .em(let range):
-            return range
-        case .strong(let range):
-            return range
-        case .strikethrough(let range):
-            return range
-        }
-    }
-    
-    /**
      Returns length of the opening tag characters.
      
      - returns: Length of the opening tag characters.
@@ -65,11 +58,11 @@ internal enum MarkdownTag {
     func openingTagLength() -> Int {
         switch self {
         case .em(_):
-            return EmphasisTag.Constants.emTagLength
+            return 1
         case .strong(_):
-            return EmphasisTag.Constants.strongTagLength
+            return 2
         case .strikethrough(_):
-            return EmphasisTag.Constants.strikethroughTagLength
+            return 2
         }
     }
     
@@ -81,11 +74,11 @@ internal enum MarkdownTag {
     func closingTagLength() -> Int {
         switch self {
         case .em(_):
-            return EmphasisTag.Constants.emTagLength
+            return 1
         case .strong(_):
-            return EmphasisTag.Constants.strongTagLength
+            return 2
         case .strikethrough(_):
-            return EmphasisTag.Constants.strikethroughTagLength
+            return 2
         }
     }
     
