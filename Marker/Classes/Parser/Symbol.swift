@@ -37,6 +37,14 @@ internal struct Symbol: RawRepresentable, Equatable {
         self.rawValue = rawValue
     }
     
+    /// Creates a new instance with specified character.
+    ///
+    /// - Parameter character: `Character` to be used as `rawValue`.
+    /// - Returns: A new `Symbol` instance.
+    init(character: Character) {
+        self.rawValue = String(character)
+    }
+    
     // MARK: - Instance functions
 
     /// Returns a boolean indicating whether the symbol matches given characters.

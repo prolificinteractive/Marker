@@ -8,22 +8,23 @@
 
 import Foundation
 
-/**
- Returns formatted Markdown text as an attributed string.
- 
- - parameter parsedString: String stripped of markup.
- - parameter elements:     Markdown elements.
- - parameter textStyle:    Text style object containing markup font.
- 
- - returns: Formatted markdown text.
- */
-internal func attributedMarkdownString(from parsedString: String, with elements: [MarkdownElement], using textStyle: TextStyle) -> NSAttributedString {
-    let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
+/// Returns formatted Markdown text as an attributed string.
+///
+/// - Parameters:
+///   - markdownText: String with Markdown tags.
+///   - textStyle: Text style object containing style information.
+/// - Returns: Formatted Markdown text.
+internal func attributedMarkdownString(from markdownText: String,
+                                       using textStyle: TextStyle) -> NSAttributedString {
+    guard let (parsedString, elements) = try? MarkdownParser.parse(markdownText) else {
+        return NSAttributedString(string: markdownText, textStyle: textStyle)
+    }
     
+    let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,
                                    range: NSRange(location: 0, length: parsedString.characters.count))
     
-    for element in elements {
+    elements.forEach { (element) in
         var font: UIFont? = nil
         var strikethroughStyle: NSUnderlineStyle? = nil
         
@@ -52,16 +53,4 @@ internal func attributedMarkdownString(from parsedString: String, with elements:
     }
     
     return attributedString
-}
-
-// Source: http://stackoverflow.com/questions/25138339/nsrange-to-rangestring-index/30404532#30404532
-private extension String {
-    
-    func range(from range: Range<String.Index>) -> NSRange {
-        let from = String.UTF16View.Index(range.lowerBound, within: utf16)
-        let to = String.UTF16View.Index(range.upperBound, within: utf16)
-        
-        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from), length: utf16.distance(from: from, to: to))
-    }
-    
 }

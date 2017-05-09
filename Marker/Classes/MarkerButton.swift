@@ -16,8 +16,8 @@ public extension UIButton {
      - parameter text:      The text to be displayed in the label.
      - parameter textStyle: Text style object containing style information.
      */
-    func setTitleText(_ text: String, using textStyle: TextStyle) {
-        setAttributedTitle(NSAttributedString(string: text, textStyle: textStyle), for: .normal)
+    func setTitleText(_ text: String, using textStyle: TextStyle, customMarkup markups: Markup = [:]) {
+        setAttributedTitle(attributedMarkupString(from: text, using: textStyle, customMarkup: markups), for: .normal)
     }
     
     /**
@@ -29,12 +29,7 @@ public extension UIButton {
      - parameter textStyle:    Text style object containing style information.
      */
     func setMarkdownTitleText(_ markdownText: String, using textStyle: TextStyle) {
-        do {
-            let (parsedString, tags) = try MarkdownParser.parse(markdownText)
-            setAttributedTitle(attributedMarkdownString(from: parsedString, with: tags, using: textStyle), for: .normal)
-        } catch {
-            setTitle(markdownText, for: .normal)
-        }
+        setAttributedTitle(attributedMarkdownString(from: markdownText, using: textStyle), for: .normal)
     }
     
 }

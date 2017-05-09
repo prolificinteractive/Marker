@@ -16,8 +16,8 @@ public extension UILabel {
      - parameter text:      The text to be displayed in the label.
      - parameter textStyle: Text style object containing style information.
      */
-    func setText(_ text: String, using textStyle: TextStyle) {
-        attributedText = NSAttributedString(string: text, textStyle: textStyle)
+    func setText(_ text: String, using textStyle: TextStyle, customMarkup markups: Markup = [:]) {
+        attributedText = attributedMarkupString(from: text, using: textStyle, customMarkup: markups)
     }
     
     /**
@@ -29,12 +29,7 @@ public extension UILabel {
      - parameter textStyle:    Text style object containing style information.
      */
     func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
-        do {
-            let (parsedString, elements) = try MarkdownParser.parse(markdownText)
-            attributedText = attributedMarkdownString(from: parsedString, with: elements, using: textStyle)
-        } catch {
-            text = markdownText
-        }
+        attributedText = attributedMarkdownString(from: markdownText, using: textStyle)
     }
-        
+    
 }
