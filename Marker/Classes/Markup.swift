@@ -6,4 +6,5 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+/// Markup data. Contains a mapping of tag characters to style information.
 public typealias Markup = [Character: TextStyle]

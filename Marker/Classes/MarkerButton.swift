@@ -10,24 +10,23 @@ import UIKit
 
 public extension UIButton {
     
-    /**
-     Sets the button's title to an attributed string created from the specified string and text style.
-     
-     - parameter text:      The text to be displayed in the label.
-     - parameter textStyle: Text style object containing style information.
-     */
+    /// Sets the button's title to an attributed string created from the specified string and text style.
+    ///
+    /// - Parameters:
+    ///   - text: The text to be displayed in the label.
+    ///   - textStyle: Text style object containing style information.
+    ///   - markups: Custom markup if there is any. Defaults to zero custom markup.
     func setTitleText(_ text: String, using textStyle: TextStyle, customMarkup markups: Markup = [:]) {
         setAttributedTitle(attributedMarkupString(from: text, using: textStyle, customMarkup: markups), for: .normal)
     }
     
-    /**
-     Sets the button's title text to an attributed string created from the specified string and text style.
-     This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
-     Refer to MarkerdownParser.Tag for a list of supported Markdown tags.
-     
-     - parameter markdownText: The Markdown text to be displayed in the label.
-     - parameter textStyle:    Text style object containing style information.
-     */
+    /// Sets the button's title text to an attributed string created from the specified string and text style.
+    /// This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
+    /// Refer to MarkerdownParser.Tag for a list of supported Markdown tags.
+    ///
+    /// - Parameters:
+    ///   - markdownText: The Markdown text to be displayed in the label.
+    ///   - textStyle: Text style object containing style information.
     func setMarkdownTitleText(_ markdownText: String, using textStyle: TextStyle) {
         setAttributedTitle(attributedMarkdownString(from: markdownText, using: textStyle), for: .normal)
     }
