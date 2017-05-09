@@ -17,6 +17,14 @@ internal struct MarkdownParser {
         case invalidTagSymbol
     }
     
+    // MARK: - Private properties
+    
+    private static let underscoreEmSymbol = Symbol(rawValue: "_")
+    private static let asteriskEmSymbol = Symbol(rawValue: "*")
+    private static let underscoreStrongSymbol = Symbol(rawValue: "__")
+    private static let asteriskStrongSymbol = Symbol(rawValue: "**")
+    private static let tildeStrikethroughSymbol = Symbol(rawValue: "~~")
+    
     // MARK: - Static functions
     
     /// Parses specified string and returns a tuple containing string stripped of tag characters and an array of Markdown elements.
@@ -26,11 +34,11 @@ internal struct MarkdownParser {
     /// - Throws: Parser error.
     static func parse(_ string: String) throws -> (strippedString: String, elements: [MarkdownElement]) {
         guard
-            let underscoreEmSymbol = Symbol(rawValue: "_"),
-            let asteriskEmSymbol = Symbol(rawValue: "*"),
-            let underscoreStrongSymbol = Symbol(rawValue: "__"),
-            let asteriskStrongSymbol = Symbol(rawValue: "**"),
-            let tildeStrikethroughSymbol = Symbol(rawValue: "~~") else {
+            let underscoreEmSymbol = underscoreEmSymbol,
+            let asteriskEmSymbol = asteriskEmSymbol,
+            let underscoreStrongSymbol = underscoreStrongSymbol,
+            let asteriskStrongSymbol = asteriskStrongSymbol,
+            let tildeStrikethroughSymbol = tildeStrikethroughSymbol else {
                 return (string, [])
         }
         
