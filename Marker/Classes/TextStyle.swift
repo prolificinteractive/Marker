@@ -43,6 +43,12 @@ public struct TextStyle {
     /// Maximum line height.
     public var maximumLineHeight: CGFloat?
     
+    /// Indentation of the first line of a paragraph.
+    public var firstLineHeadIndent: CGFloat?
+    
+    /// Indentation of the lines of the paragraph other than the first line.
+    public var headIndent: CGFloat?
+    
     /// Paragraph spacing.
     public var paragraphSpacing: CGFloat?
 
@@ -90,6 +96,13 @@ public struct TextStyle {
         }
         if let maximumLineHeight = maximumLineHeight {
             paragraphStyle.maximumLineHeight = maximumLineHeight
+        }
+        
+        if let firstLineHeadIndent = firstLineHeadIndent {
+            paragraphStyle.firstLineHeadIndent = firstLineHeadIndent
+        }
+        if let headIndent = headIndent {
+            paragraphStyle.headIndent = headIndent
         }
         
         if let paragraphSpacing = paragraphSpacing {
@@ -145,6 +158,8 @@ public struct TextStyle {
                 lineHeightMultiple: CGFloat? = nil,
                 minimumLineHeight: CGFloat? = nil,
                 maximumLineHeight: CGFloat? = nil,
+                firstLineHeadIndent: CGFloat? = nil,
+                headIndent: CGFloat? = nil,
                 paragraphSpacing: CGFloat? = nil,
                 paragraphSpacingBefore: CGFloat? = nil,
                 textAlignment: NSTextAlignment? = nil,
@@ -158,6 +173,8 @@ public struct TextStyle {
         self.textColor = textColor
         self.characterSpacing = characterSpacing
         self.lineSpacing = lineSpacing
+        self.firstLineHeadIndent = firstLineHeadIndent
+        self.headIndent = headIndent
         self.lineHeightMultiple = lineHeightMultiple
         self.minimumLineHeight = minimumLineHeight
         self.maximumLineHeight = maximumLineHeight
