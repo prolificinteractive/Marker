@@ -33,14 +33,12 @@ Marker abstracts the most common attributed text properties into a data object c
 * Bold font
 * Character spacing
 * Line spacing
-* Line height multiple
-* Minimum line height
+* Line height
+* Paragraph and line indentations
 * Paragraph spacing
-* Paragraph spacing before
 * Text alignment
 * Line break mode
-* Strikethrough style
-* Strikethrough color
+* Strikethrough style and color
 * Text transformation option
 
 `TextStyle` objects are a simple way of aggregating style information. For example:
@@ -72,10 +70,21 @@ Marker has convenience extensions for setting `attributedText` on common UI elem
 * `UITextField`
 * `UITextView`
 
-To set text on these elements, use `setText(_:using:)` (or `setTitleText(_:using:)` in the case of `UIButton`) function.
+To set text on these elements, use `setText(_:using:customMarkup:)` (or `setTitleText(_:using:customMarkup:)` in the case of `UIButton`) function.
 
 ```swift
 label.setText("Hello World", using: headlineTextStyle)
+```
+
+Optionally, you can pass custom markup information to selectively style segments of the specified text with custom `TextStyle`.
+
+```swift
+var blueTextStyle = headlineTextStyle
+blueTextStyle.textColor = UIColor.blue
+
+label.setText("The sky is #blue#.",
+              using: headlineTextStyle,
+              customMarkup: ["#": blueTextStyle])
 ```
 
 #### Markdown
