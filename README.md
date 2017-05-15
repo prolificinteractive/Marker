@@ -101,6 +101,10 @@ To set Markdown text on these elements, use `setMarkdownText(_:using:)` (or `set
 textField.setMarkdownText("_Hello World_", using: headlineTextStyle)
 ```
 
+#### Best Practices
+
+Parsing operation for custom markup and Markdown strings can be too slow to use for performance-critical views such as `UITableViewCell`. In these cases, it's recommended to cache and reuse `NSAttributedString`'s returned from `Marker` functions instead of calling either `setText(_:using:customMarkup:)` or `setMarkdownText(_:using:)` directly.
+
 ## Contributing to Marker
 
 To report a bug or enhancement request, feel free to file an issue under the respective heading.
