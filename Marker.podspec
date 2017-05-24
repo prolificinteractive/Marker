@@ -23,5 +23,5 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'Marker/Classes/**/*'
+  s.source_files = 'Marker/Marker/**/*.{h,swift}'
 end

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Marker_Example.app"
-               BlueprintName = "Marker_Example"
-               ReferencedContainer = "container:Marker.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Marker_Tests.xctest"
-               BlueprintName = "Marker_Tests"
+               BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+               BuildableName = "Marker.framework"
+               BlueprintName = "Marker"
                ReferencedContainer = "container:Marker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Marker_Tests.xctest"
-               BlueprintName = "Marker_Tests"
+               BlueprintIdentifier = "271C85921ED4E2A000F8BBBB"
+               BuildableName = "MarkerTests.xctest"
+               BlueprintName = "MarkerTests"
                ReferencedContainer = "container:Marker.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Marker_Example.app"
-            BlueprintName = "Marker_Example"
+            BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+            BuildableName = "Marker.framework"
+            BlueprintName = "Marker"
             ReferencedContainer = "container:Marker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Marker_Example.app"
-            BlueprintName = "Marker_Example"
+            BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+            BuildableName = "Marker.framework"
+            BlueprintName = "Marker"
             ReferencedContainer = "container:Marker.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Marker_Example.app"
-            BlueprintName = "Marker_Example"
+            BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+            BuildableName = "Marker.framework"
+            BlueprintName = "Marker"
             ReferencedContainer = "container:Marker.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
