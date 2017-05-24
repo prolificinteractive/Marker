@@ -1,15 +1,15 @@
 //
-//  MarkerButton.swift
+//  NSButtonExtension.swift
 //  Marker
 //
-//  Created by Htin Linn on 11/14/16.
-//  Copyright © 2016 Prolific Interactive. All rights reserved.
+//  Created by Michael Campbell on 5/24/17.
+//  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
+import AppKit
 
-public extension UIButton {
-    
+public extension NSButton {
+
     /// Sets the button's title to an attributed string created from the specified string and text style.
     ///
     /// - Parameters:
@@ -17,9 +17,9 @@ public extension UIButton {
     ///   - textStyle: Text style object containing style information.
     ///   - markups: Custom markup if there is any. Defaults to zero custom markup.
     func setTitleText(_ text: String, using textStyle: TextStyle, customMarkup markups: Markup = [:]) {
-        setAttributedTitle(attributedMarkupString(from: text, using: textStyle, customMarkup: markups), for: .normal)
+        attributedTitle = attributedMarkupString(from: text, using: textStyle, customMarkup: markups)
     }
-    
+
     /// Sets the button's title text to an attributed string created from the specified string and text style.
     /// This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
     /// Refer to MarkerdownParser.Tag for a list of supported Markdown tags.
@@ -28,7 +28,7 @@ public extension UIButton {
     ///   - markdownText: The Markdown text to be displayed in the label.
     ///   - textStyle: Text style object containing style information.
     func setMarkdownTitleText(_ markdownText: String, using textStyle: TextStyle) {
-        setAttributedTitle(attributedMarkdownString(from: markdownText, using: textStyle), for: .normal)
+        attributedTitle = attributedMarkdownString(from: markdownText, using: textStyle)
     }
-    
+
 }

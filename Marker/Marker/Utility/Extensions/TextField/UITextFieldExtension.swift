@@ -1,5 +1,5 @@
 //
-//  MarkerTextField.swift
+//  UITextFieldExtension.swift
 //  Marker
 //
 //  Created by Htin Linn on 5/4/16.
@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UITextField {
-    
+
     /// Sets the text field text to an attributed string created from the specified string and text style.
     ///
     /// - Parameters:
@@ -30,5 +30,5 @@ public extension UITextField {
     func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
         attributedText = attributedMarkdownString(from: markdownText, using: textStyle)
     }
-    
+
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
+import Marker
 
-internal struct HelveticaNeueFont: Font {
+internal struct HelveticaNeueFont: FontFamily {
     
     // MARK: - Protocol conformance
     
@@ -18,16 +18,16 @@ internal struct HelveticaNeueFont: Font {
         return "Helvetica Neue"
     }
     
-    func regularFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue", size: size)!
+    func regularFont(ofSize size: CGFloat) -> Font {
+        return Font(name: "HelveticaNeue", size: size)!
     }
     
-    func boldFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: size)!
+    func boldFont(ofSize size: CGFloat) -> Font {
+        return Font(name: "HelveticaNeue-Bold", size: size)!
     }
     
-    func italicFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Italic", size: size)!
+    func italicFont(ofSize size: CGFloat) -> Font {
+        return Font(name: "HelveticaNeue-Italic", size: size)!
     }
     
 }

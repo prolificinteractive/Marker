@@ -6,7 +6,11 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
-import Foundation
+#if os(iOS) || os(tvOS)
+    import UIKit
+#elseif os(macOS) || os(OSX)
+    import AppKit
+#endif
 
 /// Parses Markdown text and eturns formatted text as an attributed string with custom markup attributes applied.
 /// If the parsing failed, specified Markdown tags are ignored. Yet, the rest of the style information is still applied.
@@ -59,7 +63,7 @@ public func parsedMarkdownString(from markdownText: String,
                                    range: NSRange(location: 0, length: parsedString.characters.count))
     
     elements.forEach { (element) in
-        var font: UIFont? = nil
+        var font: Font? = nil
         var strikethroughStyle: NSUnderlineStyle? = nil
         
         switch element {

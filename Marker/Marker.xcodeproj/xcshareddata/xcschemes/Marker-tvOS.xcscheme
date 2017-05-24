@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+               BlueprintIdentifier = "27C4E5C61ED5ED2400DDE387"
                BuildableName = "Marker.framework"
-               BlueprintName = "Marker"
+               BlueprintName = "Marker-tvOS"
                ReferencedContainer = "container:Marker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "271C85921ED4E2A000F8BBBB"
-               BuildableName = "MarkerTests.xctest"
-               BlueprintName = "MarkerTests"
+               BlueprintIdentifier = "27C4E5CE1ED5ED2400DDE387"
+               BuildableName = "Marker-tvOSTests.xctest"
+               BlueprintName = "Marker-tvOSTests"
                ReferencedContainer = "container:Marker.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+            BlueprintIdentifier = "27C4E5C61ED5ED2400DDE387"
             BuildableName = "Marker.framework"
-            BlueprintName = "Marker"
+            BlueprintName = "Marker-tvOS"
             ReferencedContainer = "container:Marker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+            BlueprintIdentifier = "27C4E5C61ED5ED2400DDE387"
             BuildableName = "Marker.framework"
-            BlueprintName = "Marker"
+            BlueprintName = "Marker-tvOS"
             ReferencedContainer = "container:Marker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271C85891ED4E2A000F8BBBB"
+            BlueprintIdentifier = "27C4E5C61ED5ED2400DDE387"
             BuildableName = "Marker.framework"
-            BlueprintName = "Marker"
+            BlueprintName = "Marker-tvOS"
             ReferencedContainer = "container:Marker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -10,18 +10,18 @@ import UIKit
 import Marker
 
 internal protocol FontTheme {
-    
+
     var headlineTextStyle: TextStyle { get }
     var titleTextStyle: TextStyle { get }
     var bodyTextStyle: TextStyle { get }
-    
+
     var headlineFontSize: CGFloat { get }
     var titleFontSize: CGFloat { get }
-    
+
 }
 
 extension FontTheme {
-    
+
     var headlineFontSize: CGFloat {
         switch UIApplication.shared.preferredContentSizeCategory {
         case UIContentSizeCategory.extraSmall, UIContentSizeCategory.small:
@@ -40,7 +40,7 @@ extension FontTheme {
             return 17
         }
     }
-    
+
     var titleFontSize: CGFloat {
         switch UIApplication.shared.preferredContentSizeCategory {
         case UIContentSizeCategory.extraSmall, UIContentSizeCategory.small:
@@ -57,5 +57,5 @@ extension FontTheme {
             return 19
         }
     }
-    
+
 }

@@ -10,10 +10,6 @@
 		271C85941ED4E2A000F8BBBB /* Marker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271C858A1ED4E2A000F8BBBB /* Marker.framework */; };
 		271C859B1ED4E2A000F8BBBB /* Marker.h in Headers */ = {isa = PBXBuildFile; fileRef = 271C858D1ED4E2A000F8BBBB /* Marker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		271C85B61ED4E2B700F8BBBB /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A41ED4E2B700F8BBBB /* Marker.swift */; };
-		271C85B71ED4E2B700F8BBBB /* MarkerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A51ED4E2B700F8BBBB /* MarkerButton.swift */; };
-		271C85B81ED4E2B700F8BBBB /* MarkerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A61ED4E2B700F8BBBB /* MarkerLabel.swift */; };
-		271C85B91ED4E2B700F8BBBB /* MarkerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A71ED4E2B700F8BBBB /* MarkerTextField.swift */; };
-		271C85BA1ED4E2B700F8BBBB /* MarkerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A81ED4E2B700F8BBBB /* MarkerTextView.swift */; };
 		271C85BB1ED4E2B700F8BBBB /* Markup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A91ED4E2B700F8BBBB /* Markup.swift */; };
 		271C85BC1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AA1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift */; };
 		271C85BD1ED4E2B700F8BBBB /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AC1ED4E2B700F8BBBB /* Element.swift */; };
@@ -27,6 +23,53 @@
 		271C85C51ED4E2B700F8BBBB /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B41ED4E2B700F8BBBB /* TextStyle.swift */; };
 		271C85C61ED4E2B700F8BBBB /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B51ED4E2B700F8BBBB /* TextTransform.swift */; };
 		271C85C91ED4E37700F8BBBB /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
+		27C4E5D01ED5ED2400DDE387 /* Marker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C4E5C71ED5ED2400DDE387 /* Marker.framework */; };
+		27C4E5EC1ED5ED3100DDE387 /* Marker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C4E5E31ED5ED3000DDE387 /* Marker.framework */; };
+		27C4E5FA1ED5ED6400DDE387 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A41ED4E2B700F8BBBB /* Marker.swift */; };
+		27C4E5FF1ED5ED6400DDE387 /* Markup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A91ED4E2B700F8BBBB /* Markup.swift */; };
+		27C4E6001ED5ED6400DDE387 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AA1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift */; };
+		27C4E6011ED5ED6400DDE387 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AC1ED4E2B700F8BBBB /* Element.swift */; };
+		27C4E6021ED5ED6400DDE387 /* ElementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AD1ED4E2B700F8BBBB /* ElementParser.swift */; };
+		27C4E6031ED5ED6400DDE387 /* MarkdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AE1ED4E2B700F8BBBB /* MarkdownElement.swift */; };
+		27C4E6041ED5ED6400DDE387 /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AF1ED4E2B700F8BBBB /* MarkdownParser.swift */; };
+		27C4E6051ED5ED6400DDE387 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B01ED4E2B700F8BBBB /* Symbol.swift */; };
+		27C4E6061ED5ED6400DDE387 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B11ED4E2B700F8BBBB /* Tag.swift */; };
+		27C4E6071ED5ED6400DDE387 /* TagParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B21ED4E2B700F8BBBB /* TagParser.swift */; };
+		27C4E6081ED5ED6400DDE387 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */; };
+		27C4E6091ED5ED6400DDE387 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B41ED4E2B700F8BBBB /* TextStyle.swift */; };
+		27C4E60A1ED5ED6400DDE387 /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B51ED4E2B700F8BBBB /* TextTransform.swift */; };
+		27C4E60B1ED5ED6500DDE387 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A41ED4E2B700F8BBBB /* Marker.swift */; };
+		27C4E6101ED5ED6500DDE387 /* Markup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A91ED4E2B700F8BBBB /* Markup.swift */; };
+		27C4E6111ED5ED6500DDE387 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AA1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift */; };
+		27C4E6121ED5ED6500DDE387 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AC1ED4E2B700F8BBBB /* Element.swift */; };
+		27C4E6131ED5ED6500DDE387 /* ElementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AD1ED4E2B700F8BBBB /* ElementParser.swift */; };
+		27C4E6141ED5ED6500DDE387 /* MarkdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AE1ED4E2B700F8BBBB /* MarkdownElement.swift */; };
+		27C4E6151ED5ED6500DDE387 /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85AF1ED4E2B700F8BBBB /* MarkdownParser.swift */; };
+		27C4E6161ED5ED6500DDE387 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B01ED4E2B700F8BBBB /* Symbol.swift */; };
+		27C4E6171ED5ED6500DDE387 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B11ED4E2B700F8BBBB /* Tag.swift */; };
+		27C4E6181ED5ED6500DDE387 /* TagParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B21ED4E2B700F8BBBB /* TagParser.swift */; };
+		27C4E6191ED5ED6500DDE387 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */; };
+		27C4E61A1ED5ED6500DDE387 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B41ED4E2B700F8BBBB /* TextStyle.swift */; };
+		27C4E61B1ED5ED6500DDE387 /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B51ED4E2B700F8BBBB /* TextTransform.swift */; };
+		27C4E61C1ED5ED6900DDE387 /* Marker.h in Headers */ = {isa = PBXBuildFile; fileRef = 271C858D1ED4E2A000F8BBBB /* Marker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27C4E61D1ED5ED6C00DDE387 /* Marker.h in Headers */ = {isa = PBXBuildFile; fileRef = 271C858D1ED4E2A000F8BBBB /* Marker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27C4E64E1ED6064400DDE387 /* NSButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6431ED6064400DDE387 /* NSButtonExtension.swift */; };
+		27C4E64F1ED6064400DDE387 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */; };
+		27C4E6501ED6064400DDE387 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */; };
+		27C4E6521ED6064400DDE387 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6461ED6064400DDE387 /* Color.swift */; };
+		27C4E6531ED6064400DDE387 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6461ED6064400DDE387 /* Color.swift */; };
+		27C4E6541ED6064400DDE387 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6461ED6064400DDE387 /* Color.swift */; };
+		27C4E6551ED6064400DDE387 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6481ED6064400DDE387 /* Font.swift */; };
+		27C4E6561ED6064400DDE387 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6481ED6064400DDE387 /* Font.swift */; };
+		27C4E6571ED6064400DDE387 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6481ED6064400DDE387 /* Font.swift */; };
+		27C4E65A1ED6064400DDE387 /* NSTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E64A1ED6064400DDE387 /* NSTextFieldExtension.swift */; };
+		27C4E65B1ED6064400DDE387 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */; };
+		27C4E65E1ED6065F00DDE387 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */; };
+		27C4E6611ED6080B00DDE387 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */; };
+		27C4E6621ED6080B00DDE387 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */; };
+		27C4E6671ED6082800DDE387 /* NSTextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */; };
+		27C4E66A1ED60C7700DDE387 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */; };
+		27C4E66B1ED60C7700DDE387 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +80,29 @@
 			remoteGlobalIDString = 271C85891ED4E2A000F8BBBB;
 			remoteInfo = Marker;
 		};
+		27C4E5D11ED5ED2400DDE387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 271C85811ED4E2A000F8BBBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27C4E5C61ED5ED2400DDE387;
+			remoteInfo = "Marker-tvOS";
+		};
+		27C4E5ED1ED5ED3100DDE387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 271C85811ED4E2A000F8BBBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27C4E5E21ED5ED3000DDE387;
+			remoteInfo = "Marker-macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		271C858A1ED4E2A000F8BBBB /* Marker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		271C858D1ED4E2A000F8BBBB /* Marker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marker.h; sourceTree = "<group>"; };
 		271C858E1ED4E2A000F8BBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		271C85931ED4E2A000F8BBBB /* MarkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		271C85931ED4E2A000F8BBBB /* Marker-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marker-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		271C859A1ED4E2A000F8BBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271C85A41ED4E2B700F8BBBB /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
-		271C85A51ED4E2B700F8BBBB /* MarkerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerButton.swift; sourceTree = "<group>"; };
-		271C85A61ED4E2B700F8BBBB /* MarkerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerLabel.swift; sourceTree = "<group>"; };
-		271C85A71ED4E2B700F8BBBB /* MarkerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerTextField.swift; sourceTree = "<group>"; };
-		271C85A81ED4E2B700F8BBBB /* MarkerTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerTextView.swift; sourceTree = "<group>"; };
 		271C85A91ED4E2B700F8BBBB /* Markup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Markup.swift; sourceTree = "<group>"; };
 		271C85AA1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		271C85AC1ED4E2B700F8BBBB /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -64,6 +117,19 @@
 		271C85B51ED4E2B700F8BBBB /* TextTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTransform.swift; sourceTree = "<group>"; };
 		271C85C71ED4E37600F8BBBB /* MarkerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarkerTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		271C85C81ED4E37700F8BBBB /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		27C4E5C71ED5ED2400DDE387 /* Marker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C4E5CF1ED5ED2400DDE387 /* Marker-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marker-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C4E5E31ED5ED3000DDE387 /* Marker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C4E5EB1ED5ED3100DDE387 /* Marker-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marker-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C4E6431ED6064400DDE387 /* NSButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSButtonExtension.swift; sourceTree = "<group>"; };
+		27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		27C4E6461ED6064400DDE387 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		27C4E6481ED6064400DDE387 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		27C4E64A1ED6064400DDE387 /* NSTextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTextFieldExtension.swift; sourceTree = "<group>"; };
+		27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextViewExtension.swift; path = TextView/UITextViewExtension.swift; sourceTree = "<group>"; };
+		27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextViewExtension.swift; path = TextView/NSTextViewExtension.swift; sourceTree = "<group>"; };
+		27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabelExtension.swift; path = Label/UILabelExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +145,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				271C85941ED4E2A000F8BBBB /* Marker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5C31ED5ED2400DDE387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5CC1ED5ED2400DDE387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C4E5D01ED5ED2400DDE387 /* Marker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5DF1ED5ED3000DDE387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5E81ED5ED3100DDE387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C4E5EC1ED5ED3100DDE387 /* Marker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +194,11 @@
 			isa = PBXGroup;
 			children = (
 				271C858A1ED4E2A000F8BBBB /* Marker.framework */,
-				271C85931ED4E2A000F8BBBB /* MarkerTests.xctest */,
+				271C85931ED4E2A000F8BBBB /* Marker-iOSTests.xctest */,
+				27C4E5C71ED5ED2400DDE387 /* Marker.framework */,
+				27C4E5CF1ED5ED2400DDE387 /* Marker-tvOSTests.xctest */,
+				27C4E5E31ED5ED3000DDE387 /* Marker.framework */,
+				27C4E5EB1ED5ED3100DDE387 /* Marker-macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,19 +206,16 @@
 		271C858C1ED4E2A000F8BBBB /* Marker */ = {
 			isa = PBXGroup;
 			children = (
+				271C858E1ED4E2A000F8BBBB /* Info.plist */,
+				271C858D1ED4E2A000F8BBBB /* Marker.h */,
 				271C85A41ED4E2B700F8BBBB /* Marker.swift */,
-				271C85A51ED4E2B700F8BBBB /* MarkerButton.swift */,
-				271C85A61ED4E2B700F8BBBB /* MarkerLabel.swift */,
-				271C85A71ED4E2B700F8BBBB /* MarkerTextField.swift */,
-				271C85A81ED4E2B700F8BBBB /* MarkerTextView.swift */,
 				271C85A91ED4E2B700F8BBBB /* Markup.swift */,
 				271C85AA1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift */,
 				271C85AB1ED4E2B700F8BBBB /* Parser */,
 				271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */,
 				271C85B41ED4E2B700F8BBBB /* TextStyle.swift */,
 				271C85B51ED4E2B700F8BBBB /* TextTransform.swift */,
-				271C858D1ED4E2A000F8BBBB /* Marker.h */,
-				271C858E1ED4E2A000F8BBBB /* Info.plist */,
+				27C4E61E1ED5EE3000DDE387 /* Utility */,
 			);
 			path = Marker;
 			sourceTree = "<group>";
@@ -147,6 +244,79 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		27C4E61E1ED5EE3000DDE387 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E6411ED6064400DDE387 /* Extensions */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		27C4E6411ED6064400DDE387 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E6421ED6064400DDE387 /* Button */,
+				27C4E6451ED6064400DDE387 /* Color */,
+				27C4E6471ED6064400DDE387 /* Font */,
+				27C4E6681ED60C4E00DDE387 /* Label */,
+				27C4E6491ED6064400DDE387 /* TextField */,
+				27C4E65F1ED607E000DDE387 /* TextView */,
+			);
+			name = Extensions;
+			path = Utility/Extensions;
+			sourceTree = "<group>";
+		};
+		27C4E6421ED6064400DDE387 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E6431ED6064400DDE387 /* NSButtonExtension.swift */,
+				27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		27C4E6451ED6064400DDE387 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E6461ED6064400DDE387 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		27C4E6471ED6064400DDE387 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E6481ED6064400DDE387 /* Font.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		27C4E6491ED6064400DDE387 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E64A1ED6064400DDE387 /* NSTextFieldExtension.swift */,
+				27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		27C4E65F1ED607E000DDE387 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */,
+				27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */,
+			);
+			name = TextView;
+			sourceTree = "<group>";
+		};
+		27C4E6681ED60C4E00DDE387 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */,
+			);
+			name = Label;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -158,12 +328,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27C4E5C41ED5ED2400DDE387 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C4E61C1ED5ED6900DDE387 /* Marker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5E01ED5ED3000DDE387 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C4E61D1ED5ED6C00DDE387 /* Marker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		271C85891ED4E2A000F8BBBB /* Marker */ = {
+		271C85891ED4E2A000F8BBBB /* Marker-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 271C859E1ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "Marker" */;
+			buildConfigurationList = 271C859E1ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "Marker-iOS" */;
 			buildPhases = (
 				271C85851ED4E2A000F8BBBB /* Sources */,
 				271C85861ED4E2A000F8BBBB /* Frameworks */,
@@ -174,14 +360,14 @@
 			);
 			dependencies = (
 			);
-			name = Marker;
+			name = "Marker-iOS";
 			productName = Marker;
 			productReference = 271C858A1ED4E2A000F8BBBB /* Marker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		271C85921ED4E2A000F8BBBB /* MarkerTests */ = {
+		271C85921ED4E2A000F8BBBB /* Marker-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 271C85A11ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "MarkerTests" */;
+			buildConfigurationList = 271C85A11ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "Marker-iOSTests" */;
 			buildPhases = (
 				271C858F1ED4E2A000F8BBBB /* Sources */,
 				271C85901ED4E2A000F8BBBB /* Frameworks */,
@@ -192,9 +378,81 @@
 			dependencies = (
 				271C85961ED4E2A000F8BBBB /* PBXTargetDependency */,
 			);
-			name = MarkerTests;
+			name = "Marker-iOSTests";
 			productName = MarkerTests;
-			productReference = 271C85931ED4E2A000F8BBBB /* MarkerTests.xctest */;
+			productReference = 271C85931ED4E2A000F8BBBB /* Marker-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27C4E5C61ED5ED2400DDE387 /* Marker-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C4E5D81ED5ED2400DDE387 /* Build configuration list for PBXNativeTarget "Marker-tvOS" */;
+			buildPhases = (
+				27C4E5C21ED5ED2400DDE387 /* Sources */,
+				27C4E5C31ED5ED2400DDE387 /* Frameworks */,
+				27C4E5C41ED5ED2400DDE387 /* Headers */,
+				27C4E5C51ED5ED2400DDE387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marker-tvOS";
+			productName = "Marker-tvOS";
+			productReference = 27C4E5C71ED5ED2400DDE387 /* Marker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27C4E5CE1ED5ED2400DDE387 /* Marker-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C4E5DB1ED5ED2400DDE387 /* Build configuration list for PBXNativeTarget "Marker-tvOSTests" */;
+			buildPhases = (
+				27C4E5CB1ED5ED2400DDE387 /* Sources */,
+				27C4E5CC1ED5ED2400DDE387 /* Frameworks */,
+				27C4E5CD1ED5ED2400DDE387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27C4E5D21ED5ED2400DDE387 /* PBXTargetDependency */,
+			);
+			name = "Marker-tvOSTests";
+			productName = "Marker-tvOSTests";
+			productReference = 27C4E5CF1ED5ED2400DDE387 /* Marker-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27C4E5E21ED5ED3000DDE387 /* Marker-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C4E5F41ED5ED3100DDE387 /* Build configuration list for PBXNativeTarget "Marker-macOS" */;
+			buildPhases = (
+				27C4E5DE1ED5ED3000DDE387 /* Sources */,
+				27C4E5DF1ED5ED3000DDE387 /* Frameworks */,
+				27C4E5E01ED5ED3000DDE387 /* Headers */,
+				27C4E5E11ED5ED3000DDE387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marker-macOS";
+			productName = "Marker-macOS";
+			productReference = 27C4E5E31ED5ED3000DDE387 /* Marker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27C4E5EA1ED5ED3100DDE387 /* Marker-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C4E5F71ED5ED3100DDE387 /* Build configuration list for PBXNativeTarget "Marker-macOSTests" */;
+			buildPhases = (
+				27C4E5E71ED5ED3100DDE387 /* Sources */,
+				27C4E5E81ED5ED3100DDE387 /* Frameworks */,
+				27C4E5E91ED5ED3100DDE387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27C4E5EE1ED5ED3100DDE387 /* PBXTargetDependency */,
+			);
+			name = "Marker-macOSTests";
+			productName = "Marker-macOSTests";
+			productReference = 27C4E5EB1ED5ED3100DDE387 /* Marker-macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -219,6 +477,26 @@
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
+					27C4E5C61ED5ED2400DDE387 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5ZZ7W4SB26;
+						ProvisioningStyle = Automatic;
+					};
+					27C4E5CE1ED5ED2400DDE387 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5ZZ7W4SB26;
+						ProvisioningStyle = Automatic;
+					};
+					27C4E5E21ED5ED3000DDE387 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5ZZ7W4SB26;
+						ProvisioningStyle = Automatic;
+					};
+					27C4E5EA1ED5ED3100DDE387 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5ZZ7W4SB26;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 271C85841ED4E2A000F8BBBB /* Build configuration list for PBXProject "Marker" */;
@@ -233,8 +511,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				271C85891ED4E2A000F8BBBB /* Marker */,
-				271C85921ED4E2A000F8BBBB /* MarkerTests */,
+				271C85891ED4E2A000F8BBBB /* Marker-iOS */,
+				271C85921ED4E2A000F8BBBB /* Marker-iOSTests */,
+				27C4E5C61ED5ED2400DDE387 /* Marker-tvOS */,
+				27C4E5CE1ED5ED2400DDE387 /* Marker-tvOSTests */,
+				27C4E5E21ED5ED3000DDE387 /* Marker-macOS */,
+				27C4E5EA1ED5ED3100DDE387 /* Marker-macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,6 +536,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27C4E5C51ED5ED2400DDE387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5CD1ED5ED2400DDE387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5E11ED5ED3000DDE387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5E91ED5ED3100DDE387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -263,21 +573,23 @@
 			files = (
 				271C85C51ED4E2B700F8BBBB /* TextStyle.swift in Sources */,
 				271C85C01ED4E2B700F8BBBB /* MarkdownParser.swift in Sources */,
-				271C85BA1ED4E2B700F8BBBB /* MarkerTextView.swift in Sources */,
 				271C85BB1ED4E2B700F8BBBB /* Markup.swift in Sources */,
+				27C4E66A1ED60C7700DDE387 /* UILabelExtension.swift in Sources */,
+				27C4E6551ED6064400DDE387 /* Font.swift in Sources */,
 				271C85BD1ED4E2B700F8BBBB /* Element.swift in Sources */,
 				271C85BF1ED4E2B700F8BBBB /* MarkdownElement.swift in Sources */,
 				271C85C31ED4E2B700F8BBBB /* TagParser.swift in Sources */,
+				27C4E64F1ED6064400DDE387 /* UIButtonExtension.swift in Sources */,
 				271C85C11ED4E2B700F8BBBB /* Symbol.swift in Sources */,
 				271C85BE1ED4E2B700F8BBBB /* ElementParser.swift in Sources */,
 				271C85B61ED4E2B700F8BBBB /* Marker.swift in Sources */,
 				271C85BC1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift in Sources */,
 				271C85C41ED4E2B700F8BBBB /* String+Extensions.swift in Sources */,
+				27C4E65B1ED6064400DDE387 /* UITextFieldExtension.swift in Sources */,
 				271C85C61ED4E2B700F8BBBB /* TextTransform.swift in Sources */,
-				271C85B81ED4E2B700F8BBBB /* MarkerLabel.swift in Sources */,
-				271C85B71ED4E2B700F8BBBB /* MarkerButton.swift in Sources */,
-				271C85B91ED4E2B700F8BBBB /* MarkerTextField.swift in Sources */,
 				271C85C21ED4E2B700F8BBBB /* Tag.swift in Sources */,
+				27C4E6521ED6064400DDE387 /* Color.swift in Sources */,
+				27C4E6611ED6080B00DDE387 /* UITextViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,13 +601,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27C4E5C21ED5ED2400DDE387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C4E6091ED5ED6400DDE387 /* TextStyle.swift in Sources */,
+				27C4E6041ED5ED6400DDE387 /* MarkdownParser.swift in Sources */,
+				27C4E5FF1ED5ED6400DDE387 /* Markup.swift in Sources */,
+				27C4E66B1ED60C7700DDE387 /* UILabelExtension.swift in Sources */,
+				27C4E6561ED6064400DDE387 /* Font.swift in Sources */,
+				27C4E6011ED5ED6400DDE387 /* Element.swift in Sources */,
+				27C4E6031ED5ED6400DDE387 /* MarkdownElement.swift in Sources */,
+				27C4E6071ED5ED6400DDE387 /* TagParser.swift in Sources */,
+				27C4E6501ED6064400DDE387 /* UIButtonExtension.swift in Sources */,
+				27C4E6051ED5ED6400DDE387 /* Symbol.swift in Sources */,
+				27C4E6021ED5ED6400DDE387 /* ElementParser.swift in Sources */,
+				27C4E5FA1ED5ED6400DDE387 /* Marker.swift in Sources */,
+				27C4E65E1ED6065F00DDE387 /* UITextFieldExtension.swift in Sources */,
+				27C4E6001ED5ED6400DDE387 /* NSAttributedString+Extensions.swift in Sources */,
+				27C4E6081ED5ED6400DDE387 /* String+Extensions.swift in Sources */,
+				27C4E60A1ED5ED6400DDE387 /* TextTransform.swift in Sources */,
+				27C4E6061ED5ED6400DDE387 /* Tag.swift in Sources */,
+				27C4E6531ED6064400DDE387 /* Color.swift in Sources */,
+				27C4E6621ED6080B00DDE387 /* UITextViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5CB1ED5ED2400DDE387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5DE1ED5ED3000DDE387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C4E61A1ED5ED6500DDE387 /* TextStyle.swift in Sources */,
+				27C4E64E1ED6064400DDE387 /* NSButtonExtension.swift in Sources */,
+				27C4E6151ED5ED6500DDE387 /* MarkdownParser.swift in Sources */,
+				27C4E65A1ED6064400DDE387 /* NSTextFieldExtension.swift in Sources */,
+				27C4E6541ED6064400DDE387 /* Color.swift in Sources */,
+				27C4E6101ED5ED6500DDE387 /* Markup.swift in Sources */,
+				27C4E6121ED5ED6500DDE387 /* Element.swift in Sources */,
+				27C4E6141ED5ED6500DDE387 /* MarkdownElement.swift in Sources */,
+				27C4E6181ED5ED6500DDE387 /* TagParser.swift in Sources */,
+				27C4E6671ED6082800DDE387 /* NSTextViewExtension.swift in Sources */,
+				27C4E6161ED5ED6500DDE387 /* Symbol.swift in Sources */,
+				27C4E6131ED5ED6500DDE387 /* ElementParser.swift in Sources */,
+				27C4E60B1ED5ED6500DDE387 /* Marker.swift in Sources */,
+				27C4E6111ED5ED6500DDE387 /* NSAttributedString+Extensions.swift in Sources */,
+				27C4E6571ED6064400DDE387 /* Font.swift in Sources */,
+				27C4E6191ED5ED6500DDE387 /* String+Extensions.swift in Sources */,
+				27C4E61B1ED5ED6500DDE387 /* TextTransform.swift in Sources */,
+				27C4E6171ED5ED6500DDE387 /* Tag.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C4E5E71ED5ED3100DDE387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		271C85961ED4E2A000F8BBBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 271C85891ED4E2A000F8BBBB /* Marker */;
+			target = 271C85891ED4E2A000F8BBBB /* Marker-iOS */;
 			targetProxy = 271C85951ED4E2A000F8BBBB /* PBXContainerItemProxy */;
+		};
+		27C4E5D21ED5ED2400DDE387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27C4E5C61ED5ED2400DDE387 /* Marker-tvOS */;
+			targetProxy = 27C4E5D11ED5ED2400DDE387 /* PBXContainerItemProxy */;
+		};
+		27C4E5EE1ED5ED3100DDE387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27C4E5E21ED5ED3000DDE387 /* Marker-macOS */;
+			targetProxy = 27C4E5ED1ED5ED3100DDE387 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -418,7 +805,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULE_NAME = Marker;
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.Marker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Marker;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -442,7 +829,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULE_NAME = Marker;
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.Marker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Marker;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -479,6 +866,168 @@
 			};
 			name = Release;
 		};
+		27C4E5D91ED5ED2400DDE387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Marker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = Marker;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-tvOS";
+				PRODUCT_NAME = Marker;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		27C4E5DA1ED5ED2400DDE387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Marker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = Marker;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-tvOS";
+				PRODUCT_NAME = Marker;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		27C4E5DC1ED5ED2400DDE387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				INFOPLIST_FILE = MarkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		27C4E5DD1ED5ED2400DDE387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				INFOPLIST_FILE = MarkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		27C4E5F51ED5ED3100DDE387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Marker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULE_NAME = Marker;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOS";
+				PRODUCT_NAME = Marker;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		27C4E5F61ED5ED3100DDE387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Marker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULE_NAME = Marker;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOS";
+				PRODUCT_NAME = Marker;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		27C4E5F81ED5ED3100DDE387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				INFOPLIST_FILE = MarkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		27C4E5F91ED5ED3100DDE387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				INFOPLIST_FILE = MarkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -491,7 +1040,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		271C859E1ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "Marker" */ = {
+		271C859E1ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "Marker-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				271C859F1ED4E2A000F8BBBB /* Debug */,
@@ -500,7 +1049,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		271C85A11ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "MarkerTests" */ = {
+		271C85A11ED4E2A000F8BBBB /* Build configuration list for PBXNativeTarget "Marker-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				271C85A21ED4E2A000F8BBBB /* Debug */,
@@ -508,6 +1057,38 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		27C4E5D81ED5ED2400DDE387 /* Build configuration list for PBXNativeTarget "Marker-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C4E5D91ED5ED2400DDE387 /* Debug */,
+				27C4E5DA1ED5ED2400DDE387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27C4E5DB1ED5ED2400DDE387 /* Build configuration list for PBXNativeTarget "Marker-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C4E5DC1ED5ED2400DDE387 /* Debug */,
+				27C4E5DD1ED5ED2400DDE387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27C4E5F41ED5ED3100DDE387 /* Build configuration list for PBXNativeTarget "Marker-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C4E5F51ED5ED3100DDE387 /* Debug */,
+				27C4E5F61ED5ED3100DDE387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27C4E5F71ED5ED3100DDE387 /* Build configuration list for PBXNativeTarget "Marker-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C4E5F81ED5ED3100DDE387 /* Debug */,
+				27C4E5F91ED5ED3100DDE387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

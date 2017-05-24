@@ -6,9 +6,9 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
+import Marker
 
-internal struct AvenirNextFont: Font {
+internal struct AvenirNextFont: FontFamily {
     
     // MARK: - Protocol conformance
     
@@ -18,16 +18,16 @@ internal struct AvenirNextFont: Font {
         return "Avenir Next"
     }
     
-    func regularFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Regular", size: size)!
+    func regularFont(ofSize size: CGFloat) -> Font {
+        return Font(name: "AvenirNext-Regular", size: size)!
     }
     
-    func boldFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Bold", size: size)!
+    func boldFont(ofSize size: CGFloat) -> Font {
+        return Font(name: "AvenirNext-Bold", size: size)!
     }
     
-    func italicFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Italic", size: size)!
+    func italicFont(ofSize size: CGFloat) -> Font {
+        return Font(name: "AvenirNext-Italic", size: size)!
     }
     
 }
