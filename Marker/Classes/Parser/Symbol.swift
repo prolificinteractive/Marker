@@ -20,6 +20,11 @@ internal struct Symbol: RawRepresentable, Equatable {
     var length: Int {
         return rawValue.characters.count
     }
+
+    // MARK: - Private properties
+
+    private let symbolCharacterOne: Character?
+    private let symbolCharacterTwo: Character?
     
     // MARK: - Init/deinit
     
@@ -30,11 +35,14 @@ internal struct Symbol: RawRepresentable, Equatable {
     /// - Parameter rawValue: The raw value to use for the new instance.
     /// - Returns: A new `Symbol` instance.
     init?(rawValue: String) {
-        guard rawValue.characters.count > 0 || rawValue.characters.count <= 2 else {
+        guard rawValue.characters.count > 0 && rawValue.characters.count <= 2 else {
             return nil
         }
         
         self.rawValue = rawValue
+        symbolCharacterOne = rawValue.characters.first
+        symbolCharacterTwo = rawValue.characters.count >= 2 ?
+            rawValue[self.rawValue.characters.index(after: self.rawValue.startIndex)] : nil
     }
     
     /// Creates a new instance with specified character.
@@ -43,8 +51,10 @@ internal struct Symbol: RawRepresentable, Equatable {
     /// - Returns: A new `Symbol` instance.
     init(character: Character) {
         self.rawValue = String(character)
+        symbolCharacterOne = character
+        symbolCharacterTwo = nil
     }
-    
+
     // MARK: - Instance functions
 
     /// Returns a boolean indicating whether the symbol matches given characters.
@@ -58,7 +68,7 @@ internal struct Symbol: RawRepresentable, Equatable {
     ///   - succeedingCharacter: Character succeeding the chracter to match.
     /// - Returns: Boolean indicating whether the symbol matches given characters.
     func matches(precedingCharacter: Character?, character: Character?, succeedingCharacter: Character?) -> Bool {
-        guard let symbolCharacterOne = rawValue.characters.first else {
+        guard let symbolCharacterOne = self.symbolCharacterOne else {
             return false
         }
 
@@ -72,9 +82,7 @@ internal struct Symbol: RawRepresentable, Equatable {
             default:
                 break
             }
-        } else if length == 2 {
-            let symbolCharacterTwo = rawValue[rawValue.characters.index(after: rawValue.startIndex)]
-            
+        } else if length == 2, let symbolCharacterTwo = self.symbolCharacterTwo {
             switch (precedingCharacter, character, succeedingCharacter) {
             case (_, .some(symbolCharacterOne), .some(symbolCharacterTwo)):
                 return true
