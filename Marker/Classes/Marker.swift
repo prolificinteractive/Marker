@@ -8,17 +8,51 @@
 
 import Foundation
 
+/// Parses Markdown text and eturns formatted text as an attributed string with custom markup attributes applied.
+/// If the parsing failed, specified Markdown tags are ignored. Yet, the rest of the style information is still applied.
+///
+/// - Parameters:
+///   - text: Text.
+///   - textStyle: Text style object containing style information.
+///   - markups: Markup information.
+/// - Returns: Formatted text.
+public func attributedMarkdownString(from markdownText: String,
+                                     using textStyle: TextStyle) -> NSAttributedString {
+    do {
+        return try parsedMarkdownString(from: markdownText, using: textStyle)
+    } catch {
+        return NSAttributedString(string: markdownText, textStyle: textStyle)
+    }
+}
+
+/// Parses custom mark up information and returns formatted text as an attributed string with custom markup attributes applied.
+/// If the parsing failed, custom markup attributes are ignored. Yet, style information from `textStyle` parameter is still applied.
+///
+/// - Parameters:
+///   - text: Text.
+///   - textStyle: Text style object containing style information.
+///   - markups: Markup information.
+/// - Returns: Formatted text.
+public func attributedMarkupString(from text: String,
+                                   using textStyle: TextStyle,
+                                   customMarkup markups: Markup) -> NSAttributedString {
+    do {
+        return try parsedMarkupString(from: text, using: textStyle, customMarkup: markups)
+    } catch {
+        return NSAttributedString(string: text, textStyle: textStyle)
+    }
+}
+
 /// Returns formatted Markdown text as an attributed string.
 ///
 /// - Parameters:
 ///   - markdownText: String with Markdown tags.
 ///   - textStyle: Text style object containing style information.
 /// - Returns: Formatted Markdown text.
-public func attributedMarkdownString(from markdownText: String,
-                                     using textStyle: TextStyle) -> NSAttributedString {
-    guard let (parsedString, elements) = try? MarkdownParser.parse(markdownText) else {
-        return NSAttributedString(string: markdownText, textStyle: textStyle)
-    }
+/// - Throws: Parser error.
+public func parsedMarkdownString(from markdownText: String,
+                                 using textStyle: TextStyle) throws -> NSAttributedString {
+    let (parsedString, elements) = try MarkdownParser.parse(markdownText)
     
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,
@@ -62,14 +96,15 @@ public func attributedMarkdownString(from markdownText: String,
 ///   - textStyle: Text style object containing style information.
 ///   - markups: Markup information.
 /// - Returns: Formatted text.
-public func attributedMarkupString(from text: String,
-                                   using textStyle: TextStyle,
-                                   customMarkup markups: Markup) -> NSAttributedString {
-    guard
-        markups.count > 0,
-        let (parsedString, elements) = try? ElementParser.parse(text, for: markups.map { Symbol(character: $0.0) }) else {
-            return NSAttributedString(string: text, textStyle: textStyle)
+/// - Throws: Parser error.
+public func parsedMarkupString(from text: String,
+                               using textStyle: TextStyle,
+                               customMarkup markups: Markup) throws -> NSAttributedString {
+    guard markups.count > 0 else {
+        return NSAttributedString(string: text, textStyle: textStyle)
     }
+
+    let (parsedString, elements) = try ElementParser.parse(text, for: markups.map { Symbol(character: $0.0) })
     
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,

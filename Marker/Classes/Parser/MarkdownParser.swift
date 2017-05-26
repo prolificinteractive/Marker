@@ -11,10 +11,13 @@ internal struct MarkdownParser {
     
     /// Parser error.
     ///
-    /// - tagMismatch: Opening tag doesn't match closing tag.
-    /// - unclosedTags: A tag was left unclosed.
-    enum ParserError: Error {
+    /// - invalidTagSymbol: Tag symbol is not a Markdown symbol.
+    enum ParserError: LocalizedError {
         case invalidTagSymbol
+
+        var errorDescription: String? {
+            return "Invalid Markdown tag."
+        }
     }
     
     // MARK: - Private properties

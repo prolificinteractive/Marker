@@ -15,9 +15,20 @@ internal struct ElementParser {
     ///
     /// - tagMismatch: Opening tag doesn't match closing tag.
     /// - unclosedTags: A tag was left unclosed.
-    enum ParserError: Error {
+    enum ParserError: LocalizedError {
+
         case tagMismatch
         case unclosedTags
+
+        var errorDescription: String? {
+            switch self {
+            case .tagMismatch:
+                return "Opening tag doesn't match closing tag."
+            case .unclosedTags:
+                return "A tag was left unclosed."
+            }
+        }
+
     }
     
     // MARK: - Static functions
