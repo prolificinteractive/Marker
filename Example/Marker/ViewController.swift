@@ -25,7 +25,11 @@ internal final class ViewController: UIViewController {
     
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var textField: UITextField!
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var textView: UITextView! {
+        didSet {
+            textView.isEditable = false
+        }
+    }
     
     private let labelText = "__the life of       pablo__\n" +
         "__the life of   pablo__\n" +
@@ -41,8 +45,8 @@ internal final class ViewController: UIViewController {
         "facts\n" +
         "fade\n" +
         ".\n" +
-        ".\n" +
-        ".\n"
+        "#.#\n" +
+        "^.^\n"
 
     // MARK: - Init/Deinit
     
@@ -86,7 +90,18 @@ internal final class ViewController: UIViewController {
         
         label.setMarkdownText(labelText, using: fontTheme.headlineTextStyle)
         textField.setText(textFieldText, using: fontTheme.titleTextStyle)
-        textView.setText(textViewText, using: fontTheme.bodyTextStyle)
+        
+        var fadedTextStyleOne = fontTheme.bodyTextStyle
+        fadedTextStyleOne.textColor = UIColor.black.withAlphaComponent(0.5)
+        var fadedTextStyleTwo = fontTheme.bodyTextStyle
+        fadedTextStyleTwo.textColor = UIColor.black.withAlphaComponent(0.2)
+        textView.setText(textViewText,
+                         using: fontTheme.bodyTextStyle,
+                         customMarkup: [
+                            "#": fadedTextStyleOne,
+                            "^": fadedTextStyleTwo
+            ]
+        )
     }
     
 }

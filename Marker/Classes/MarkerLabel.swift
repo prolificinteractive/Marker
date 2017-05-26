@@ -10,31 +10,25 @@ import UIKit
 
 public extension UILabel {
     
-    /**
-     Sets the label text to an attributed string created from the specified string and text style.
-     
-     - parameter text:      The text to be displayed in the label.
-     - parameter textStyle: Text style object containing style information.
-     */
-    func setText(_ text: String, using textStyle: TextStyle) {
-        attributedText = NSAttributedString(string: text, textStyle: textStyle)
+    /// Sets the label text to an attributed string created from the specified string and text style.
+    ///
+    /// - Parameters:
+    ///   - text: The text to be displayed in the label.
+    ///   - textStyle: Text style object containing style information.
+    ///   - markups: Custom markup if there is any. Defaults to zero custom markup.
+    func setText(_ text: String, using textStyle: TextStyle, customMarkup markups: Markup = [:]) {
+        attributedText = attributedMarkupString(from: text, using: textStyle, customMarkup: markups)
+    }
+
+    /// Sets the label text to an attributed string created from the specified string and text style.
+    /// This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
+    /// Refer to MarkerdownElement for a list of supported Markdown tags.
+    ///
+    /// - Parameters:
+    ///   - markdownText: The Markdown text to be displayed in the label.
+    ///   - textStyle: Text style object containing style information.
+    func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
+        attributedText = attributedMarkdownString(from: markdownText, using: textStyle)
     }
     
-    /**
-     Sets the label text to an attributed string created from the specified string and text style.
-     This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
-     Refer to MarkerdownParser.Tag for a list of supported Markdown tags.
-     
-     - parameter markdownText: The Markdown text to be displayed in the label.
-     - parameter textStyle:    Text style object containing style information.
-     */
-    func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
-        do {
-            let (parsedString, tags) = try MarkdownParser.parse(markdownText)
-            attributedText = attributedMarkdownString(from: parsedString, with: tags, using: textStyle)
-        } catch {
-            text = markdownText
-        }
-    }
-        
 }
