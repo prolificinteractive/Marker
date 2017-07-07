@@ -67,7 +67,7 @@ public struct TextStyle {
     /// Stroke color for strikethough text.
     public var strikethroughColor: UIColor?
     
-    /// Underline style for underlined text.s
+    /// Underline style for underlined text.
     public var underlineStyle: NSUnderlineStyle?
     
     /// Stroke color for underlined text.

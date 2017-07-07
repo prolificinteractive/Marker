@@ -31,6 +31,8 @@ public extension TextStyle {
     ///   - newLineBreakMode: New line break mode.
     ///   - newStrikethroughStyle: New strikethrough style.
     ///   - newStrikethroughColor: New strikethrough color.
+    ///   - newUnderlineStyle: New underline style.
+    ///   - newUnderlineColor: New underline color.
     ///   - newTextTransform: New text transform.
     /// - Returns: New Text Style with updated value(s).
     public func with(newFont: UIFont? = nil,
@@ -50,6 +52,8 @@ public extension TextStyle {
                      newLineBreakMode: NSLineBreakMode? = nil,
                      newStrikethroughStyle: NSUnderlineStyle? = nil,
                      newStrikethroughColor: UIColor? = nil,
+                     newUnderlineStyle: NSUnderlineStyle? = nil,
+                     newUnderlineColor: UIColor? = nil,
                      newTextTransform: TextTransform? = nil) -> TextStyle {
         let fontToUse = (newFont == nil) ? self.font : newFont!
         let emFontToUse = (newEmFont == nil) ? self.emFont : newEmFont!
@@ -68,6 +72,8 @@ public extension TextStyle {
         let lineBreakModeToUse = (newLineBreakMode == nil) ? self.lineBreakMode : newLineBreakMode!
         let strikethroughStyleToUse = (newStrikethroughStyle == nil) ? self.strikethroughStyle : newStrikethroughStyle!
         let strikethroughColorToUse = (newStrikethroughColor == nil) ? self.strikethroughColor : newStrikethroughColor!
+        let underlineStyleToUse = (newUnderlineStyle == nil) ? self.underlineStyle : newUnderlineStyle!
+        let underlineColorToUse = (newUnderlineColor == nil) ? self.underlineColor : newUnderlineColor!
         let textTransformToUse = (newTextTransform == nil) ? self.textTransform : newTextTransform!
         
         return TextStyle(
@@ -88,6 +94,8 @@ public extension TextStyle {
             lineBreakMode: lineBreakModeToUse,
             strikethroughStyle: strikethroughStyleToUse,
             strikethroughColor: strikethroughColorToUse,
+            underlineStyle: underlineStyleToUse,
+            underlineColor: underlineColorToUse,
             textTransform: textTransformToUse
         )
     }
@@ -144,6 +152,8 @@ public func ==(lhs: TextStyle, rhs: TextStyle) -> Bool {
         lhs.lineBreakMode == rhs.lineBreakMode,
         lhs.strikethroughStyle == rhs.strikethroughStyle,
         lhs.strikethroughColor == rhs.strikethroughColor,
+        lhs.underlineStyle == rhs.underlineStyle,
+        lhs.underlineColor == rhs.underlineColor,
         lhs.textTransform == rhs.textTransform else {
         return false
     }
