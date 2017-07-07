@@ -493,4 +493,52 @@ class TextStyleFactoryFunctionTests: XCTestCase {
         XCTAssertEqual(newTextStyle, expectedTextStyle)
     }
     
+    func testTextStyleFactory_whenBolded_fontIsBold() {
+        let newTextStyle = textStyle.bold()
+        let expectedTextStyle = TextStyle(font: textStyle.strongFont,
+                                          emFont: textStyle.emFont,
+                                          strongFont: textStyle.strongFont,
+                                          textColor: textStyle.textColor,
+                                          characterSpacing: textStyle.characterSpacing,
+                                          lineSpacing: textStyle.lineSpacing,
+                                          lineHeightMultiple: textStyle.lineHeightMultiple,
+                                          minimumLineHeight: textStyle.minimumLineHeight,
+                                          maximumLineHeight: textStyle.maximumLineHeight,
+                                          firstLineHeadIndent: textStyle.firstLineHeadIndent,
+                                          headIndent: textStyle.headIndent,
+                                          paragraphSpacing: textStyle.paragraphSpacing,
+                                          paragraphSpacingBefore: textStyle.paragraphSpacingBefore,
+                                          textAlignment: textStyle.textAlignment,
+                                          lineBreakMode: textStyle.lineBreakMode,
+                                          strikethroughStyle: textStyle.strikethroughStyle,
+                                          strikethroughColor: textStyle.strikethroughColor,
+                                          textTransform: textStyle.textTransform)
+        
+        XCTAssertEqual(newTextStyle, expectedTextStyle)
+    }
+
+    func testTextStyleFactory_whenItalicized_fontIsitalic() {
+        let newTextStyle = textStyle.italic()
+        let expectedTextStyle = TextStyle(font: textStyle.emFont,
+                                          emFont: textStyle.emFont,
+                                          strongFont: textStyle.strongFont,
+                                          textColor: textStyle.textColor,
+                                          characterSpacing: textStyle.characterSpacing,
+                                          lineSpacing: textStyle.lineSpacing,
+                                          lineHeightMultiple: textStyle.lineHeightMultiple,
+                                          minimumLineHeight: textStyle.minimumLineHeight,
+                                          maximumLineHeight: textStyle.maximumLineHeight,
+                                          firstLineHeadIndent: textStyle.firstLineHeadIndent,
+                                          headIndent: textStyle.headIndent,
+                                          paragraphSpacing: textStyle.paragraphSpacing,
+                                          paragraphSpacingBefore: textStyle.paragraphSpacingBefore,
+                                          textAlignment: textStyle.textAlignment,
+                                          lineBreakMode: textStyle.lineBreakMode,
+                                          strikethroughStyle: textStyle.strikethroughStyle,
+                                          strikethroughColor: textStyle.strikethroughColor,
+                                          textTransform: textStyle.textTransform)
+        
+        XCTAssertEqual(newTextStyle, expectedTextStyle)
+    }
+    
 }

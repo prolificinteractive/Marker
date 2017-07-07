@@ -11,10 +11,28 @@ import UIKit
 /// Adds factory functions producing new TextStyle from existing TextStyle.
 public extension TextStyle {
     
-    /// Creates new TextStyle from exisiting TextStyle, updating with provided values.Creates
+    /// Creates new TextStyle from exisiting TextStyle, updating with provided values.
     ///
-    /// - Parameter newFont: New font to use.
-    /// - Returns: New TextStyle.
+    /// - Parameters:
+    ///   - newFont: New font.
+    ///   - newEmFont: New emphasis font.
+    ///   - newStrongFont: New strong font.
+    ///   - newTextColor: New text color.
+    ///   - newCharacterSpacing: New character spacing.
+    ///   - newLineSpacing: New line spacing.
+    ///   - newLineHeightMultiple: New line height multiple.
+    ///   - newMinimumLineHeight: New minimum line height.
+    ///   - newMaximumLineHeight: New maximum line height.
+    ///   - newFirstLineHeadIndent: New first line head indent.
+    ///   - newHeadIndent: New head indent.
+    ///   - newParagraphSpacing: New paragraph spacing.
+    ///   - newParagraphSpacingBefore: New paragraph spacing before.
+    ///   - newTextAlignment: New text alignment.
+    ///   - newLineBreakMode: New line break mode.
+    ///   - newStrikethroughStyle: New strikethrough style.
+    ///   - newStrikethroughColor: New strikethrough color.
+    ///   - newTextTransform: New text transform.
+    /// - Returns: New Text Style with updated value(s).
     public func with(newFont: UIFont? = nil,
                      newEmFont: UIFont? = nil,
                      newStrongFont: UIFont? = nil,
@@ -72,6 +90,20 @@ public extension TextStyle {
             strikethroughColor: strikethroughColorToUse,
             textTransform: textTransformToUse
         )
+    }
+    
+    /// Creates new TextStyle from exisiting TextStyle, replacing font with bold variation.
+    ///
+    /// - Returns: New TextStyle with updated font.
+    public func bold() -> TextStyle {
+        return self.with(newFont: strongFont)
+    }
+    
+    /// Creates new TextStyle from exisiting TextStyle, replacing font with italic variation.
+    ///
+    /// - Returns: New TextStyle with updated font.
+    public func italic() -> TextStyle {
+        return self.with(newFont: emFont)
     }
     
 }
