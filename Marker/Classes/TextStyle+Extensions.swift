@@ -92,6 +92,18 @@ public extension TextStyle {
         )
     }
     
+    /// Creates new TextStyle from exisiting TextStyle, updating fonts with new size.
+    ///
+    /// - Parameter newFontSize: New font size.
+    /// - Returns: New TextStyle.
+    public func with(newFontSize: CGFloat) -> TextStyle {
+        return self.with(
+            newFont: self.font.withSize(newFontSize),
+            newEmFont: self.emFont.withSize(newFontSize),
+            newStrongFont: self.strongFont.withSize(newFontSize)
+        )
+    }
+    
     /// Creates new TextStyle from exisiting TextStyle, replacing font with bold variation.
     ///
     /// - Returns: New TextStyle with updated font.

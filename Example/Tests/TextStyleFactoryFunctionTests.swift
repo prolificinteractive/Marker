@@ -493,6 +493,31 @@ class TextStyleFactoryFunctionTests: XCTestCase {
         XCTAssertEqual(newTextStyle, expectedTextStyle)
     }
     
+    func testTextStyleFactory_whenNewFontSize_allFontsHaveNewSize() {
+        let newFontSize = textStyle.font.pointSize + 10
+        let newTextStyle = textStyle.with(newFontSize: newFontSize)
+        let expectedTextStyle = TextStyle(font: textStyle.font.withSize(newFontSize),
+                                          emFont: textStyle.emFont.withSize(newFontSize),
+                                          strongFont: textStyle.strongFont.withSize(newFontSize),
+                                          textColor: textStyle.textColor,
+                                          characterSpacing: textStyle.characterSpacing,
+                                          lineSpacing: textStyle.lineSpacing,
+                                          lineHeightMultiple: textStyle.lineHeightMultiple,
+                                          minimumLineHeight: textStyle.minimumLineHeight,
+                                          maximumLineHeight: textStyle.maximumLineHeight,
+                                          firstLineHeadIndent: textStyle.firstLineHeadIndent,
+                                          headIndent: textStyle.headIndent,
+                                          paragraphSpacing: textStyle.paragraphSpacing,
+                                          paragraphSpacingBefore: textStyle.paragraphSpacingBefore,
+                                          textAlignment: textStyle.textAlignment,
+                                          lineBreakMode: textStyle.lineBreakMode,
+                                          strikethroughStyle: textStyle.strikethroughStyle,
+                                          strikethroughColor: textStyle.strikethroughColor,
+                                          textTransform: textStyle.textTransform)
+        
+        XCTAssertEqual(newTextStyle, expectedTextStyle)
+    }
+    
     func testTextStyleFactory_whenBolded_fontIsBold() {
         let newTextStyle = textStyle.bold()
         let expectedTextStyle = TextStyle(font: textStyle.strongFont,
