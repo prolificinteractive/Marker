@@ -22,6 +22,8 @@ public func ==(lhs: TextTransform, rhs: TextTransform) -> Bool {
         return true
     case (.uppercased, .uppercased):
         return true
+    case (.capitalized, .capitalized):
+        return true
     default:
         return false
     }
