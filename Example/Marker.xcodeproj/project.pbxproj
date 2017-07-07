@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FC3E7E41F0FC57E0024E2D1 /* TextStyleFactoryFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC3E7E21F0FC5500024E2D1 /* TextStyleFactoryFunctionTests.swift */; };
 		4811C04D1D0B6FB5007279CB /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811C04C1D0B6FB5007279CB /* AppTheme.swift */; };
 		485ED1131D09E89F00119D5D /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485ED1121D09E89F00119D5D /* AvenirNextFont.swift */; };
 		485ED1181D0A091800119D5D /* ThemeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485ED1171D0A091800119D5D /* ThemeSettingsViewController.swift */; };
@@ -38,6 +39,7 @@
 		08F1825B7EA29E36898092FB /* Marker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Marker.podspec; path = ../Marker.podspec; sourceTree = "<group>"; };
 		1E6E60D0D2F5667C8156B123 /* Pods_Marker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2408A1D80FB40943D0B15C58 /* Pods-Marker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marker_Tests/Pods-Marker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2FC3E7E21F0FC5500024E2D1 /* TextStyleFactoryFunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleFactoryFunctionTests.swift; sourceTree = "<group>"; };
 		31D2DC9BD8B466270B5299FF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4811C04C1D0B6FB5007279CB /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		485ED1121D09E89F00119D5D /* AvenirNextFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvenirNextFont.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				486EC7691DB440D3009BCA7A /* ParserTests.swift */,
+				2FC3E7E21F0FC5500024E2D1 /* TextStyleFactoryFunctionTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -415,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				486EC76B1DB440E8009BCA7A /* ParserTests.swift in Sources */,
+				2FC3E7E41F0FC57E0024E2D1 /* TextStyleFactoryFunctionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
