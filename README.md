@@ -94,6 +94,9 @@ Marker also supports setting text with common Markdown tags:
 
 * Bold (`__` or `**`)
 * Italic (`_` or `*`)
+
+As well as convenient Markdown tags specific to Marker:
+
 * Strikethrough (`~~`)
 * Underline (`==`)
 

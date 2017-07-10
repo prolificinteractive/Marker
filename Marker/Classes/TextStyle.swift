@@ -152,7 +152,7 @@ public struct TextStyle {
      - parameter strikethroughStyle:     Strikethrough style.
      - parameter strikethroughColor:     Strikethrough color.
      - parameter underlineStyle:         Underline style.
-     - parameter underlineColor:         Underline color.s
+     - parameter underlineColor:         Underline color.
      - parameter textTransform:          Text transform option.
      
      - returns: An initialized text style object.
