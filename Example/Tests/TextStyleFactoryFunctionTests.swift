@@ -664,4 +664,60 @@ class TextStyleFactoryFunctionTests: XCTestCase {
         XCTAssertEqual(newTextStyle, expectedTextStyle)
     }
     
+    func testTextStyleFactory_whenUnderlined_underlinePropertiesAreSet() {
+        let underlineStyle: NSUnderlineStyle = .styleDouble
+        let underlineColor = UIColor.green
+        let newTextStyle = textStyle.underlined(color: underlineColor, style: underlineStyle)
+        let expectedTextStyle = TextStyle(font: textStyle.font,
+                                          emFont: textStyle.emFont,
+                                          strongFont: textStyle.strongFont,
+                                          textColor: textStyle.textColor,
+                                          characterSpacing: textStyle.characterSpacing,
+                                          lineSpacing: textStyle.lineSpacing,
+                                          lineHeightMultiple: textStyle.lineHeightMultiple,
+                                          minimumLineHeight: textStyle.minimumLineHeight,
+                                          maximumLineHeight: textStyle.maximumLineHeight,
+                                          firstLineHeadIndent: textStyle.firstLineHeadIndent,
+                                          headIndent: textStyle.headIndent,
+                                          paragraphSpacing: textStyle.paragraphSpacing,
+                                          paragraphSpacingBefore: textStyle.paragraphSpacingBefore,
+                                          textAlignment: textStyle.textAlignment,
+                                          lineBreakMode: textStyle.lineBreakMode,
+                                          strikethroughStyle: textStyle.strikethroughStyle,
+                                          strikethroughColor: textStyle.strikethroughColor,
+                                          underlineStyle: underlineStyle,
+                                          underlineColor: underlineColor,
+                                          textTransform: textStyle.textTransform)
+        
+        XCTAssertEqual(newTextStyle, expectedTextStyle)
+    }
+    
+    func testTextStyleFactory_whenUnderlined_defaultsToSingleLineOfSameColor() {
+        let expectedStyle: NSUnderlineStyle = .styleSingle
+        let expectedColor = textStyle.textColor
+        let newTextStyle = textStyle.underlined()
+        let expectedTextStyle = TextStyle(font: textStyle.font,
+                                          emFont: textStyle.emFont,
+                                          strongFont: textStyle.strongFont,
+                                          textColor: textStyle.textColor,
+                                          characterSpacing: textStyle.characterSpacing,
+                                          lineSpacing: textStyle.lineSpacing,
+                                          lineHeightMultiple: textStyle.lineHeightMultiple,
+                                          minimumLineHeight: textStyle.minimumLineHeight,
+                                          maximumLineHeight: textStyle.maximumLineHeight,
+                                          firstLineHeadIndent: textStyle.firstLineHeadIndent,
+                                          headIndent: textStyle.headIndent,
+                                          paragraphSpacing: textStyle.paragraphSpacing,
+                                          paragraphSpacingBefore: textStyle.paragraphSpacingBefore,
+                                          textAlignment: textStyle.textAlignment,
+                                          lineBreakMode: textStyle.lineBreakMode,
+                                          strikethroughStyle: textStyle.strikethroughStyle,
+                                          strikethroughColor: textStyle.strikethroughColor,
+                                          underlineStyle: expectedStyle,
+                                          underlineColor: expectedColor,
+                                          textTransform: textStyle.textTransform)
+        
+        XCTAssertEqual(newTextStyle, expectedTextStyle)
+    }
+    
 }

@@ -126,6 +126,17 @@ public extension TextStyle {
         return self.with(newFont: emFont)
     }
     
+    /// Creates new Text Style from exisiting TextStyle, with underline.
+    ///
+    /// - Parameter color: Underline color. Defaults to textColor.
+    /// - Parameter style: Underline style. Defaults to single line.
+    /// - Returns: New TextStyle with underline.
+    public func underlined(color: UIColor? = nil, style: NSUnderlineStyle = .styleSingle) -> TextStyle {
+        return self
+            .with(newUnderlineStyle: style)
+            .with(newUnderlineColor: color ?? textColor)
+    }
+    
 }
 
 // MARK: - Protocol conformance
