@@ -27,6 +27,7 @@ internal struct MarkdownParser {
     private static let underscoreStrongSymbol = Symbol(rawValue: "__")
     private static let asteriskStrongSymbol = Symbol(rawValue: "**")
     private static let tildeStrikethroughSymbol = Symbol(rawValue: "~~")
+    private static let equalUnderlineSymbol = Symbol(rawValue: "==")
     
     // MARK: - Static functions
     
@@ -41,7 +42,8 @@ internal struct MarkdownParser {
             let asteriskEmSymbol = asteriskEmSymbol,
             let underscoreStrongSymbol = underscoreStrongSymbol,
             let asteriskStrongSymbol = asteriskStrongSymbol,
-            let tildeStrikethroughSymbol = tildeStrikethroughSymbol else {
+            let tildeStrikethroughSymbol = tildeStrikethroughSymbol,
+            let equalUnderlineSymbol = equalUnderlineSymbol else {
                 return (string, [])
         }
         
@@ -53,6 +55,8 @@ internal struct MarkdownParser {
                 return .strong(element.range)
             case tildeStrikethroughSymbol:
                 return .strikethrough(element.range)
+            case equalUnderlineSymbol:
+                return .underline(element.range)
             default:
                 throw ParserError.invalidTagSymbol
             }
@@ -63,7 +67,8 @@ internal struct MarkdownParser {
                                                                        asteriskEmSymbol,
                                                                        underscoreStrongSymbol,
                                                                        asteriskStrongSymbol,
-                                                                       tildeStrikethroughSymbol])
+                                                                       tildeStrikethroughSymbol,
+                                                                       equalUnderlineSymbol])
         return try (strippedString, elements.map(transformToMarkdownElement))
     }
     
