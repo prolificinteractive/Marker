@@ -70,6 +70,8 @@
 		27C4E6671ED6082800DDE387 /* NSTextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */; };
 		27C4E66A1ED60C7700DDE387 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */; };
 		27C4E66B1ED60C7700DDE387 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */; };
+		480C7A5F1F15832A0094E4EA /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
+		480C7A601F15832A0094E4EA /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -631,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480C7A601F15832A0094E4EA /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480C7A5F1F15832A0094E4EA /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1065,6 +1069,7 @@
 				27C4E5DA1ED5ED2400DDE387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27C4E5DB1ED5ED2400DDE387 /* Build configuration list for PBXNativeTarget "Marker-tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1073,6 +1078,7 @@
 				27C4E5DD1ED5ED2400DDE387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27C4E5F41ED5ED3100DDE387 /* Build configuration list for PBXNativeTarget "Marker-macOS" */ = {
 			isa = XCConfigurationList;
@@ -1081,6 +1087,7 @@
 				27C4E5F61ED5ED3100DDE387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27C4E5F71ED5ED3100DDE387 /* Build configuration list for PBXNativeTarget "Marker-macOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1089,6 +1096,7 @@
 				27C4E5F91ED5ED3100DDE387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
