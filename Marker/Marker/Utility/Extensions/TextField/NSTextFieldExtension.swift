@@ -10,29 +10,25 @@ import AppKit
 
 public extension NSTextField {
 
-    /// Creates a text field based on text passed to an attributed string created from the specified string and text style.
+    /// Sets the text view text to an attributed string created from the specified string and text style.
     ///
     /// - Parameters:
-    ///   - text: The text to be displayed in the text field.
-    ///   - textStyle:  Text style object containing style information.
-    ///   - markups: Custom markup if there is any. Defaults to zero custom markup.
-    /// - Returns: A NSTextField instance.
-    convenience init(_ text: String, using textStyle: TextStyle, customMarkup markups: Markup = [:]) {
-        let attributedText = attributedMarkupString(from: text, using: textStyle, customMarkup: markups)
-
-        self.init(labelWithAttributedString: attributedText)
-    }
-
-    /// Creates a text field based on text passed to an attributed string created from the specified string and text style.
-    ///
-    /// - Parameters:
-    ///   - markdownText: The Markdown text to be displayed in the text field.
+    ///   - text: The text to be displayed in the text view.
     ///   - textStyle: Text style object containing style information.
-    /// - Returns: A NSTextField instance.
-    convenience init(_ markdownText: String, using textStyle: TextStyle) {
-        let attributedText = attributedMarkdownString(from: markdownText, using: textStyle)
-
-        self.init(labelWithAttributedString: attributedText)
+    ///   - markups: Custom markup if there is any. Defaults to zero custom markup.
+    func setText(_ text: String, using textStyle: TextStyle, customMarkup markups: Markup = [:]) {
+        attributedStringValue = attributedMarkupString(from: text, using: textStyle, customMarkup: markups)
     }
-    
+
+    /// Sets the text view text to an attributed string created from the specified string and text style.
+    /// This function treats the specified string as a Markdown formatted string and applies appropriate styling to it.
+    /// Refer to MarkerdownElement for a list of supported Markdown tags.
+    ///
+    /// - Parameters:
+    ///   - markdownText: The Markdown text to be displayed in the text view.
+    ///   - textStyle: Text style object containing style information.
+    func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
+        attributedStringValue = attributedMarkdownString(from: markdownText, using: textStyle)
+    }
+
 }

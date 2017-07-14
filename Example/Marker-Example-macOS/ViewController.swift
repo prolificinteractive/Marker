@@ -63,11 +63,8 @@ internal final class ViewController: NSViewController {
             return
         }
 
-        let multiLineTextFieldText = attributedMarkdownString(from: labelText, using: fontTheme.headlineTextStyle)
-        multiLineTextField.attributedStringValue = multiLineTextFieldText
-
-        let textFieldAttributedText = attributedMarkdownString(from: textFieldText, using: fontTheme.titleTextStyle)
-        textField.attributedStringValue = textFieldAttributedText
+        multiLineTextField.setMarkdownText(labelText, using: fontTheme.headlineTextStyle)
+        textField.setMarkdownText(textFieldText, using: fontTheme.titleTextStyle)
 
         var fadedTextStyleOne = fontTheme.bodyTextStyle
         fadedTextStyleOne.textColor = Color.black.withAlphaComponent(0.5)

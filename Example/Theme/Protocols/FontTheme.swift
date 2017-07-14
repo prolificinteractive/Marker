@@ -6,8 +6,13 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
 import Marker
+
+#if os(iOS) || os(tvOS)
+    import UIKit
+#elseif os(macOS)
+    import AppKit
+#endif
 
 internal protocol FontTheme {
 
@@ -21,6 +26,8 @@ internal protocol FontTheme {
 }
 
 extension FontTheme {
+
+#if os(iOS) || os(tvOS)
 
     var headlineFontSize: CGFloat {
         switch UIApplication.shared.preferredContentSizeCategory {
@@ -57,5 +64,17 @@ extension FontTheme {
             return 19
         }
     }
+
+#elseif os(macOS)
+
+    var headlineFontSize: CGFloat {
+        return 17
+    }
+
+    var titleFontSize: CGFloat {
+        return 19
+    }
+    
+#endif
 
 }

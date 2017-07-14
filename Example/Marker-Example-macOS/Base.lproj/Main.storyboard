@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -425,9 +425,9 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wac-eq-pul">
-                                            <rect key="frame" x="15" y="198" width="290" height="50"/>
+                                            <rect key="frame" x="15" y="198" width="290" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="U4W-Kg-cZa"/>
+                                                <constraint firstAttribute="height" constant="35" id="U4W-Kg-cZa"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="Hxp-uo-Zdq">
                                                 <font key="font" metaFont="system"/>
@@ -436,16 +436,16 @@
                                             </textFieldCell>
                                         </textField>
                                         <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIy-LX-Izi">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="198"/>
+                                            <rect key="frame" x="12" y="0.0" width="296" height="198"/>
                                             <clipView key="contentView" id="Yzx-T6-ZWz">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="198"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="198"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="sXQ-LI-rcS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="198"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="198"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <size key="minSize" width="300" height="198"/>
+                                                        <size key="minSize" width="296" height="198"/>
                                                         <size key="maxSize" width="463" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
@@ -457,7 +457,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ovf-Ss-KeN">
-                                                <rect key="frame" x="284" y="0.0" width="16" height="198"/>
+                                                <rect key="frame" x="280" y="0.0" width="16" height="198"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
@@ -465,11 +465,11 @@
                                     <constraints>
                                         <constraint firstItem="Wac-eq-pul" firstAttribute="leading" secondItem="zDe-ow-nVV" secondAttribute="leading" constant="15" id="3J9-S6-QTg"/>
                                         <constraint firstAttribute="trailing" secondItem="Wac-eq-pul" secondAttribute="trailing" constant="15" id="8fo-DS-PLH"/>
-                                        <constraint firstItem="UIy-LX-Izi" firstAttribute="leading" secondItem="zDe-ow-nVV" secondAttribute="leading" constant="10" id="QBg-bP-S5M"/>
-                                        <constraint firstAttribute="trailing" secondItem="UIy-LX-Izi" secondAttribute="trailing" constant="10" id="bQa-ol-Y8Q"/>
+                                        <constraint firstItem="UIy-LX-Izi" firstAttribute="leading" secondItem="zDe-ow-nVV" secondAttribute="leading" constant="12" id="QBg-bP-S5M"/>
+                                        <constraint firstAttribute="trailing" secondItem="UIy-LX-Izi" secondAttribute="trailing" constant="12" id="bQa-ol-Y8Q"/>
                                         <constraint firstItem="UIy-LX-Izi" firstAttribute="top" secondItem="Wac-eq-pul" secondAttribute="bottom" id="j48-M6-q6R"/>
                                         <constraint firstAttribute="bottom" secondItem="UIy-LX-Izi" secondAttribute="bottom" id="jNU-vv-IoJ"/>
-                                        <constraint firstItem="Wac-eq-pul" firstAttribute="top" secondItem="zDe-ow-nVV" secondAttribute="top" id="ve9-Sp-FIx"/>
+                                        <constraint firstItem="Wac-eq-pul" firstAttribute="top" secondItem="zDe-ow-nVV" secondAttribute="top" constant="15" id="ve9-Sp-FIx"/>
                                     </constraints>
                                 </view>
                                 <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

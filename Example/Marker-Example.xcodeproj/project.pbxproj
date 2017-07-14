@@ -15,20 +15,20 @@
 		272D86351ED62E9C00CE29EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D86341ED62E9C00CE29EB /* ViewController.swift */; };
 		272D86371ED62E9C00CE29EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 272D86361ED62E9C00CE29EB /* Assets.xcassets */; };
 		272D863A1ED62E9C00CE29EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272D86381ED62E9C00CE29EB /* Main.storyboard */; };
-		272D863F1ED6362E00CE29EB /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B31ED5E0B600DDE387 /* AppTheme.swift */; };
-		272D86401ED6377C00CE29EB /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B61ED5E0B600DDE387 /* MarkerExampleFontTheme.swift */; };
-		272D86441ED638F100CE29EB /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B51ED5E0B600DDE387 /* HelveticaNeueFont.swift */; };
-		272D86451ED638F500CE29EB /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B41ED5E0B600DDE387 /* AvenirNextFont.swift */; };
-		272D86471ED6392900CE29EB /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D86461ED6392900CE29EB /* FontTheme.swift */; };
-		272D86481ED63A4F00CE29EB /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B81ED5E0B600DDE387 /* FontFamily.swift */; };
 		27C4E5B11ED5E09900DDE387 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C4E5AF1ED5E09900DDE387 /* LaunchScreen.xib */; };
-		27C4E5BB1ED5E0B600DDE387 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B31ED5E0B600DDE387 /* AppTheme.swift */; };
-		27C4E5BC1ED5E0B600DDE387 /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B41ED5E0B600DDE387 /* AvenirNextFont.swift */; };
-		27C4E5BD1ED5E0B600DDE387 /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B51ED5E0B600DDE387 /* HelveticaNeueFont.swift */; };
-		27C4E5BE1ED5E0B600DDE387 /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B61ED5E0B600DDE387 /* MarkerExampleFontTheme.swift */; };
-		27C4E5BF1ED5E0B600DDE387 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B81ED5E0B600DDE387 /* FontFamily.swift */; };
-		27C4E5C01ED5E0B600DDE387 /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B91ED5E0B600DDE387 /* FontTheme.swift */; };
 		27C4E5C11ED5E0B600DDE387 /* ThemeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5BA1ED5E0B600DDE387 /* ThemeSettingsViewController.swift */; };
+		482D11211F192059004FFCDD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111A1F192059004FFCDD /* AppTheme.swift */; };
+		482D11221F192059004FFCDD /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111B1F192059004FFCDD /* AvenirNextFont.swift */; };
+		482D11231F192059004FFCDD /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */; };
+		482D11241F192059004FFCDD /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */; };
+		482D11251F192059004FFCDD /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111F1F192059004FFCDD /* FontFamily.swift */; };
+		482D11261F192059004FFCDD /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D11201F192059004FFCDD /* FontTheme.swift */; };
+		482D11271F192063004FFCDD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111A1F192059004FFCDD /* AppTheme.swift */; };
+		482D11281F192063004FFCDD /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111B1F192059004FFCDD /* AvenirNextFont.swift */; };
+		482D11291F192063004FFCDD /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */; };
+		482D112A1F192063004FFCDD /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */; };
+		482D112B1F192067004FFCDD /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111F1F192059004FFCDD /* FontFamily.swift */; };
+		482D112C1F192067004FFCDD /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D11201F192059004FFCDD /* FontTheme.swift */; };
 		8EDAEDEF570C6A7CB445F83B /* Pods_Marker_Example_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305DE7EF138FF288EF3289D2 /* Pods_Marker_Example_macOS.framework */; };
 		C2C325BAF837614C071CDA55 /* Pods_Marker_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EBCAC481930708F9EBF1F8 /* Pods_Marker_Example_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -48,19 +48,15 @@
 		272D86361ED62E9C00CE29EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		272D86391ED62E9C00CE29EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		272D863B1ED62E9C00CE29EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		272D86461ED6392900CE29EB /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontTheme.swift; path = Theme/Protocols/FontTheme.swift; sourceTree = "<group>"; };
-		27C4E54B1ED5DB8B00DDE387 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		27C4E54C1ED5DB8B00DDE387 /* Marker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Marker.podspec; path = ../Marker.podspec; sourceTree = "<group>"; };
-		27C4E54D1ED5DB8B00DDE387 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		27C4E5B01ED5E09900DDE387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		27C4E5B31ED5E0B600DDE387 /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		27C4E5B41ED5E0B600DDE387 /* AvenirNextFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvenirNextFont.swift; sourceTree = "<group>"; };
-		27C4E5B51ED5E0B600DDE387 /* HelveticaNeueFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaNeueFont.swift; sourceTree = "<group>"; };
-		27C4E5B61ED5E0B600DDE387 /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
-		27C4E5B81ED5E0B600DDE387 /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
-		27C4E5B91ED5E0B600DDE387 /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
 		27C4E5BA1ED5E0B600DDE387 /* ThemeSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeSettingsViewController.swift; sourceTree = "<group>"; };
 		305DE7EF138FF288EF3289D2 /* Pods_Marker_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marker_Example_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482D111A1F192059004FFCDD /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		482D111B1F192059004FFCDD /* AvenirNextFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvenirNextFont.swift; sourceTree = "<group>"; };
+		482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaNeueFont.swift; sourceTree = "<group>"; };
+		482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
+		482D111F1F192059004FFCDD /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
+		482D11201F192059004FFCDD /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
 		6E0E5053CCCC25964EA84B2A /* Pods-Marker-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		70010596CDFDF2A41B708669 /* Pods-Marker-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E9EBCAC481930708F9EBF1F8 /* Pods_Marker_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marker_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +94,9 @@
 		271C85CA1ED4E3F000F8BBBB = {
 			isa = PBXGroup;
 			children = (
-				271C85E81ED4E57500F8BBBB /* Podspec Metadata */,
 				271C85D71ED4E40800F8BBBB /* Marker-Example-iOS */,
 				272D86311ED62E9C00CE29EB /* Marker-Example-macOS */,
+				482D11191F192059004FFCDD /* Theme */,
 				271C85D61ED4E40800F8BBBB /* Products */,
 				FC8796DD44CABC4E027AAE16 /* Pods */,
 				253BEC31DDF816A46E9293BF /* Frameworks */,
@@ -120,31 +116,19 @@
 			isa = PBXGroup;
 			children = (
 				271C85D81ED4E40800F8BBBB /* AppDelegate.swift */,
-				271C85DF1ED4E40800F8BBBB /* Assets.xcassets */,
-				271C85E41ED4E40800F8BBBB /* Info.plist */,
-				27C4E5AF1ED5E09900DDE387 /* LaunchScreen.xib */,
-				271C85DC1ED4E40800F8BBBB /* Main.storyboard */,
-				27C4E5B21ED5E0B600DDE387 /* Theme */,
 				27C4E5BA1ED5E0B600DDE387 /* ThemeSettingsViewController.swift */,
 				271C85DA1ED4E40800F8BBBB /* ViewController.swift */,
+				271C85DF1ED4E40800F8BBBB /* Assets.xcassets */,
+				27C4E5AF1ED5E09900DDE387 /* LaunchScreen.xib */,
+				271C85DC1ED4E40800F8BBBB /* Main.storyboard */,
+				271C85E41ED4E40800F8BBBB /* Info.plist */,
 			);
 			path = "Marker-Example-iOS";
-			sourceTree = "<group>";
-		};
-		271C85E81ED4E57500F8BBBB /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				27C4E54B1ED5DB8B00DDE387 /* LICENSE */,
-				27C4E54C1ED5DB8B00DDE387 /* Marker.podspec */,
-				27C4E54D1ED5DB8B00DDE387 /* README.md */,
-			);
-			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 		272D86311ED62E9C00CE29EB /* Marker-Example-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				272D86421ED638D100CE29EB /* Theme */,
 				272D86321ED62E9C00CE29EB /* AppDelegate.swift */,
 				272D86341ED62E9C00CE29EB /* ViewController.swift */,
 				272D86361ED62E9C00CE29EB /* Assets.xcassets */,
@@ -154,39 +138,23 @@
 			path = "Marker-Example-macOS";
 			sourceTree = "<group>";
 		};
-		272D86421ED638D100CE29EB /* Theme */ = {
+		482D11191F192059004FFCDD /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				272D86431ED638D700CE29EB /* Protocols */,
-			);
-			name = Theme;
-			sourceTree = "<group>";
-		};
-		272D86431ED638D700CE29EB /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				272D86461ED6392900CE29EB /* FontTheme.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		27C4E5B21ED5E0B600DDE387 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				27C4E5B31ED5E0B600DDE387 /* AppTheme.swift */,
-				27C4E5B41ED5E0B600DDE387 /* AvenirNextFont.swift */,
-				27C4E5B51ED5E0B600DDE387 /* HelveticaNeueFont.swift */,
-				27C4E5B61ED5E0B600DDE387 /* MarkerExampleFontTheme.swift */,
-				27C4E5B71ED5E0B600DDE387 /* Protocols */,
+				482D111A1F192059004FFCDD /* AppTheme.swift */,
+				482D111B1F192059004FFCDD /* AvenirNextFont.swift */,
+				482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */,
+				482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */,
+				482D111E1F192059004FFCDD /* Protocols */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
 		};
-		27C4E5B71ED5E0B600DDE387 /* Protocols */ = {
+		482D111E1F192059004FFCDD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E5B81ED5E0B600DDE387 /* FontFamily.swift */,
-				27C4E5B91ED5E0B600DDE387 /* FontTheme.swift */,
+				482D111F1F192059004FFCDD /* FontFamily.swift */,
+				482D11201F192059004FFCDD /* FontTheme.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -406,15 +374,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C4E5BC1ED5E0B600DDE387 /* AvenirNextFont.swift in Sources */,
-				27C4E5BB1ED5E0B600DDE387 /* AppTheme.swift in Sources */,
+				482D11221F192059004FFCDD /* AvenirNextFont.swift in Sources */,
 				271C85DB1ED4E40800F8BBBB /* ViewController.swift in Sources */,
-				27C4E5BF1ED5E0B600DDE387 /* FontFamily.swift in Sources */,
+				482D11211F192059004FFCDD /* AppTheme.swift in Sources */,
 				271C85D91ED4E40800F8BBBB /* AppDelegate.swift in Sources */,
-				27C4E5BD1ED5E0B600DDE387 /* HelveticaNeueFont.swift in Sources */,
-				27C4E5C01ED5E0B600DDE387 /* FontTheme.swift in Sources */,
-				27C4E5BE1ED5E0B600DDE387 /* MarkerExampleFontTheme.swift in Sources */,
+				482D11251F192059004FFCDD /* FontFamily.swift in Sources */,
 				27C4E5C11ED5E0B600DDE387 /* ThemeSettingsViewController.swift in Sources */,
+				482D11231F192059004FFCDD /* HelveticaNeueFont.swift in Sources */,
+				482D11261F192059004FFCDD /* FontTheme.swift in Sources */,
+				482D11241F192059004FFCDD /* MarkerExampleFontTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,14 +390,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272D863F1ED6362E00CE29EB /* AppTheme.swift in Sources */,
+				482D11271F192063004FFCDD /* AppTheme.swift in Sources */,
 				272D86351ED62E9C00CE29EB /* ViewController.swift in Sources */,
+				482D11291F192063004FFCDD /* HelveticaNeueFont.swift in Sources */,
+				482D11281F192063004FFCDD /* AvenirNextFont.swift in Sources */,
+				482D112C1F192067004FFCDD /* FontTheme.swift in Sources */,
 				272D86331ED62E9C00CE29EB /* AppDelegate.swift in Sources */,
-				272D86471ED6392900CE29EB /* FontTheme.swift in Sources */,
-				272D86481ED63A4F00CE29EB /* FontFamily.swift in Sources */,
-				272D86401ED6377C00CE29EB /* MarkerExampleFontTheme.swift in Sources */,
-				272D86441ED638F100CE29EB /* HelveticaNeueFont.swift in Sources */,
-				272D86451ED638F500CE29EB /* AvenirNextFont.swift in Sources */,
+				482D112B1F192067004FFCDD /* FontFamily.swift in Sources */,
+				482D112A1F192063004FFCDD /* MarkerExampleFontTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
