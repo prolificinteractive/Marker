@@ -18,7 +18,7 @@ internal final class ViewController: UIViewController {
     }
     
     // MARK: - Instance properties
-    
+
     var theme: AppTheme!
     
     // MARK: - Private properties

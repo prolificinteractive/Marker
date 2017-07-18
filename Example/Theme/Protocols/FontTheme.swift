@@ -6,22 +6,29 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
 import Marker
 
+#if os(iOS) || os(tvOS)
+    import UIKit
+#elseif os(macOS)
+    import AppKit
+#endif
+
 internal protocol FontTheme {
-    
+
     var headlineTextStyle: TextStyle { get }
     var titleTextStyle: TextStyle { get }
     var bodyTextStyle: TextStyle { get }
-    
+
     var headlineFontSize: CGFloat { get }
     var titleFontSize: CGFloat { get }
-    
+
 }
 
 extension FontTheme {
-    
+
+#if os(iOS) || os(tvOS)
+
     var headlineFontSize: CGFloat {
         switch UIApplication.shared.preferredContentSizeCategory {
         case UIContentSizeCategory.extraSmall, UIContentSizeCategory.small:
@@ -40,7 +47,7 @@ extension FontTheme {
             return 17
         }
     }
-    
+
     var titleFontSize: CGFloat {
         switch UIApplication.shared.preferredContentSizeCategory {
         case UIContentSizeCategory.extraSmall, UIContentSizeCategory.small:
@@ -57,5 +64,17 @@ extension FontTheme {
             return 19
         }
     }
+
+#elseif os(macOS)
+
+    var headlineFontSize: CGFloat {
+        return 17
+    }
+
+    var titleFontSize: CGFloat {
+        return 19
+    }
     
+#endif
+
 }

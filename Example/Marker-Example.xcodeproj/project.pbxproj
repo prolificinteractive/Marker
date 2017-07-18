@@ -11,35 +11,52 @@
 		271C85DB1ED4E40800F8BBBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85DA1ED4E40800F8BBBB /* ViewController.swift */; };
 		271C85DE1ED4E40800F8BBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271C85DC1ED4E40800F8BBBB /* Main.storyboard */; };
 		271C85E01ED4E40800F8BBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271C85DF1ED4E40800F8BBBB /* Assets.xcassets */; };
+		272D86331ED62E9C00CE29EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D86321ED62E9C00CE29EB /* AppDelegate.swift */; };
+		272D86351ED62E9C00CE29EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D86341ED62E9C00CE29EB /* ViewController.swift */; };
+		272D86371ED62E9C00CE29EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 272D86361ED62E9C00CE29EB /* Assets.xcassets */; };
+		272D863A1ED62E9C00CE29EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272D86381ED62E9C00CE29EB /* Main.storyboard */; };
 		27C4E5B11ED5E09900DDE387 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C4E5AF1ED5E09900DDE387 /* LaunchScreen.xib */; };
-		27C4E5BB1ED5E0B600DDE387 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B31ED5E0B600DDE387 /* AppTheme.swift */; };
-		27C4E5BC1ED5E0B600DDE387 /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B41ED5E0B600DDE387 /* AvenirNextFont.swift */; };
-		27C4E5BD1ED5E0B600DDE387 /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B51ED5E0B600DDE387 /* HelveticaNeueFont.swift */; };
-		27C4E5BE1ED5E0B600DDE387 /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B61ED5E0B600DDE387 /* MarkerExampleFontTheme.swift */; };
-		27C4E5BF1ED5E0B600DDE387 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B81ED5E0B600DDE387 /* Font.swift */; };
-		27C4E5C01ED5E0B600DDE387 /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5B91ED5E0B600DDE387 /* FontTheme.swift */; };
 		27C4E5C11ED5E0B600DDE387 /* ThemeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E5BA1ED5E0B600DDE387 /* ThemeSettingsViewController.swift */; };
+		482D11211F192059004FFCDD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111A1F192059004FFCDD /* AppTheme.swift */; };
+		482D11221F192059004FFCDD /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111B1F192059004FFCDD /* AvenirNextFont.swift */; };
+		482D11231F192059004FFCDD /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */; };
+		482D11241F192059004FFCDD /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */; };
+		482D11251F192059004FFCDD /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111F1F192059004FFCDD /* FontFamily.swift */; };
+		482D11261F192059004FFCDD /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D11201F192059004FFCDD /* FontTheme.swift */; };
+		482D11271F192063004FFCDD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111A1F192059004FFCDD /* AppTheme.swift */; };
+		482D11281F192063004FFCDD /* AvenirNextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111B1F192059004FFCDD /* AvenirNextFont.swift */; };
+		482D11291F192063004FFCDD /* HelveticaNeueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */; };
+		482D112A1F192063004FFCDD /* MarkerExampleFontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */; };
+		482D112B1F192067004FFCDD /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D111F1F192059004FFCDD /* FontFamily.swift */; };
+		482D112C1F192067004FFCDD /* FontTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D11201F192059004FFCDD /* FontTheme.swift */; };
+		8EDAEDEF570C6A7CB445F83B /* Pods_Marker_Example_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305DE7EF138FF288EF3289D2 /* Pods_Marker_Example_macOS.framework */; };
 		C2C325BAF837614C071CDA55 /* Pods_Marker_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EBCAC481930708F9EBF1F8 /* Pods_Marker_Example_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03BFFAE5B005D1198DC853B3 /* Pods-Marker-Example-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-macOS/Pods-Marker-Example-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1447B21A693B8B55DCAE11F7 /* Pods-Marker-Example-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-macOS/Pods-Marker-Example-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		271C85D51ED4E40800F8BBBB /* Marker-Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marker-Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		271C85D81ED4E40800F8BBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		271C85DA1ED4E40800F8BBBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		271C85DD1ED4E40800F8BBBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		271C85DF1ED4E40800F8BBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		271C85E41ED4E40800F8BBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27C4E54B1ED5DB8B00DDE387 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		27C4E54C1ED5DB8B00DDE387 /* Marker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Marker.podspec; path = ../Marker.podspec; sourceTree = "<group>"; };
-		27C4E54D1ED5DB8B00DDE387 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		272D86301ED62E9C00CE29EB /* Marker-Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marker-Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		272D86321ED62E9C00CE29EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		272D86341ED62E9C00CE29EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		272D86361ED62E9C00CE29EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		272D86391ED62E9C00CE29EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		272D863B1ED62E9C00CE29EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27C4E5B01ED5E09900DDE387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		27C4E5B31ED5E0B600DDE387 /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		27C4E5B41ED5E0B600DDE387 /* AvenirNextFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvenirNextFont.swift; sourceTree = "<group>"; };
-		27C4E5B51ED5E0B600DDE387 /* HelveticaNeueFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaNeueFont.swift; sourceTree = "<group>"; };
-		27C4E5B61ED5E0B600DDE387 /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
-		27C4E5B81ED5E0B600DDE387 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		27C4E5B91ED5E0B600DDE387 /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
 		27C4E5BA1ED5E0B600DDE387 /* ThemeSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeSettingsViewController.swift; sourceTree = "<group>"; };
+		305DE7EF138FF288EF3289D2 /* Pods_Marker_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marker_Example_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482D111A1F192059004FFCDD /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		482D111B1F192059004FFCDD /* AvenirNextFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvenirNextFont.swift; sourceTree = "<group>"; };
+		482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelveticaNeueFont.swift; sourceTree = "<group>"; };
+		482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
+		482D111F1F192059004FFCDD /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
+		482D11201F192059004FFCDD /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
 		6E0E5053CCCC25964EA84B2A /* Pods-Marker-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		70010596CDFDF2A41B708669 /* Pods-Marker-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E9EBCAC481930708F9EBF1F8 /* Pods_Marker_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marker_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +71,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		272D862D1ED62E9C00CE29EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EDAEDEF570C6A7CB445F83B /* Pods_Marker_Example_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E9EBCAC481930708F9EBF1F8 /* Pods_Marker_Example_iOS.framework */,
+				305DE7EF138FF288EF3289D2 /* Pods_Marker_Example_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -68,8 +94,9 @@
 		271C85CA1ED4E3F000F8BBBB = {
 			isa = PBXGroup;
 			children = (
-				271C85E81ED4E57500F8BBBB /* Podspec Metadata */,
 				271C85D71ED4E40800F8BBBB /* Marker-Example-iOS */,
+				272D86311ED62E9C00CE29EB /* Marker-Example-macOS */,
+				482D11191F192059004FFCDD /* Theme */,
 				271C85D61ED4E40800F8BBBB /* Products */,
 				FC8796DD44CABC4E027AAE16 /* Pods */,
 				253BEC31DDF816A46E9293BF /* Frameworks */,
@@ -80,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				271C85D51ED4E40800F8BBBB /* Marker-Example-iOS.app */,
+				272D86301ED62E9C00CE29EB /* Marker-Example-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,44 +116,45 @@
 			isa = PBXGroup;
 			children = (
 				271C85D81ED4E40800F8BBBB /* AppDelegate.swift */,
-				271C85DF1ED4E40800F8BBBB /* Assets.xcassets */,
-				271C85E41ED4E40800F8BBBB /* Info.plist */,
-				27C4E5AF1ED5E09900DDE387 /* LaunchScreen.xib */,
-				271C85DC1ED4E40800F8BBBB /* Main.storyboard */,
-				27C4E5B21ED5E0B600DDE387 /* Theme */,
 				27C4E5BA1ED5E0B600DDE387 /* ThemeSettingsViewController.swift */,
 				271C85DA1ED4E40800F8BBBB /* ViewController.swift */,
+				271C85DF1ED4E40800F8BBBB /* Assets.xcassets */,
+				27C4E5AF1ED5E09900DDE387 /* LaunchScreen.xib */,
+				271C85DC1ED4E40800F8BBBB /* Main.storyboard */,
+				271C85E41ED4E40800F8BBBB /* Info.plist */,
 			);
 			path = "Marker-Example-iOS";
 			sourceTree = "<group>";
 		};
-		271C85E81ED4E57500F8BBBB /* Podspec Metadata */ = {
+		272D86311ED62E9C00CE29EB /* Marker-Example-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E54B1ED5DB8B00DDE387 /* LICENSE */,
-				27C4E54C1ED5DB8B00DDE387 /* Marker.podspec */,
-				27C4E54D1ED5DB8B00DDE387 /* README.md */,
+				272D86321ED62E9C00CE29EB /* AppDelegate.swift */,
+				272D86341ED62E9C00CE29EB /* ViewController.swift */,
+				272D86361ED62E9C00CE29EB /* Assets.xcassets */,
+				272D86381ED62E9C00CE29EB /* Main.storyboard */,
+				272D863B1ED62E9C00CE29EB /* Info.plist */,
 			);
-			name = "Podspec Metadata";
+			path = "Marker-Example-macOS";
 			sourceTree = "<group>";
 		};
-		27C4E5B21ED5E0B600DDE387 /* Theme */ = {
+		482D11191F192059004FFCDD /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E5B31ED5E0B600DDE387 /* AppTheme.swift */,
-				27C4E5B41ED5E0B600DDE387 /* AvenirNextFont.swift */,
-				27C4E5B51ED5E0B600DDE387 /* HelveticaNeueFont.swift */,
-				27C4E5B61ED5E0B600DDE387 /* MarkerExampleFontTheme.swift */,
-				27C4E5B71ED5E0B600DDE387 /* Protocols */,
+				482D111A1F192059004FFCDD /* AppTheme.swift */,
+				482D111B1F192059004FFCDD /* AvenirNextFont.swift */,
+				482D111C1F192059004FFCDD /* HelveticaNeueFont.swift */,
+				482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */,
+				482D111E1F192059004FFCDD /* Protocols */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
 		};
-		27C4E5B71ED5E0B600DDE387 /* Protocols */ = {
+		482D111E1F192059004FFCDD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E5B81ED5E0B600DDE387 /* Font.swift */,
-				27C4E5B91ED5E0B600DDE387 /* FontTheme.swift */,
+				482D111F1F192059004FFCDD /* FontFamily.swift */,
+				482D11201F192059004FFCDD /* FontTheme.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -135,6 +164,8 @@
 			children = (
 				6E0E5053CCCC25964EA84B2A /* Pods-Marker-Example-iOS.debug.xcconfig */,
 				70010596CDFDF2A41B708669 /* Pods-Marker-Example-iOS.release.xcconfig */,
+				03BFFAE5B005D1198DC853B3 /* Pods-Marker-Example-macOS.debug.xcconfig */,
+				1447B21A693B8B55DCAE11F7 /* Pods-Marker-Example-macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -162,6 +193,26 @@
 			productReference = 271C85D51ED4E40800F8BBBB /* Marker-Example-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		272D862F1ED62E9C00CE29EB /* Marker-Example-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 272D863E1ED62E9C00CE29EB /* Build configuration list for PBXNativeTarget "Marker-Example-macOS" */;
+			buildPhases = (
+				14196B33BA09817DA92BBF6A /* [CP] Check Pods Manifest.lock */,
+				272D862C1ED62E9C00CE29EB /* Sources */,
+				272D862D1ED62E9C00CE29EB /* Frameworks */,
+				272D862E1ED62E9C00CE29EB /* Resources */,
+				40B7CC52E028A1EB1F9E75FE /* [CP] Embed Pods Frameworks */,
+				99D7069AFB3C7D29D4F26C07 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marker-Example-macOS";
+			productName = "Marker-Example-macOS";
+			productReference = 272D86301ED62E9C00CE29EB /* Marker-Example-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +226,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5ZZ7W4SB26;
 						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					272D862F1ED62E9C00CE29EB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5ZZ7W4SB26;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -193,6 +249,7 @@
 			projectRoot = "";
 			targets = (
 				271C85D41ED4E40800F8BBBB /* Marker-Example-iOS */,
+				272D862F1ED62E9C00CE29EB /* Marker-Example-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +262,15 @@
 				27C4E5B11ED5E09900DDE387 /* LaunchScreen.xib in Resources */,
 				271C85E01ED4E40800F8BBBB /* Assets.xcassets in Resources */,
 				271C85DE1ED4E40800F8BBBB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D862E1ED62E9C00CE29EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D86371ED62E9C00CE29EB /* Assets.xcassets in Resources */,
+				272D863A1ED62E9C00CE29EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +289,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		14196B33BA09817DA92BBF6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2C97776FB52214BDCF7F7BD2 /* [CP] Copy Pods Resources */ = {
@@ -239,6 +320,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40B7CC52E028A1EB1F9E75FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marker-Example-macOS/Pods-Marker-Example-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99D7069AFB3C7D29D4F26C07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marker-Example-macOS/Pods-Marker-Example-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAF73D195B963F0D4B5861A5 /* [CP] Embed Pods Frameworks */ = {
@@ -263,15 +374,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C4E5BC1ED5E0B600DDE387 /* AvenirNextFont.swift in Sources */,
-				27C4E5BB1ED5E0B600DDE387 /* AppTheme.swift in Sources */,
+				482D11221F192059004FFCDD /* AvenirNextFont.swift in Sources */,
 				271C85DB1ED4E40800F8BBBB /* ViewController.swift in Sources */,
-				27C4E5BF1ED5E0B600DDE387 /* Font.swift in Sources */,
+				482D11211F192059004FFCDD /* AppTheme.swift in Sources */,
 				271C85D91ED4E40800F8BBBB /* AppDelegate.swift in Sources */,
-				27C4E5BD1ED5E0B600DDE387 /* HelveticaNeueFont.swift in Sources */,
-				27C4E5C01ED5E0B600DDE387 /* FontTheme.swift in Sources */,
-				27C4E5BE1ED5E0B600DDE387 /* MarkerExampleFontTheme.swift in Sources */,
+				482D11251F192059004FFCDD /* FontFamily.swift in Sources */,
 				27C4E5C11ED5E0B600DDE387 /* ThemeSettingsViewController.swift in Sources */,
+				482D11231F192059004FFCDD /* HelveticaNeueFont.swift in Sources */,
+				482D11261F192059004FFCDD /* FontTheme.swift in Sources */,
+				482D11241F192059004FFCDD /* MarkerExampleFontTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D862C1ED62E9C00CE29EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482D11271F192063004FFCDD /* AppTheme.swift in Sources */,
+				272D86351ED62E9C00CE29EB /* ViewController.swift in Sources */,
+				482D11291F192063004FFCDD /* HelveticaNeueFont.swift in Sources */,
+				482D11281F192063004FFCDD /* AvenirNextFont.swift in Sources */,
+				482D112C1F192067004FFCDD /* FontTheme.swift in Sources */,
+				272D86331ED62E9C00CE29EB /* AppDelegate.swift in Sources */,
+				482D112B1F192067004FFCDD /* FontFamily.swift in Sources */,
+				482D112A1F192063004FFCDD /* MarkerExampleFontTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +408,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				271C85DD1ED4E40800F8BBBB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		272D86381ED62E9C00CE29EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				272D86391ED62E9C00CE29EB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -420,6 +554,116 @@
 			};
 			name = Release;
 		};
+		272D863C1ED62E9C00CE29EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03BFFAE5B005D1198DC853B3 /* Pods-Marker-Example-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Marker-Example-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		272D863D1ED62E9C00CE29EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1447B21A693B8B55DCAE11F7 /* Pods-Marker-Example-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5ZZ7W4SB26;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Marker-Example-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -437,6 +681,15 @@
 			buildConfigurations = (
 				271C85E61ED4E40800F8BBBB /* Debug */,
 				271C85E71ED4E40800F8BBBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		272D863E1ED62E9C00CE29EB /* Build configuration list for PBXNativeTarget "Marker-Example-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272D863C1ED62E9C00CE29EB /* Debug */,
+				272D863D1ED62E9C00CE29EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

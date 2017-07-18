@@ -6,14 +6,13 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
 import Marker
 
 internal struct MarkerExampleFontTheme: FontTheme {
     
     // MARK: - Properties
     
-    let font: Font
+    let font: FontFamily
     
     // MARK: - Protocol conformance
     

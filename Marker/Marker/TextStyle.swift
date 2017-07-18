@@ -6,7 +6,11 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import UIKit
+#if os(iOS) || os(tvOS)
+    import UIKit
+#elseif os(macOS) || os(OSX)
+    import AppKit
+#endif
 
 /// Text attributes.
 public typealias TextAttributes = [String: Any]
@@ -17,16 +21,16 @@ public struct TextStyle {
     // MARK: - Properties
 
     /// Font for displaying regular text.
-    public var font: UIFont
+    public var font: Font
     
     /// Font for displaying emphasized text.
-    public var emFont: UIFont
+    public var emFont: Font
     
     /// Font for displaying important text.
-    public var strongFont: UIFont
+    public var strongFont: Font
     
     /// Text color.
-    public var textColor: UIColor?
+    public var textColor: Color?
     
     /// Character spacing/kerning.
     public var characterSpacing: CGFloat?
@@ -65,7 +69,7 @@ public struct TextStyle {
     public var strikethroughStyle: NSUnderlineStyle?
     
     /// Stroke color for strikethough text.
-    public var strikethroughColor: UIColor?
+    public var strikethroughColor: Color?
     
     /// Text transform.
     public var textTransform: TextTransform
@@ -149,10 +153,10 @@ public struct TextStyle {
      
      - returns: An initialized text style object.
      */
-    public init(font: UIFont,
-                emFont: UIFont? = nil,
-                strongFont: UIFont? = nil,
-                textColor: UIColor? = nil,
+    public init(font: Font,
+                emFont: Font? = nil,
+                strongFont: Font? = nil,
+                textColor: Color? = nil,
                 characterSpacing: CGFloat? = nil,
                 lineSpacing: CGFloat? = nil,
                 lineHeightMultiple: CGFloat? = nil,
@@ -165,7 +169,7 @@ public struct TextStyle {
                 textAlignment: NSTextAlignment? = nil,
                 lineBreakMode: NSLineBreakMode? = nil,
                 strikethroughStyle: NSUnderlineStyle? = nil,
-                strikethroughColor: UIColor? = nil,
+                strikethroughColor: Color? = nil,
                 textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!

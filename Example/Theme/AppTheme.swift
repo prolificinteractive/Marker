@@ -6,7 +6,7 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
-import Foundation
+import Marker
 
 internal final class AppTheme {
     
@@ -16,7 +16,7 @@ internal final class AppTheme {
     
     // MARK: - Properties
 
-    var font: Font {
+    var font: FontFamily {
         didSet {
             fontTheme = MarkerExampleFontTheme(font: font)
             
