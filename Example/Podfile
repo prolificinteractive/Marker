@@ -1,9 +1,23 @@
-use_frameworks!
+# Uncomment the next line to define a global platform for your project
 
-target 'Marker_Example' do
+target 'Marker-Example-iOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  platform :ios, '8.0'
+
+  # Pods for Marker-Example-iOS
+
   pod 'Marker', :path => '../'
+
 end
 
-target 'Marker_Tests' do
-  pod 'Marker', :path => '../'
+target 'Marker-Example-macOS' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    platform :osx, '10.12'
+
+    # Pods for Marker-Example-iOS
+
+    pod 'Marker', :path => '../'
+    
 end

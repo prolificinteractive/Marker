@@ -20,8 +20,15 @@ TODO: Add long description of the pod here.
   s.author           = { "Htin Linn" => "linn@prolificinteractive.com" }
   s.source           = { :git => "https://github.com/prolificinteractive/Marker.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.12'
+  s.tvos.deployment_target = '9.0'
+
   s.requires_arc = true
 
-  s.source_files = 'Marker/Classes/**/*'
+  s.source_files = 'Marker/Marker/**/*.{h,swift}'
+
+  s.ios.exclude_files   = 'Marker/Marker/**/NS*Extension.swift'
+  s.tvos.exclude_files  = 'Marker/Marker/**/NS*Extension.swift'
+  s.osx.exclude_files   = 'Marker/Marker/**/UI*Extension.swift'
 end
