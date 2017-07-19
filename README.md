@@ -40,6 +40,7 @@ Marker abstracts the most common attributed text properties into a data object c
 * Text alignment
 * Line break mode
 * Strikethrough style and color
+* Underline style and color
 * Text transformation option
 
 `TextStyle` objects are a simple way of aggregating style information. For example:
@@ -94,7 +95,11 @@ Marker also supports setting text with common Markdown tags:
 
 * Bold (`__` or `**`)
 * Italic (`_` or `*`)
+
+As well as convenient Markdown tags specific to Marker:
+
 * Strikethrough (`~~`)
+* Underline (`==`)
 
 To set Markdown text on these elements, use `setMarkdownText(_:using:)` (or `setMarkdownTitleText(_:using:)` for `UIButton`) function.
 
