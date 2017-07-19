@@ -65,6 +65,7 @@ public func parsedMarkdownString(from markdownText: String,
     elements.forEach { (element) in
         var font: Font? = nil
         var strikethroughStyle: NSUnderlineStyle? = nil
+        var underlineStyle: NSUnderlineStyle? = nil
         
         switch element {
         case .em(_):
@@ -73,6 +74,8 @@ public func parsedMarkdownString(from markdownText: String,
             font = textStyle.strongFont
         case .strikethrough(_):
             strikethroughStyle = textStyle.strikethroughStyle
+        case .underline(_):
+            underlineStyle = textStyle.underlineStyle
         }
         
         if let font = font {
@@ -86,6 +89,14 @@ public func parsedMarkdownString(from markdownText: String,
             if let strikethroughColor = textStyle.strikethroughColor {
                 attributedString.addAttributes([NSStrikethroughColorAttributeName: strikethroughColor],
                                                range: parsedString.range(from: element.range))
+            }
+        }
+        
+        if let underlineStyle = underlineStyle {
+            attributedString.addAttributes([NSUnderlineStyleAttributeName: underlineStyle.rawValue], range: parsedString.range(from: element.range))
+            
+            if let underlineColor = textStyle.underlineColor {
+                attributedString.addAttributes([NSUnderlineColorAttributeName: underlineColor], range: parsedString.range(from: element.range))
             }
         }
     }

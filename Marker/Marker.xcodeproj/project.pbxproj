@@ -72,6 +72,21 @@
 		27C4E66B1ED60C7700DDE387 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */; };
 		480C7A5F1F15832A0094E4EA /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
 		480C7A601F15832A0094E4EA /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
+		48F232751F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */; };
+		48F232761F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */; };
+		48F232771F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */; };
+		48F2327C1F1FBA4400E86D5D /* TextTransformEquatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232781F1FBA2200E86D5D /* TextTransformEquatableTests.swift */; };
+		48F2327D1F1FBA4400E86D5D /* TextTransformEquatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232781F1FBA2200E86D5D /* TextTransformEquatableTests.swift */; };
+		48F2327E1F1FBA4500E86D5D /* TextTransformEquatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232781F1FBA2200E86D5D /* TextTransformEquatableTests.swift */; };
+		48F232801F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2327F1F1FBA7800E86D5D /* TextStyle+Extensions.swift */; };
+		48F232811F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2327F1F1FBA7800E86D5D /* TextStyle+Extensions.swift */; };
+		48F232821F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2327F1F1FBA7800E86D5D /* TextStyle+Extensions.swift */; };
+		48F232841F1FBD1300E86D5D /* TextStyleEquatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232831F1FBD1300E86D5D /* TextStyleEquatableTests.swift */; };
+		48F232851F1FBD1300E86D5D /* TextStyleEquatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232831F1FBD1300E86D5D /* TextStyleEquatableTests.swift */; };
+		48F232861F1FBD1300E86D5D /* TextStyleEquatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232831F1FBD1300E86D5D /* TextStyleEquatableTests.swift */; };
+		48F232881F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232871F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift */; };
+		48F232891F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232871F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift */; };
+		48F2328A1F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232871F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +147,11 @@
 		27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextViewExtension.swift; path = TextView/UITextViewExtension.swift; sourceTree = "<group>"; };
 		27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextViewExtension.swift; path = TextView/NSTextViewExtension.swift; sourceTree = "<group>"; };
 		27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabelExtension.swift; path = Label/UILabelExtension.swift; sourceTree = "<group>"; };
+		48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextTransform+Extensions.swift"; sourceTree = "<group>"; };
+		48F232781F1FBA2200E86D5D /* TextTransformEquatableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTransformEquatableTests.swift; sourceTree = "<group>"; };
+		48F2327F1F1FBA7800E86D5D /* TextStyle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextStyle+Extensions.swift"; sourceTree = "<group>"; };
+		48F232831F1FBD1300E86D5D /* TextStyleEquatableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleEquatableTests.swift; sourceTree = "<group>"; };
+		48F232871F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleFactoryFunctionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +236,9 @@
 				271C85AB1ED4E2B700F8BBBB /* Parser */,
 				271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */,
 				271C85B41ED4E2B700F8BBBB /* TextStyle.swift */,
+				48F2327F1F1FBA7800E86D5D /* TextStyle+Extensions.swift */,
 				271C85B51ED4E2B700F8BBBB /* TextTransform.swift */,
+				48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */,
 				27C4E61E1ED5EE3000DDE387 /* Utility */,
 			);
 			path = Marker;
@@ -226,6 +248,9 @@
 			isa = PBXGroup;
 			children = (
 				271C85C81ED4E37700F8BBBB /* ParserTests.swift */,
+				48F232831F1FBD1300E86D5D /* TextStyleEquatableTests.swift */,
+				48F232871F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift */,
+				48F232781F1FBA2200E86D5D /* TextTransformEquatableTests.swift */,
 				271C859A1ED4E2A000F8BBBB /* Info.plist */,
 				271C85C71ED4E37600F8BBBB /* MarkerTests-Bridging-Header.h */,
 			);
@@ -574,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				271C85C51ED4E2B700F8BBBB /* TextStyle.swift in Sources */,
+				48F232751F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */,
 				271C85C01ED4E2B700F8BBBB /* MarkdownParser.swift in Sources */,
 				271C85BB1ED4E2B700F8BBBB /* Markup.swift in Sources */,
 				27C4E66A1ED60C7700DDE387 /* UILabelExtension.swift in Sources */,
@@ -581,6 +607,7 @@
 				271C85BD1ED4E2B700F8BBBB /* Element.swift in Sources */,
 				271C85BF1ED4E2B700F8BBBB /* MarkdownElement.swift in Sources */,
 				271C85C31ED4E2B700F8BBBB /* TagParser.swift in Sources */,
+				48F232801F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */,
 				27C4E64F1ED6064400DDE387 /* UIButtonExtension.swift in Sources */,
 				271C85C11ED4E2B700F8BBBB /* Symbol.swift in Sources */,
 				271C85BE1ED4E2B700F8BBBB /* ElementParser.swift in Sources */,
@@ -599,6 +626,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F2327C1F1FBA4400E86D5D /* TextTransformEquatableTests.swift in Sources */,
+				48F232881F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift in Sources */,
+				48F232841F1FBD1300E86D5D /* TextStyleEquatableTests.swift in Sources */,
 				271C85C91ED4E37700F8BBBB /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C4E6091ED5ED6400DDE387 /* TextStyle.swift in Sources */,
+				48F232761F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */,
 				27C4E6041ED5ED6400DDE387 /* MarkdownParser.swift in Sources */,
 				27C4E5FF1ED5ED6400DDE387 /* Markup.swift in Sources */,
 				27C4E66B1ED60C7700DDE387 /* UILabelExtension.swift in Sources */,
@@ -615,6 +646,7 @@
 				27C4E6011ED5ED6400DDE387 /* Element.swift in Sources */,
 				27C4E6031ED5ED6400DDE387 /* MarkdownElement.swift in Sources */,
 				27C4E6071ED5ED6400DDE387 /* TagParser.swift in Sources */,
+				48F232811F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */,
 				27C4E6501ED6064400DDE387 /* UIButtonExtension.swift in Sources */,
 				27C4E6051ED5ED6400DDE387 /* Symbol.swift in Sources */,
 				27C4E6021ED5ED6400DDE387 /* ElementParser.swift in Sources */,
@@ -633,6 +665,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F2327D1F1FBA4400E86D5D /* TextTransformEquatableTests.swift in Sources */,
+				48F232891F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift in Sources */,
+				48F232851F1FBD1300E86D5D /* TextStyleEquatableTests.swift in Sources */,
 				480C7A601F15832A0094E4EA /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,9 +678,11 @@
 			files = (
 				27C4E61A1ED5ED6500DDE387 /* TextStyle.swift in Sources */,
 				27C4E64E1ED6064400DDE387 /* NSButtonExtension.swift in Sources */,
+				48F232821F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */,
 				27C4E6151ED5ED6500DDE387 /* MarkdownParser.swift in Sources */,
 				27C4E65A1ED6064400DDE387 /* NSTextFieldExtension.swift in Sources */,
 				27C4E6541ED6064400DDE387 /* Color.swift in Sources */,
+				48F232771F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */,
 				27C4E6101ED5ED6500DDE387 /* Markup.swift in Sources */,
 				27C4E6121ED5ED6500DDE387 /* Element.swift in Sources */,
 				27C4E6141ED5ED6500DDE387 /* MarkdownElement.swift in Sources */,
@@ -666,6 +703,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F2327E1F1FBA4500E86D5D /* TextTransformEquatableTests.swift in Sources */,
+				48F2328A1F1FC2F900E86D5D /* TextStyleFactoryFunctionTests.swift in Sources */,
+				48F232861F1FBD1300E86D5D /* TextStyleEquatableTests.swift in Sources */,
 				480C7A5F1F15832A0094E4EA /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

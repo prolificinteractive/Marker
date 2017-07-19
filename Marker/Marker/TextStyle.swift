@@ -70,6 +70,12 @@ public struct TextStyle {
     
     /// Stroke color for strikethough text.
     public var strikethroughColor: Color?
+
+    /// Underline style for underlined text.
+    public var underlineStyle: NSUnderlineStyle?
+
+    /// Stroke color for underlined text.
+    public var underlineColor: Color?
     
     /// Text transform.
     public var textTransform: TextTransform
@@ -149,6 +155,8 @@ public struct TextStyle {
      - parameter lineBreakMode:          Line break node.
      - parameter strikethroughStyle:     Strikethrough style.
      - parameter strikethroughColor:     Strikethrough color.
+     - parameter underlineStyle:         Underline style.
+     - parameter underlineColor:         Underline color.
      - parameter textTransform:          Text transform option.
      
      - returns: An initialized text style object.
@@ -170,6 +178,8 @@ public struct TextStyle {
                 lineBreakMode: NSLineBreakMode? = nil,
                 strikethroughStyle: NSUnderlineStyle? = nil,
                 strikethroughColor: Color? = nil,
+                underlineStyle: NSUnderlineStyle? = nil,
+                underlineColor: Color? = nil,
                 textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
@@ -188,6 +198,8 @@ public struct TextStyle {
         self.lineBreakMode = lineBreakMode
         self.strikethroughStyle = strikethroughStyle
         self.strikethroughColor = strikethroughColor
+        self.underlineStyle = underlineStyle
+        self.underlineColor = underlineColor
         self.textTransform = textTransform
     }
 }
