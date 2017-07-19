@@ -1,5 +1,5 @@
 PODS:
-  - Marker (0.7.0)
+  - Marker (1.0.0-beta.1)
 
 DEPENDENCIES:
   - Marker (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Marker: 38fa47ebbb9f2c7eef1a6cc76dc7f89355afd15d
+  Marker: 87df29caaaa351fec7283000edee67399d692c1b
 
 PODFILE CHECKSUM: 2d22b0ce73bebf9f2dee7cbf15b441cc137adc5e
 
