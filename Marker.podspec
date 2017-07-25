@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Marker"
-  s.version          = "1.0.0-beta.1"
+  s.version          = "1.0.0-beta.2"
   s.summary          = "A light wrapper around NSAttributedString."
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
