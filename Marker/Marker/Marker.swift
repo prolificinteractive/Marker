@@ -60,7 +60,7 @@ public func parsedMarkdownString(from markdownText: String,
     
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,
-                                   range: NSRange(location: 0, length: parsedString.characters.count))
+                                   range: NSRange(location: 0, length: parsedString.count))
     
     elements.forEach { (element) in
         var font: Font? = nil
@@ -123,7 +123,7 @@ public func parsedMarkupString(from text: String,
     
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,
-                                   range: NSRange(location: 0, length: parsedString.characters.count))
+                                   range: NSRange(location: 0, length: parsedString.count))
     
     elements.forEach { (element) in
         if let markup = markups[Character(element.symbol.rawValue)] {

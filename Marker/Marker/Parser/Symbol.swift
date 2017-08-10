@@ -18,7 +18,7 @@ internal struct Symbol: RawRepresentable, Equatable {
     
     /// Length of the symbol.
     var length: Int {
-        return rawValue.characters.count
+        return rawValue.count
     }
 
     // MARK: - Private properties
@@ -35,14 +35,14 @@ internal struct Symbol: RawRepresentable, Equatable {
     /// - Parameter rawValue: The raw value to use for the new instance.
     /// - Returns: A new `Symbol` instance.
     init?(rawValue: String) {
-        guard rawValue.characters.count > 0 && rawValue.characters.count <= 2 else {
+        guard rawValue.count > 0 && rawValue.count <= 2 else {
             return nil
         }
         
         self.rawValue = rawValue
-        symbolCharacterOne = rawValue.characters.first
-        symbolCharacterTwo = rawValue.characters.count >= 2 ?
-            rawValue[self.rawValue.characters.index(after: self.rawValue.startIndex)] : nil
+        symbolCharacterOne = rawValue.first
+        symbolCharacterTwo = rawValue.count >= 2 ?
+            rawValue[self.rawValue.index(after: self.rawValue.startIndex)] : nil
     }
     
     /// Creates a new instance with specified character.
