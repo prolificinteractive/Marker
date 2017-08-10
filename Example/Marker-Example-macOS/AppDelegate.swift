@@ -20,7 +20,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func setupWindow() {
-        guard let currentScreen = NSScreen.main() else {
+        guard let currentScreen = NSScreen.main else {
             return
         }
 
@@ -43,8 +43,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func presentMainView() {
         let bundle = Bundle(for: ViewController.self)
-        let storyboard = NSStoryboard(name: "Main", bundle: bundle)
-        guard let viewController = storyboard.instantiateController(withIdentifier: "ViewController")
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: bundle)
+        guard let viewController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ViewController"))
             as? ViewController else {
                 return
         }
