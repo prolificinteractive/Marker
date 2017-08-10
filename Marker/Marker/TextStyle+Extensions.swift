@@ -53,7 +53,7 @@ public extension TextStyle {
                      newParagraphSpacing: CGFloat? = nil,
                      newParagraphSpacingBefore: CGFloat? = nil,
                      newTextAlignment: NSTextAlignment? = nil,
-                     newLineBreakMode: NSLineBreakMode? = nil,
+                     newLineBreakMode: LineBreakMode? = nil,
                      newStrikethroughStyle: NSUnderlineStyle? = nil,
                      newStrikethroughColor: Color? = nil,
                      newUnderlineStyle: NSUnderlineStyle? = nil,

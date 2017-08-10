@@ -64,13 +64,11 @@ internal struct ElementParser {
             }
             
             // Add the text from the last closing tag to the current opening tag.
-            strippedString += string.substring(with: startIndex..<openingTag.index)
+            strippedString += string[startIndex..<openingTag.index]
             
             let elementStartIndex = strippedString.endIndex
             // Add the text that is in between the opening and closing tags.
-            strippedString += string.substring(with:
-                string.index(openingTag.index, offsetBy: openingTag.symbol.length)..<closingTag.index
-            )
+            strippedString += string[string.index(openingTag.index, offsetBy: openingTag.symbol.length)..<closingTag.index]
             let elementEndIndex = strippedString.endIndex
             
             // Create an element that would apply to the new string.
@@ -81,7 +79,7 @@ internal struct ElementParser {
         }
         
         // Add from the last closing tag to the end of the string.
-        strippedString += string.substring(with: startIndex..<string.endIndex)
+        strippedString += string[startIndex..<string.endIndex]
         
         return (strippedString, elements)
     }
