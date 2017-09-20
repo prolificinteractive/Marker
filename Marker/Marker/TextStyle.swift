@@ -12,9 +12,6 @@
     import AppKit
 #endif
 
-/// Text attributes.
-public typealias TextAttributes = [NSAttributedStringKey: Any]
-
 /// Encapsulates style information to be applied when displaying text.
 public struct TextStyle {
     
@@ -88,9 +85,9 @@ public struct TextStyle {
         var attributes: TextAttributes = [:]
         
 
-        attributes[NSAttributedStringKey.font] = font
-        attributes[NSAttributedStringKey.foregroundColor] = textColor
-        attributes[NSAttributedStringKey.kern] = characterSpacing as NSObject?
+        attributes[AttributedStringKey.font] = font
+        attributes[AttributedStringKey.foregroundColor] = textColor
+        attributes[AttributedStringKey.kern] = characterSpacing as NSObject?
         
         
         let paragraphStyle = NSMutableParagraphStyle()
@@ -130,7 +127,7 @@ public struct TextStyle {
             paragraphStyle.lineBreakMode = lineBreakMode
         }
         
-        attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
+        attributes[AttributedStringKey.paragraphStyle] = paragraphStyle
         
         return attributes
     }

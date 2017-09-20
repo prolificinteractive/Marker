@@ -15,7 +15,7 @@
 /// Adds factory functions producing new TextStyle from existing TextStyle.
 public extension TextStyle {
     
-    /// Creates new TextStyle from exisiting TextStyle, updating with provided values.
+    /// Creates new TextStyle from existing TextStyle, updating with provided values.
     ///
     /// - Parameters:
     ///   - newFont: New font.

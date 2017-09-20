@@ -79,24 +79,24 @@ public func parsedMarkdownString(from markdownText: String,
         }
         
         if let font = font {
-            attributedString.addAttributes([NSAttributedStringKey.font: font], range: NSRange(element.range, in: parsedString))
+            attributedString.addAttributes([AttributedStringKey.font: font], range: NSRange(element.range, in: parsedString))
         }
         
         if let strikethroughStyle = strikethroughStyle {
-            attributedString.addAttributes([NSAttributedStringKey.strikethroughStyle: strikethroughStyle.rawValue],
+            attributedString.addAttributes([AttributedStringKey.strikethroughStyle: strikethroughStyle.rawValue],
                                            range: NSRange(element.range, in: parsedString))
             
             if let strikethroughColor = textStyle.strikethroughColor {
-                attributedString.addAttributes([NSAttributedStringKey.strikethroughColor: strikethroughColor],
+                attributedString.addAttributes([AttributedStringKey.strikethroughColor: strikethroughColor],
                                                range: NSRange(element.range, in: parsedString))
             }
         }
         
         if let underlineStyle = underlineStyle {
-            attributedString.addAttributes([NSAttributedStringKey.underlineStyle: underlineStyle.rawValue], range: NSRange(element.range, in: parsedString))
+            attributedString.addAttributes([AttributedStringKey.underlineStyle: underlineStyle.rawValue], range: NSRange(element.range, in: parsedString))
             
             if let underlineColor = textStyle.underlineColor {
-                attributedString.addAttributes([NSAttributedStringKey.underlineColor: underlineColor], range: NSRange(element.range, in: parsedString))
+                attributedString.addAttributes([AttributedStringKey.underlineColor: underlineColor], range: NSRange(element.range, in: parsedString))
             }
         }
     }
