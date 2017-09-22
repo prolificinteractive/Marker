@@ -19,7 +19,6 @@
 		271C85C11ED4E2B700F8BBBB /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B01ED4E2B700F8BBBB /* Symbol.swift */; };
 		271C85C21ED4E2B700F8BBBB /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B11ED4E2B700F8BBBB /* Tag.swift */; };
 		271C85C31ED4E2B700F8BBBB /* TagParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B21ED4E2B700F8BBBB /* TagParser.swift */; };
-		271C85C41ED4E2B700F8BBBB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */; };
 		271C85C51ED4E2B700F8BBBB /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B41ED4E2B700F8BBBB /* TextStyle.swift */; };
 		271C85C61ED4E2B700F8BBBB /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B51ED4E2B700F8BBBB /* TextTransform.swift */; };
 		271C85C91ED4E37700F8BBBB /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
@@ -35,7 +34,6 @@
 		27C4E6051ED5ED6400DDE387 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B01ED4E2B700F8BBBB /* Symbol.swift */; };
 		27C4E6061ED5ED6400DDE387 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B11ED4E2B700F8BBBB /* Tag.swift */; };
 		27C4E6071ED5ED6400DDE387 /* TagParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B21ED4E2B700F8BBBB /* TagParser.swift */; };
-		27C4E6081ED5ED6400DDE387 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */; };
 		27C4E6091ED5ED6400DDE387 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B41ED4E2B700F8BBBB /* TextStyle.swift */; };
 		27C4E60A1ED5ED6400DDE387 /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B51ED4E2B700F8BBBB /* TextTransform.swift */; };
 		27C4E60B1ED5ED6500DDE387 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85A41ED4E2B700F8BBBB /* Marker.swift */; };
@@ -48,30 +46,35 @@
 		27C4E6161ED5ED6500DDE387 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B01ED4E2B700F8BBBB /* Symbol.swift */; };
 		27C4E6171ED5ED6500DDE387 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B11ED4E2B700F8BBBB /* Tag.swift */; };
 		27C4E6181ED5ED6500DDE387 /* TagParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B21ED4E2B700F8BBBB /* TagParser.swift */; };
-		27C4E6191ED5ED6500DDE387 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */; };
 		27C4E61A1ED5ED6500DDE387 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B41ED4E2B700F8BBBB /* TextStyle.swift */; };
 		27C4E61B1ED5ED6500DDE387 /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85B51ED4E2B700F8BBBB /* TextTransform.swift */; };
 		27C4E61C1ED5ED6900DDE387 /* Marker.h in Headers */ = {isa = PBXBuildFile; fileRef = 271C858D1ED4E2A000F8BBBB /* Marker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27C4E61D1ED5ED6C00DDE387 /* Marker.h in Headers */ = {isa = PBXBuildFile; fileRef = 271C858D1ED4E2A000F8BBBB /* Marker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27C4E64E1ED6064400DDE387 /* NSButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6431ED6064400DDE387 /* NSButtonExtension.swift */; };
-		27C4E64F1ED6064400DDE387 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */; };
-		27C4E6501ED6064400DDE387 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */; };
-		27C4E6521ED6064400DDE387 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6461ED6064400DDE387 /* Color.swift */; };
-		27C4E6531ED6064400DDE387 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6461ED6064400DDE387 /* Color.swift */; };
-		27C4E6541ED6064400DDE387 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6461ED6064400DDE387 /* Color.swift */; };
-		27C4E6551ED6064400DDE387 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6481ED6064400DDE387 /* Font.swift */; };
-		27C4E6561ED6064400DDE387 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6481ED6064400DDE387 /* Font.swift */; };
-		27C4E6571ED6064400DDE387 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6481ED6064400DDE387 /* Font.swift */; };
-		27C4E65A1ED6064400DDE387 /* NSTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E64A1ED6064400DDE387 /* NSTextFieldExtension.swift */; };
-		27C4E65B1ED6064400DDE387 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */; };
-		27C4E65E1ED6065F00DDE387 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */; };
-		27C4E6611ED6080B00DDE387 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */; };
-		27C4E6621ED6080B00DDE387 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */; };
-		27C4E6671ED6082800DDE387 /* NSTextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */; };
-		27C4E66A1ED60C7700DDE387 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */; };
-		27C4E66B1ED60C7700DDE387 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */; };
 		480C7A5F1F15832A0094E4EA /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
 		480C7A601F15832A0094E4EA /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C85C81ED4E37700F8BBBB /* ParserTests.swift */; };
+		484053B21F72EA6000626C55 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A21F72EA4F00626C55 /* UIButtonExtension.swift */; };
+		484053B31F72EA6000626C55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A41F72EA4F00626C55 /* Color.swift */; };
+		484053B41F72EA6000626C55 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A61F72EA4F00626C55 /* Font.swift */; };
+		484053B61F72EA6000626C55 /* LineBreakMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053AA1F72EA4F00626C55 /* LineBreakMode.swift */; };
+		484053B81F72EA6000626C55 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053AD1F72EA4F00626C55 /* UITextFieldExtension.swift */; };
+		484053BA1F72EA6000626C55 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053B01F72EA4F00626C55 /* UITextViewExtension.swift */; };
+		484053BD1F72EA6000626C55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A41F72EA4F00626C55 /* Color.swift */; };
+		484053BE1F72EA6000626C55 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A61F72EA4F00626C55 /* Font.swift */; };
+		484053C01F72EA6000626C55 /* LineBreakMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053AA1F72EA4F00626C55 /* LineBreakMode.swift */; };
+		484053C21F72EA6000626C55 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053AD1F72EA4F00626C55 /* UITextFieldExtension.swift */; };
+		484053C41F72EA6000626C55 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053B01F72EA4F00626C55 /* UITextViewExtension.swift */; };
+		484053C51F72EA6100626C55 /* NSButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A11F72EA4F00626C55 /* NSButtonExtension.swift */; };
+		484053C71F72EA6100626C55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A41F72EA4F00626C55 /* Color.swift */; };
+		484053C81F72EA6100626C55 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A61F72EA4F00626C55 /* Font.swift */; };
+		484053CA1F72EA6100626C55 /* LineBreakMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053AA1F72EA4F00626C55 /* LineBreakMode.swift */; };
+		484053CB1F72EA6100626C55 /* NSTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053AC1F72EA4F00626C55 /* NSTextFieldExtension.swift */; };
+		484053CD1F72EA6100626C55 /* NSTextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053AF1F72EA4F00626C55 /* NSTextViewExtension.swift */; };
+		484053CF1F72EA7A00626C55 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A21F72EA4F00626C55 /* UIButtonExtension.swift */; };
+		484053D11F72EA9D00626C55 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053D01F72EA9D00626C55 /* TextAttributes.swift */; };
+		484053D21F72EAA100626C55 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053D01F72EA9D00626C55 /* TextAttributes.swift */; };
+		484053D31F72EAA200626C55 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053D01F72EA9D00626C55 /* TextAttributes.swift */; };
+		484053D41F72EF1100626C55 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A81F72EA4F00626C55 /* UILabelExtension.swift */; };
+		484053D51F72EF1200626C55 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484053A81F72EA4F00626C55 /* UILabelExtension.swift */; };
 		48F232751F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */; };
 		48F232761F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */; };
 		48F232771F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */; };
@@ -129,7 +132,6 @@
 		271C85B01ED4E2B700F8BBBB /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		271C85B11ED4E2B700F8BBBB /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		271C85B21ED4E2B700F8BBBB /* TagParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagParser.swift; sourceTree = "<group>"; };
-		271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		271C85B41ED4E2B700F8BBBB /* TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		271C85B51ED4E2B700F8BBBB /* TextTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTransform.swift; sourceTree = "<group>"; };
 		271C85C71ED4E37600F8BBBB /* MarkerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarkerTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -138,15 +140,17 @@
 		27C4E5CF1ED5ED2400DDE387 /* Marker-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marker-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C4E5E31ED5ED3000DDE387 /* Marker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C4E5EB1ED5ED3100DDE387 /* Marker-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marker-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		27C4E6431ED6064400DDE387 /* NSButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSButtonExtension.swift; sourceTree = "<group>"; };
-		27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		27C4E6461ED6064400DDE387 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		27C4E6481ED6064400DDE387 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		27C4E64A1ED6064400DDE387 /* NSTextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTextFieldExtension.swift; sourceTree = "<group>"; };
-		27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
-		27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextViewExtension.swift; path = TextView/UITextViewExtension.swift; sourceTree = "<group>"; };
-		27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextViewExtension.swift; path = TextView/NSTextViewExtension.swift; sourceTree = "<group>"; };
-		27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabelExtension.swift; path = Label/UILabelExtension.swift; sourceTree = "<group>"; };
+		484053A11F72EA4F00626C55 /* NSButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButtonExtension.swift; sourceTree = "<group>"; };
+		484053A21F72EA4F00626C55 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		484053A41F72EA4F00626C55 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		484053A61F72EA4F00626C55 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		484053A81F72EA4F00626C55 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		484053AA1F72EA4F00626C55 /* LineBreakMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineBreakMode.swift; sourceTree = "<group>"; };
+		484053AC1F72EA4F00626C55 /* NSTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextFieldExtension.swift; sourceTree = "<group>"; };
+		484053AD1F72EA4F00626C55 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		484053AF1F72EA4F00626C55 /* NSTextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextViewExtension.swift; sourceTree = "<group>"; };
+		484053B01F72EA4F00626C55 /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		484053D01F72EA9D00626C55 /* TextAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAttributes.swift; sourceTree = "<group>"; };
 		48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextTransform+Extensions.swift"; sourceTree = "<group>"; };
 		48F232781F1FBA2200E86D5D /* TextTransformEquatableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTransformEquatableTests.swift; sourceTree = "<group>"; };
 		48F2327F1F1FBA7800E86D5D /* TextStyle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextStyle+Extensions.swift"; sourceTree = "<group>"; };
@@ -234,12 +238,12 @@
 				271C85A91ED4E2B700F8BBBB /* Markup.swift */,
 				271C85AA1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift */,
 				271C85AB1ED4E2B700F8BBBB /* Parser */,
-				271C85B31ED4E2B700F8BBBB /* String+Extensions.swift */,
 				271C85B41ED4E2B700F8BBBB /* TextStyle.swift */,
 				48F2327F1F1FBA7800E86D5D /* TextStyle+Extensions.swift */,
+				484053D01F72EA9D00626C55 /* TextAttributes.swift */,
 				271C85B51ED4E2B700F8BBBB /* TextTransform.swift */,
 				48F232741F1FB7B600E86D5D /* TextTransform+Extensions.swift */,
-				27C4E61E1ED5EE3000DDE387 /* Utility */,
+				4840539E1F72EA4F00626C55 /* Utility */,
 			);
 			path = Marker;
 			sourceTree = "<group>";
@@ -271,77 +275,85 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
-		27C4E61E1ED5EE3000DDE387 /* Utility */ = {
+		4840539E1F72EA4F00626C55 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E6411ED6064400DDE387 /* Extensions */,
+				4840539F1F72EA4F00626C55 /* Extensions */,
 			);
-			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
-		27C4E6411ED6064400DDE387 /* Extensions */ = {
+		4840539F1F72EA4F00626C55 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E6421ED6064400DDE387 /* Button */,
-				27C4E6451ED6064400DDE387 /* Color */,
-				27C4E6471ED6064400DDE387 /* Font */,
-				27C4E6681ED60C4E00DDE387 /* Label */,
-				27C4E6491ED6064400DDE387 /* TextField */,
-				27C4E65F1ED607E000DDE387 /* TextView */,
+				484053A01F72EA4F00626C55 /* Button */,
+				484053A31F72EA4F00626C55 /* Color */,
+				484053A51F72EA4F00626C55 /* Font */,
+				484053A71F72EA4F00626C55 /* Label */,
+				484053A91F72EA4F00626C55 /* LineBreakMode */,
+				484053AB1F72EA4F00626C55 /* TextField */,
+				484053AE1F72EA4F00626C55 /* TextView */,
 			);
-			name = Extensions;
-			path = Utility/Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		27C4E6421ED6064400DDE387 /* Button */ = {
+		484053A01F72EA4F00626C55 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E6431ED6064400DDE387 /* NSButtonExtension.swift */,
-				27C4E6441ED6064400DDE387 /* UIButtonExtension.swift */,
+				484053A11F72EA4F00626C55 /* NSButtonExtension.swift */,
+				484053A21F72EA4F00626C55 /* UIButtonExtension.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
 		};
-		27C4E6451ED6064400DDE387 /* Color */ = {
+		484053A31F72EA4F00626C55 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E6461ED6064400DDE387 /* Color.swift */,
+				484053A41F72EA4F00626C55 /* Color.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
 		};
-		27C4E6471ED6064400DDE387 /* Font */ = {
+		484053A51F72EA4F00626C55 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E6481ED6064400DDE387 /* Font.swift */,
+				484053A61F72EA4F00626C55 /* Font.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
 		};
-		27C4E6491ED6064400DDE387 /* TextField */ = {
+		484053A71F72EA4F00626C55 /* Label */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E64A1ED6064400DDE387 /* NSTextFieldExtension.swift */,
-				27C4E64B1ED6064400DDE387 /* UITextFieldExtension.swift */,
+				484053A81F72EA4F00626C55 /* UILabelExtension.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		484053A91F72EA4F00626C55 /* LineBreakMode */ = {
+			isa = PBXGroup;
+			children = (
+				484053AA1F72EA4F00626C55 /* LineBreakMode.swift */,
+			);
+			path = LineBreakMode;
+			sourceTree = "<group>";
+		};
+		484053AB1F72EA4F00626C55 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				484053AC1F72EA4F00626C55 /* NSTextFieldExtension.swift */,
+				484053AD1F72EA4F00626C55 /* UITextFieldExtension.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
 		};
-		27C4E65F1ED607E000DDE387 /* TextView */ = {
+		484053AE1F72EA4F00626C55 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
-				27C4E6661ED6082800DDE387 /* NSTextViewExtension.swift */,
-				27C4E6601ED6080B00DDE387 /* UITextViewExtension.swift */,
+				484053AF1F72EA4F00626C55 /* NSTextViewExtension.swift */,
+				484053B01F72EA4F00626C55 /* UITextViewExtension.swift */,
 			);
-			name = TextView;
-			sourceTree = "<group>";
-		};
-		27C4E6681ED60C4E00DDE387 /* Label */ = {
-			isa = PBXGroup;
-			children = (
-				27C4E6691ED60C7700DDE387 /* UILabelExtension.swift */,
-			);
-			name = Label;
+			path = TextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,13 +507,13 @@
 					271C85891ED4E2A000F8BBBB = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5ZZ7W4SB26;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					271C85921ED4E2A000F8BBBB = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5ZZ7W4SB26;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					27C4E5C61ED5ED2400DDE387 = {
@@ -517,11 +529,13 @@
 					27C4E5E21ED5ED3000DDE387 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5ZZ7W4SB26;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					27C4E5EA1ED5ED3100DDE387 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5ZZ7W4SB26;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -601,24 +615,25 @@
 				271C85C51ED4E2B700F8BBBB /* TextStyle.swift in Sources */,
 				48F232751F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */,
 				271C85C01ED4E2B700F8BBBB /* MarkdownParser.swift in Sources */,
+				484053B81F72EA6000626C55 /* UITextFieldExtension.swift in Sources */,
+				484053B31F72EA6000626C55 /* Color.swift in Sources */,
 				271C85BB1ED4E2B700F8BBBB /* Markup.swift in Sources */,
-				27C4E66A1ED60C7700DDE387 /* UILabelExtension.swift in Sources */,
-				27C4E6551ED6064400DDE387 /* Font.swift in Sources */,
 				271C85BD1ED4E2B700F8BBBB /* Element.swift in Sources */,
 				271C85BF1ED4E2B700F8BBBB /* MarkdownElement.swift in Sources */,
 				271C85C31ED4E2B700F8BBBB /* TagParser.swift in Sources */,
 				48F232801F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */,
-				27C4E64F1ED6064400DDE387 /* UIButtonExtension.swift in Sources */,
+				484053B21F72EA6000626C55 /* UIButtonExtension.swift in Sources */,
+				484053BA1F72EA6000626C55 /* UITextViewExtension.swift in Sources */,
+				484053B61F72EA6000626C55 /* LineBreakMode.swift in Sources */,
 				271C85C11ED4E2B700F8BBBB /* Symbol.swift in Sources */,
 				271C85BE1ED4E2B700F8BBBB /* ElementParser.swift in Sources */,
 				271C85B61ED4E2B700F8BBBB /* Marker.swift in Sources */,
+				484053B41F72EA6000626C55 /* Font.swift in Sources */,
 				271C85BC1ED4E2B700F8BBBB /* NSAttributedString+Extensions.swift in Sources */,
-				271C85C41ED4E2B700F8BBBB /* String+Extensions.swift in Sources */,
-				27C4E65B1ED6064400DDE387 /* UITextFieldExtension.swift in Sources */,
+				484053D11F72EA9D00626C55 /* TextAttributes.swift in Sources */,
 				271C85C61ED4E2B700F8BBBB /* TextTransform.swift in Sources */,
+				484053D41F72EF1100626C55 /* UILabelExtension.swift in Sources */,
 				271C85C21ED4E2B700F8BBBB /* Tag.swift in Sources */,
-				27C4E6521ED6064400DDE387 /* Color.swift in Sources */,
-				27C4E6611ED6080B00DDE387 /* UITextViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,24 +655,25 @@
 				27C4E6091ED5ED6400DDE387 /* TextStyle.swift in Sources */,
 				48F232761F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */,
 				27C4E6041ED5ED6400DDE387 /* MarkdownParser.swift in Sources */,
+				484053C21F72EA6000626C55 /* UITextFieldExtension.swift in Sources */,
+				484053BD1F72EA6000626C55 /* Color.swift in Sources */,
 				27C4E5FF1ED5ED6400DDE387 /* Markup.swift in Sources */,
-				27C4E66B1ED60C7700DDE387 /* UILabelExtension.swift in Sources */,
-				27C4E6561ED6064400DDE387 /* Font.swift in Sources */,
+				484053CF1F72EA7A00626C55 /* UIButtonExtension.swift in Sources */,
 				27C4E6011ED5ED6400DDE387 /* Element.swift in Sources */,
 				27C4E6031ED5ED6400DDE387 /* MarkdownElement.swift in Sources */,
 				27C4E6071ED5ED6400DDE387 /* TagParser.swift in Sources */,
 				48F232811F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */,
-				27C4E6501ED6064400DDE387 /* UIButtonExtension.swift in Sources */,
+				484053C41F72EA6000626C55 /* UITextViewExtension.swift in Sources */,
+				484053C01F72EA6000626C55 /* LineBreakMode.swift in Sources */,
 				27C4E6051ED5ED6400DDE387 /* Symbol.swift in Sources */,
 				27C4E6021ED5ED6400DDE387 /* ElementParser.swift in Sources */,
 				27C4E5FA1ED5ED6400DDE387 /* Marker.swift in Sources */,
-				27C4E65E1ED6065F00DDE387 /* UITextFieldExtension.swift in Sources */,
+				484053BE1F72EA6000626C55 /* Font.swift in Sources */,
 				27C4E6001ED5ED6400DDE387 /* NSAttributedString+Extensions.swift in Sources */,
-				27C4E6081ED5ED6400DDE387 /* String+Extensions.swift in Sources */,
+				484053D21F72EAA100626C55 /* TextAttributes.swift in Sources */,
 				27C4E60A1ED5ED6400DDE387 /* TextTransform.swift in Sources */,
+				484053D51F72EF1200626C55 /* UILabelExtension.swift in Sources */,
 				27C4E6061ED5ED6400DDE387 /* Tag.swift in Sources */,
-				27C4E6531ED6064400DDE387 /* Color.swift in Sources */,
-				27C4E6621ED6080B00DDE387 /* UITextViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,23 +693,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C4E61A1ED5ED6500DDE387 /* TextStyle.swift in Sources */,
-				27C4E64E1ED6064400DDE387 /* NSButtonExtension.swift in Sources */,
+				484053C51F72EA6100626C55 /* NSButtonExtension.swift in Sources */,
 				48F232821F1FBA7800E86D5D /* TextStyle+Extensions.swift in Sources */,
 				27C4E6151ED5ED6500DDE387 /* MarkdownParser.swift in Sources */,
-				27C4E65A1ED6064400DDE387 /* NSTextFieldExtension.swift in Sources */,
-				27C4E6541ED6064400DDE387 /* Color.swift in Sources */,
+				484053C71F72EA6100626C55 /* Color.swift in Sources */,
 				48F232771F1FB7B600E86D5D /* TextTransform+Extensions.swift in Sources */,
+				484053CB1F72EA6100626C55 /* NSTextFieldExtension.swift in Sources */,
+				484053CD1F72EA6100626C55 /* NSTextViewExtension.swift in Sources */,
 				27C4E6101ED5ED6500DDE387 /* Markup.swift in Sources */,
 				27C4E6121ED5ED6500DDE387 /* Element.swift in Sources */,
 				27C4E6141ED5ED6500DDE387 /* MarkdownElement.swift in Sources */,
 				27C4E6181ED5ED6500DDE387 /* TagParser.swift in Sources */,
-				27C4E6671ED6082800DDE387 /* NSTextViewExtension.swift in Sources */,
+				484053CA1F72EA6100626C55 /* LineBreakMode.swift in Sources */,
 				27C4E6161ED5ED6500DDE387 /* Symbol.swift in Sources */,
 				27C4E6131ED5ED6500DDE387 /* ElementParser.swift in Sources */,
 				27C4E60B1ED5ED6500DDE387 /* Marker.swift in Sources */,
+				484053C81F72EA6100626C55 /* Font.swift in Sources */,
 				27C4E6111ED5ED6500DDE387 /* NSAttributedString+Extensions.swift in Sources */,
-				27C4E6571ED6064400DDE387 /* Font.swift in Sources */,
-				27C4E6191ED5ED6500DDE387 /* String+Extensions.swift in Sources */,
+				484053D31F72EAA200626C55 /* TextAttributes.swift in Sources */,
 				27C4E61B1ED5ED6500DDE387 /* TextTransform.swift in Sources */,
 				27C4E6171ED5ED6500DDE387 /* Tag.swift in Sources */,
 			);
@@ -852,7 +869,7 @@
 				PRODUCT_NAME = Marker;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -875,7 +892,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.Marker;
 				PRODUCT_NAME = Marker;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -891,7 +908,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MarkerTests/MarkerTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -906,7 +923,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.MarkerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MarkerTests/MarkerTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -928,7 +945,7 @@
 				PRODUCT_NAME = Marker;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -952,7 +969,7 @@
 				PRODUCT_NAME = Marker;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1009,7 +1026,7 @@
 				PRODUCT_NAME = Marker;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1034,7 +1051,7 @@
 				PRODUCT_NAME = Marker;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1051,7 +1068,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1068,7 +1085,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

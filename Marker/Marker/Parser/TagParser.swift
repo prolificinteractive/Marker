@@ -40,13 +40,13 @@ struct TagParser {
         var offset = 0
         var previousIndex = string.startIndex
         
-        while i < string.characters.count {
-            let index = string.characters.index(previousIndex, offsetBy: offset)
+        while i < string.count {
+            let index = string.index(previousIndex, offsetBy: offset)
 
             let character: Character? = string[index]
-            let precedingCharacter: Character? = (i > 0) ? string[string.characters.index(before: index)] : nil
-            let succeedingCharacter: Character? = (i + 1 < string.characters.count) ?
-                string[string.characters.index(after: index)] : nil
+            let precedingCharacter: Character? = (i > 0) ? string[string.index(before: index)] : nil
+            let succeedingCharacter: Character? = (i + 1 < string.count) ?
+                string[string.index(after: index)] : nil
             
             offset = 1
             for symbol in symbols {

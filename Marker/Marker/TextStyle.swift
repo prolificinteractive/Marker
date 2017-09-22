@@ -12,9 +12,6 @@
     import AppKit
 #endif
 
-/// Text attributes.
-public typealias TextAttributes = [String: Any]
-
 /// Encapsulates style information to be applied when displaying text.
 public struct TextStyle {
     
@@ -63,7 +60,7 @@ public struct TextStyle {
     public var textAlignment: NSTextAlignment?
     
     /// Line break mode.
-    public var lineBreakMode: NSLineBreakMode?
+    public var lineBreakMode: LineBreakMode?
     
     /// Underline style for strikethrough text.
     public var strikethroughStyle: NSUnderlineStyle?
@@ -88,9 +85,9 @@ public struct TextStyle {
         var attributes: TextAttributes = [:]
         
 
-        attributes[NSFontAttributeName] = font
-        attributes[NSForegroundColorAttributeName] = textColor
-        attributes[NSKernAttributeName] = characterSpacing as NSObject?
+        attributes[AttributedStringKey.font] = font
+        attributes[AttributedStringKey.foregroundColor] = textColor
+        attributes[AttributedStringKey.kern] = characterSpacing as NSObject?
         
         
         let paragraphStyle = NSMutableParagraphStyle()
@@ -130,7 +127,7 @@ public struct TextStyle {
             paragraphStyle.lineBreakMode = lineBreakMode
         }
         
-        attributes[NSParagraphStyleAttributeName] = paragraphStyle
+        attributes[AttributedStringKey.paragraphStyle] = paragraphStyle
         
         return attributes
     }
@@ -175,7 +172,7 @@ public struct TextStyle {
                 paragraphSpacing: CGFloat? = nil,
                 paragraphSpacingBefore: CGFloat? = nil,
                 textAlignment: NSTextAlignment? = nil,
-                lineBreakMode: NSLineBreakMode? = nil,
+                lineBreakMode: LineBreakMode? = nil,
                 strikethroughStyle: NSUnderlineStyle? = nil,
                 strikethroughColor: Color? = nil,
                 underlineStyle: NSUnderlineStyle? = nil,

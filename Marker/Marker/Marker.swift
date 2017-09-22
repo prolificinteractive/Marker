@@ -60,7 +60,7 @@ public func parsedMarkdownString(from markdownText: String,
     
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,
-                                   range: NSRange(location: 0, length: parsedString.characters.count))
+                                   range: NSRange(location: 0, length: parsedString.count))
     
     elements.forEach { (element) in
         var font: Font? = nil
@@ -79,24 +79,24 @@ public func parsedMarkdownString(from markdownText: String,
         }
         
         if let font = font {
-            attributedString.addAttributes([NSFontAttributeName: font], range: parsedString.range(from: element.range))
+            attributedString.addAttributes([AttributedStringKey.font: font], range: NSRange(element.range, in: parsedString))
         }
         
         if let strikethroughStyle = strikethroughStyle {
-            attributedString.addAttributes([NSStrikethroughStyleAttributeName: strikethroughStyle.rawValue],
-                                           range: parsedString.range(from: element.range))
+            attributedString.addAttributes([AttributedStringKey.strikethroughStyle: strikethroughStyle.rawValue],
+                                           range: NSRange(element.range, in: parsedString))
             
             if let strikethroughColor = textStyle.strikethroughColor {
-                attributedString.addAttributes([NSStrikethroughColorAttributeName: strikethroughColor],
-                                               range: parsedString.range(from: element.range))
+                attributedString.addAttributes([AttributedStringKey.strikethroughColor: strikethroughColor],
+                                               range: NSRange(element.range, in: parsedString))
             }
         }
         
         if let underlineStyle = underlineStyle {
-            attributedString.addAttributes([NSUnderlineStyleAttributeName: underlineStyle.rawValue], range: parsedString.range(from: element.range))
+            attributedString.addAttributes([AttributedStringKey.underlineStyle: underlineStyle.rawValue], range: NSRange(element.range, in: parsedString))
             
             if let underlineColor = textStyle.underlineColor {
-                attributedString.addAttributes([NSUnderlineColorAttributeName: underlineColor], range: parsedString.range(from: element.range))
+                attributedString.addAttributes([AttributedStringKey.underlineColor: underlineColor], range: NSRange(element.range, in: parsedString))
             }
         }
     }
@@ -123,11 +123,11 @@ public func parsedMarkupString(from text: String,
     
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,
-                                   range: NSRange(location: 0, length: parsedString.characters.count))
+                                   range: NSRange(location: 0, length: parsedString.count))
     
     elements.forEach { (element) in
         if let markup = markups[Character(element.symbol.rawValue)] {
-            attributedString.addAttributes(markup.attributes, range: parsedString.range(from: element.range))
+            attributedString.addAttributes(markup.attributes, range: NSRange(element.range, in: parsedString))
         }
     }
     

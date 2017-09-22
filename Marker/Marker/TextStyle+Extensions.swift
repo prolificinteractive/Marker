@@ -15,7 +15,7 @@
 /// Adds factory functions producing new TextStyle from existing TextStyle.
 public extension TextStyle {
     
-    /// Creates new TextStyle from exisiting TextStyle, updating with provided values.
+    /// Creates new TextStyle from existing TextStyle, updating with provided values.
     ///
     /// - Parameters:
     ///   - newFont: New font.
@@ -53,7 +53,7 @@ public extension TextStyle {
                      newParagraphSpacing: CGFloat? = nil,
                      newParagraphSpacingBefore: CGFloat? = nil,
                      newTextAlignment: NSTextAlignment? = nil,
-                     newLineBreakMode: NSLineBreakMode? = nil,
+                     newLineBreakMode: LineBreakMode? = nil,
                      newStrikethroughStyle: NSUnderlineStyle? = nil,
                      newStrikethroughColor: Color? = nil,
                      newUnderlineStyle: NSUnderlineStyle? = nil,
