@@ -21,6 +21,7 @@
         static let font = NSAttributedStringKey.font
         static let foregroundColor = NSAttributedStringKey.foregroundColor
         static let kern = NSAttributedStringKey.kern
+        static let link = NSAttributedStringKey.link
         static let paragraphStyle = NSAttributedStringKey.paragraphStyle
         static let strikethroughStyle = NSAttributedStringKey.strikethroughStyle
         static let strikethroughColor = NSAttributedStringKey.strikethroughColor
@@ -37,6 +38,7 @@
         static let font = NSFontAttributeName
         static let foregroundColor = NSForegroundColorAttributeName
         static let kern = NSKernAttributeName
+        static let link = NSLinkAttributeName
         static let paragraphStyle = NSParagraphStyleAttributeName
         static let strikethroughStyle = NSStrikethroughStyleAttributeName
         static let strikethroughColor = NSStrikethroughColorAttributeName

@@ -64,40 +64,39 @@ public func parsedMarkdownString(from markdownText: String,
     
     elements.forEach { (element) in
         var font: Font? = nil
-        var strikethroughStyle: NSUnderlineStyle? = nil
-        var underlineStyle: NSUnderlineStyle? = nil
         
         switch element {
-        case .em(_):
+        case .em:
             font = textStyle.emFont
-        case .strong(_):
+        case .strong:
             font = textStyle.strongFont
-        case .strikethrough(_):
-            strikethroughStyle = textStyle.strikethroughStyle
-        case .underline(_):
-            underlineStyle = textStyle.underlineStyle
+        case .strikethrough(let range):
+            if let strikethroughStyle = textStyle.strikethroughStyle {
+                attributedString.addAttributes([AttributedStringKey.strikethroughStyle: strikethroughStyle.rawValue],
+                                               range: NSRange(range, in: parsedString))
+            }
+            if let strikethroughColor = textStyle.strikethroughColor {
+                attributedString.addAttributes([AttributedStringKey.strikethroughColor: strikethroughColor],
+                                               range: NSRange(range, in: parsedString))
+            }
+        case .underline(let range):
+            if let underlineStyle = textStyle.underlineStyle {
+                attributedString.addAttributes([AttributedStringKey.underlineStyle: underlineStyle.rawValue],
+                                               range: NSRange(range, in: parsedString))
+            }
+            if let underlineColor = textStyle.underlineColor {
+                attributedString.addAttributes([AttributedStringKey.underlineColor: underlineColor],
+                                               range: NSRange(range, in: parsedString))
+            }
+        case .link(let range, let urlString):
+            attributedString.addAttribute(AttributedStringKey.link,
+                                          value: urlString,
+                                          range: NSRange(range, in: parsedString))
         }
         
         if let font = font {
-            attributedString.addAttributes([AttributedStringKey.font: font], range: NSRange(element.range, in: parsedString))
-        }
-        
-        if let strikethroughStyle = strikethroughStyle {
-            attributedString.addAttributes([AttributedStringKey.strikethroughStyle: strikethroughStyle.rawValue],
+            attributedString.addAttributes([AttributedStringKey.font: font],
                                            range: NSRange(element.range, in: parsedString))
-            
-            if let strikethroughColor = textStyle.strikethroughColor {
-                attributedString.addAttributes([AttributedStringKey.strikethroughColor: strikethroughColor],
-                                               range: NSRange(element.range, in: parsedString))
-            }
-        }
-        
-        if let underlineStyle = underlineStyle {
-            attributedString.addAttributes([AttributedStringKey.underlineStyle: underlineStyle.rawValue], range: NSRange(element.range, in: parsedString))
-            
-            if let underlineColor = textStyle.underlineColor {
-                attributedString.addAttributes([AttributedStringKey.underlineColor: underlineColor], range: NSRange(element.range, in: parsedString))
-            }
         }
     }
     
@@ -119,17 +118,23 @@ public func parsedMarkupString(from text: String,
         return NSAttributedString(string: text, textStyle: textStyle)
     }
 
-    let (parsedString, elements) = try ElementParser.parse(text, for: markups.map { Symbol(character: $0.0) })
-    
+    let markupRules = Dictionary(
+        uniqueKeysWithValues: markups.map { (key, value) in
+            return (Rule(symbol: Symbol(character: key)), value)
+        }
+    )
+
+    let (parsedString, elements) = try ElementParser.parse(text, for: Array(markupRules.keys))
+
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,
                                    range: NSRange(location: 0, length: parsedString.count))
-    
+
     elements.forEach { (element) in
-        if let markup = markups[Character(element.symbol.rawValue)] {
+        if let markup = markupRules[element.rule] {
             attributedString.addAttributes(markup.attributes, range: NSRange(element.range, in: parsedString))
         }
     }
-    
+
     return attributedString
 }

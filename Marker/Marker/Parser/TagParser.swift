@@ -9,17 +9,17 @@
 import Foundation
 
 /// Type for parsing symbols.
-struct TagParser {
+internal struct TagParser {
     
     /// Symbols to parse.
     let symbols: [Symbol]
     
     // MARK: - Init/deinit
     
-    /// Initializes parser with specified list of symbols.
+    /// Initializes parser with specified set of symbols.
     ///
-    /// - Parameter symbols: List of symbols.
-    init(symbols: [Symbol]) {
+    /// - Parameter symbols: Set of symbols.
+    init(symbols: Set<Symbol>) {
         // It's important that longer character symbols come before shorter character symbols
         // because of the way that parser matches characters.
         self.symbols = symbols.sorted { (lhs, rhs) in
