@@ -9,7 +9,7 @@
 import Foundation
 
 /// A parser "rule". Contains opening and closing symbols for matching.
-internal struct Rule {
+struct Rule {
 
     /// A set of character(s) that an element starts with.
     let openingSymbol: Symbol

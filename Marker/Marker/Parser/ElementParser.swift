@@ -9,7 +9,7 @@
 import Foundation
 
 /// Bare bones parser that strips `string` for symbols defined in `rules`.
-internal struct ElementParser {
+struct ElementParser {
         
     // MARK: - Static functions
     

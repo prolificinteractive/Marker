@@ -9,7 +9,7 @@
 import Foundation
 
 /// Type for parsing symbols.
-internal struct TagParser {
+struct TagParser {
     
     /// Symbols to parse.
     let symbols: [Symbol]

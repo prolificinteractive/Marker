@@ -9,7 +9,7 @@
 import Foundation
 
 /// Tokenizer that breaks down a given string into tokens based on prescribed rules.
-internal struct TokenParser {
+struct TokenParser {
 
     /// Parser error.
     ///

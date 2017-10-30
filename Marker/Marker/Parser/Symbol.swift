@@ -9,7 +9,7 @@
 import Foundation
 
 /// A `Symbol` is a one or two character `String` used for marking up text.
-internal struct Symbol: RawRepresentable, Equatable {
+struct Symbol: RawRepresentable, Equatable {
     
     typealias RawValue = String
     

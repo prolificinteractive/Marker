@@ -9,7 +9,7 @@
 import Foundation
 
 /// Markup element. Contains a symbol and the range it applies to.
-internal struct Element {
+struct Element {
     
     /// Markup rule.
     let rule: Rule

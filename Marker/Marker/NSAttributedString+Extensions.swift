@@ -6,7 +6,7 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
-internal extension NSAttributedString {
+extension NSAttributedString {
     
     /// Initializes `NSAttributedString` instance with given string and text style.
     ///

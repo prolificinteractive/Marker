@@ -15,7 +15,7 @@ import Foundation
 /// - strikethrough: Strikethrough element.
 /// - underline: Underline element.
 /// - link: Link element.
-internal enum MarkdownElement {
+enum MarkdownElement {
     
     case em(range: Range<Index>)
     case strong(range: Range<Index>)

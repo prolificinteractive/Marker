@@ -7,7 +7,7 @@
 //
 
 /// Markdown parser.
-internal struct MarkdownParser {
+struct MarkdownParser {
     
     /// Parser error.
     ///

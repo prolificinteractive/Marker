@@ -10,7 +10,7 @@ import Foundation
 
 /// An entity that the token parser outputs that contains a `String` and a matching rule.
 /// A token with an empty `rule` denotes subparts of the `String` that matches no rule.
-internal struct Token {
+struct Token {
 
     /// Content of the token.
     let string: String

@@ -9,9 +9,9 @@
 import Foundation
 
 /// Shorthand for `String.Index` used in parsing.
-internal typealias Index = String.Index
+typealias Index = String.Index
 
-internal extension String {
+extension String {
 
     /// Appends the characters (without the rule symbols) from the given token and returns the range of appended `String`.
     ///
