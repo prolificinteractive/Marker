@@ -58,6 +58,8 @@ public extension TextStyle {
                      newStrikethroughColor: Color? = nil,
                      newUnderlineStyle: NSUnderlineStyle? = nil,
                      newUnderlineColor: Color? = nil,
+                     newLinkFont: Font? = nil,
+                     newLinkColor: Color? = nil,
                      newTextTransform: TextTransform? = nil) -> TextStyle {
         let fontToUse = newFont ?? font
         let emFontToUse = newEmFont ?? emFont
@@ -78,6 +80,8 @@ public extension TextStyle {
         let strikethroughColorToUse = newStrikethroughColor ?? strikethroughColor
         let underlineStyleToUse = newUnderlineStyle ?? underlineStyle
         let underlineColorToUse = newUnderlineColor ?? underlineColor
+        let linkFontToUse = newLinkFont ?? linkFont
+        let linkColorToUse = newLinkColor ?? linkColor
         let textTransformToUse = newTextTransform ?? textTransform
         
         return TextStyle(
@@ -100,6 +104,8 @@ public extension TextStyle {
             strikethroughColor: strikethroughColorToUse,
             underlineStyle: underlineStyleToUse,
             underlineColor: underlineColorToUse,
+            linkFont: linkFontToUse,
+            linkColor: linkColorToUse,
             textTransform: textTransformToUse
         )
     }
@@ -157,6 +163,8 @@ public func ==(lhs: TextStyle, rhs: TextStyle) -> Bool {
         lhs.strikethroughColor == rhs.strikethroughColor,
         lhs.underlineStyle == rhs.underlineStyle,
         lhs.underlineColor == rhs.underlineColor,
+        lhs.linkFont == rhs.linkFont,
+        lhs.linkColor == rhs.linkColor,
         lhs.textTransform == rhs.textTransform else {
         return false
     }

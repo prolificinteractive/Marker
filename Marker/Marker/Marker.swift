@@ -92,6 +92,12 @@ public func parsedMarkdownString(from markdownText: String,
             attributedString.addAttribute(AttributedStringKey.link,
                                           value: urlString,
                                           range: NSRange(range, in: parsedString))
+
+            if let linkFont = textStyle.linkFont {
+                attributedString.addAttribute(AttributedStringKey.font,
+                                              value: linkFont,
+                                              range: NSRange(range, in: parsedString))
+            }
         }
         
         if let font = font {

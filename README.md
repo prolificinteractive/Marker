@@ -102,7 +102,7 @@ As well as convenient Markdown tags specific to Marker:
 * Strikethrough (`~~`)
 * Underline (`==`)
 
-To set Markdown text on these elements, use `setMarkdownText(_:using:)` (or `setMarkdownTitleText(_:using:)` for `UIButton`) function. **NOTE**: Setting Markdown links work only in `UITextView` whereas other Markdown tags can be applied to any UI element with aforementioned `setMarkdownText(_using:)` function.
+To set Markdown text on these elements, use `setMarkdownText(_:using:)` (or `setMarkdownTitleText(_:using:)` for buttons) function. **NOTE**: Setting Markdown links work only in text views whereas other Markdown tags can be applied to any UI element with aforementioned `setMarkdownText(_using:)` function.
 
 ```swift
 textField.setMarkdownText("_Hello World_", using: headlineTextStyle)
