@@ -95,17 +95,35 @@ Marker also supports setting text with common Markdown tags:
 
 * Bold (`__` or `**`)
 * Italic (`_` or `*`)
+* Links (`[]()`)
 
 As well as convenient Markdown tags specific to Marker:
 
 * Strikethrough (`~~`)
 * Underline (`==`)
 
-To set Markdown text on these elements, use `setMarkdownText(_:using:)` (or `setMarkdownTitleText(_:using:)` for `UIButton`) function.
+To set Markdown text on these elements, use `setMarkdownText(_:using:)` (or `setMarkdownTitleText(_:using:)` for `UIButton`) function. **NOTE**: Setting Markdown links work only in `UITextView` whereas other Markdown tags can be applied to any UI element with aforementioned `setMarkdownText(_using:)` function.
 
 ```swift
 textField.setMarkdownText("_Hello World_", using: headlineTextStyle)
 ```
+
+#### Backslash Escaping
+
+Both Markdown and custom markup functions support backslash escaping for generating literal characters which are otherwise reserved for mark up purposes. For instance, URLs with ")" character in them would not be parsed correctly without backslash escapes.
+
+```
+[Wiki](https://en.wikipedia.org/wiki/Wiki_(disambiguation))
+```
+
+By default, the parser produces `https://en.wikipedia.org/wiki/Wiki_(disambiguation` as the URL for the above link.
+
+```
+[Wiki](https://en.wikipedia.org/wiki/Wiki_(disambiguation\))
+```
+
+By backslash escaping the ")" character, the parser will treat it as a literal and produce the correct URL, `https://en.wikipedia.org/wiki/Wiki_(disambiguation))`.
+
 
 #### Best Practices
 
