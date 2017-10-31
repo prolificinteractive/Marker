@@ -124,7 +124,7 @@ public func parsedMarkupString(from text: String,
         }
     )
 
-    let (parsedString, elements) = try ElementParser.parse(text, for: Array(markupRules.keys))
+    let (parsedString, elements) = try ElementParser.parse(text, using: Array(markupRules.keys))
 
     let attributedString = NSMutableAttributedString(string: textStyle.textTransform.applied(to: parsedString))
     attributedString.addAttributes(textStyle.attributes,

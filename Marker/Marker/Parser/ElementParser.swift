@@ -20,7 +20,7 @@ struct ElementParser {
     ///   - rules: Rules with symbols to parse for.
     /// - Returns: Tuple containing string stripped of matching characters and a list of matched elements.
     /// - Throws: Parser error.
-    static func parse(_ string: String, for rules: [Rule]) throws -> (strippedString: String, elements: [Element]) {
+    static func parse(_ string: String, using rules: [Rule]) throws -> (strippedString: String, elements: [Element]) {
         let tokens = try TokenParser.parse(string, using: rules)
 
         guard tokens.count > 0 else {

@@ -1,5 +1,5 @@
 //
-//  ParserTests.swift
+//  MarkdownParserTests.swift
 //  Marker
 //
 //  Created by Htin Linn on 7/7/17.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Marker
 
-class ParserTests: XCTestCase {
+class MarkdownParserTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -181,7 +181,7 @@ class ParserTests: XCTestCase {
             XCTFail("Parsing failed.")
         }
     }
-    
+
     func testElementsInMiddleOfWords() {
         do {
             let (parsedString, parsedElements) = try MarkdownParser.parse("the_quick_brown*fox*jumps__over__the**lazy**==dog==.")
@@ -253,16 +253,30 @@ class ParserTests: XCTestCase {
     func testThatMultipleLinksAreAllowed() {
         do {
             let string = """
-                There is [Link](https://en.wikipedia.org/wiki/Link_(The_Legend_of_Zelda\\))
-                and then there are [links](https://en.wikipedia.org/wiki/Hyperlink).
+                [Link A](https://example.com/a),
+                [Link B](https://example.com/b)
                 """
             let (parsedString, parsedElements) = try MarkdownParser.parse(string)
 
-            XCTAssert(parsedString == "There is Link\nand then there are links.")
+            XCTAssert(parsedString == "Link A,\nLink B")
             XCTAssert(parsedElements.count == 2)
 
+            XCTAssert(parsedElements[0].linkURLString() == "https://example.com/a")
+            XCTAssert(parsedElements[1].linkURLString() == "https://example.com/b")
+        } catch {
+            XCTFail("Parsing failed.")
+        }
+    }
+
+    func testThatCharactersWithInURLsCanBeEscaped() {
+        do {
+            let (parsedString, parsedElements) = try MarkdownParser.parse("[Link](https://en.wikipedia.org/wiki/Link_(The_Legend_of_Zelda\\))")
+
+            XCTAssert(parsedString == "Link")
+            XCTAssert(parsedElements.count == 1)
+
+            XCTAssert(parsedElements[0].isLinkElement())
             XCTAssert(parsedElements[0].linkURLString() == "https://en.wikipedia.org/wiki/Link_(The_Legend_of_Zelda)")
-            XCTAssert(parsedElements[1].linkURLString() == "https://en.wikipedia.org/wiki/Hyperlink")
         } catch {
             XCTFail("Parsing failed.")
         }
