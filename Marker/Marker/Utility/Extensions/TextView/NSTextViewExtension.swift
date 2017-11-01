@@ -30,7 +30,7 @@ public extension NSTextView {
     ///   - textStyle: Text style object containing style information.
     func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
         if let linkColor = textStyle.linkColor {
-            linkTextAttributes = [AttributedStringKey.foregroundColor.rawValue: linkColor]
+            linkTextAttributes = [AttributedStringKey.foregroundColor: linkColor]
         }
 
         let attributedText = attributedMarkdownString(from: markdownText, using: textStyle)
