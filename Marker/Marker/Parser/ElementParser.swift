@@ -8,79 +8,36 @@
 
 import Foundation
 
-/// Markup element parser.
-internal struct ElementParser {
-    
-    /// Parser error.
-    ///
-    /// - tagMismatch: Opening tag doesn't match closing tag.
-    /// - unclosedTags: A tag was left unclosed.
-    enum ParserError: LocalizedError {
-
-        case tagMismatch
-        case unclosedTags
-
-        var errorDescription: String? {
-            switch self {
-            case .tagMismatch:
-                return "Opening tag doesn't match closing tag."
-            case .unclosedTags:
-                return "A tag was left unclosed."
-            }
-        }
-
-    }
-    
+/// Bare bones parser that strips `string` for symbols defined in `rules`.
+struct ElementParser {
+        
     // MARK: - Static functions
     
-    /// Parses specified string and returns a tuple containing string stripped of tag characters and an array of markup elements.
+    /// Parses specified string of symbols defined in `rules` and returns a tuple containing string stripped of matching characters and a list of matched elements.
     ///
     /// - Parameters:
     ///   - string: String to be parsed.
-    ///   - symbols: Symbols to parse for.
-    /// - Returns: Tuple containing string stripped of tag characters and an array of markup elements.
+    ///   - rules: Rules with symbols to parse for.
+    /// - Returns: Tuple containing string stripped of matching characters and a list of matched elements.
     /// - Throws: Parser error.
-    static func parse(_ string: String, for symbols: [Symbol]) throws -> (strippedString: String, elements: [Element]) {
-        let parser = TagParser(symbols: symbols)
-        let tags = parser.parse(string)
-        
-        guard tags.count > 0 else {
+    static func parse(_ string: String, using rules: [Rule]) throws -> (strippedString: String, elements: [Element]) {
+        let tokens = try TokenParser.parse(string, using: rules)
+
+        guard tokens.count > 0 else {
             return (string, [])
         }
-        guard tags.count % 2 == 0 else {
-            throw ParserError.unclosedTags
-        }
 
-        var strippedString: String = ""
+        var strippedString = ""
         var elements: [Element] = []
 
-        var startIndex: Index = string.startIndex
-        for i in stride(from: 0, to: tags.count, by: 2) {
-            let openingTag = tags[i]
-            let closingTag = tags[i + 1]
+        for token in tokens {
+            let range = strippedString.append(contentOf: token)
             
-            if openingTag.symbol != closingTag.symbol {
-                throw ParserError.tagMismatch
+            if let rule = token.rule {
+                elements.append(Element(rule: rule, range: range))
             }
-            
-            // Add the text from the last closing tag to the current opening tag.
-            strippedString += string[startIndex..<openingTag.index]
-            
-            let elementStartIndex = strippedString.endIndex
-            // Add the text that is in between the opening and closing tags.
-            strippedString += string[string.index(openingTag.index, offsetBy: openingTag.symbol.length)..<closingTag.index]
-            let elementEndIndex = strippedString.endIndex
-            
-            // Create an element that would apply to the new string.
-            elements.append(Element(symbol: openingTag.symbol, range: elementStartIndex..<elementEndIndex))
-            
-            // Update the start index for the next iteration.
-            startIndex = string.index(closingTag.index, offsetBy: closingTag.symbol.length)
         }
-        
-        // Add from the last closing tag to the end of the string.
-        strippedString += string[startIndex..<string.endIndex]
-        
+
         return (strippedString, elements)
     }
     

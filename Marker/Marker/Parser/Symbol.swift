@@ -9,7 +9,7 @@
 import Foundation
 
 /// A `Symbol` is a one or two character `String` used for marking up text.
-internal struct Symbol: RawRepresentable, Equatable {
+struct Symbol: RawRepresentable, Equatable {
     
     typealias RawValue = String
     
@@ -76,7 +76,7 @@ internal struct Symbol: RawRepresentable, Equatable {
             switch (precedingCharacter, character, succeedingCharacter) {
             case (.some(" "), .some(symbolCharacterOne), .some(" ")):
                 // If the symbol is only one character and is surrounded by empty spaces, treat it like a literal.
-                return false
+                break
             case (_, .some(symbolCharacterOne), _):
                 return true
             default:
@@ -94,4 +94,16 @@ internal struct Symbol: RawRepresentable, Equatable {
         return false
     }
     
+}
+
+// MARK: - Protocol conformance
+
+// MARK: - Hashable
+
+extension Symbol: Hashable {
+
+    var hashValue: Int {
+        return rawValue.hashValue
+    }
+
 }

@@ -29,6 +29,10 @@ public extension NSTextView {
     ///   - markdownText: The Markdown text to be displayed in the text view.
     ///   - textStyle: Text style object containing style information.
     func setMarkdownText(_ markdownText: String, using textStyle: TextStyle) {
+        if let linkColor = textStyle.linkColor {
+            linkTextAttributes = [AttributedStringKey.foregroundColor: linkColor]
+        }
+
         let attributedText = attributedMarkdownString(from: markdownText, using: textStyle)
         textStorage?.setAttributedString(attributedText)
     }

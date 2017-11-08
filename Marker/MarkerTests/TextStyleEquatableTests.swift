@@ -41,6 +41,8 @@ class TextStyleEquatableTests: XCTestCase {
                               strikethroughColor: Color.red,
                               underlineStyle: .styleSingle,
                               underlineColor: Color.red,
+                              linkFont: Font(name: "Helvetica-Bold", size: 10)!,
+                              linkColor: Color.blue,
                               textTransform: .lowercased)
     }
     
@@ -70,6 +72,8 @@ class TextStyleEquatableTests: XCTestCase {
                                       strikethroughColor: textStyle.strikethroughColor,
                                       underlineStyle: textStyle.underlineStyle,
                                       underlineColor: textStyle.underlineColor,
+                                      linkFont: textStyle.linkFont,
+                                      linkColor: textStyle.linkColor,
                                       textTransform: textStyle.textTransform)
         
         XCTAssertEqual(textStyle, sameTextStyle)
@@ -95,6 +99,8 @@ class TextStyleEquatableTests: XCTestCase {
         let differentStrikethroughColor = textStyle.with(newStrikethroughColor: Color.blue)
         let differentUnderlineStyle = textStyle.with(newUnderlineStyle: .styleDouble)
         let differentUnderlineColor = textStyle.with(newUnderlineColor: Color.blue)
+        let differentLinkFont = textStyle.with(newLinkFont: Font(name: textStyle.linkFont!.fontName, size: textStyle.linkFont!.pointSize + 10)!)
+        let differentLinkColor = textStyle.with(newLinkColor: Color.red)
         let differentTextTransform = textStyle.with(newTextTransform: .uppercased)
         
         
@@ -117,6 +123,8 @@ class TextStyleEquatableTests: XCTestCase {
         XCTAssertNotEqual(textStyle, differentStrikethroughColor)
         XCTAssertNotEqual(textStyle, differentUnderlineStyle)
         XCTAssertNotEqual(textStyle, differentUnderlineColor)
+        XCTAssertNotEqual(textStyle, differentLinkFont)
+        XCTAssertNotEqual(textStyle, differentLinkColor)
         XCTAssertNotEqual(textStyle, differentTextTransform)
     }
     

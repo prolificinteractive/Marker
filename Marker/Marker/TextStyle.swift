@@ -73,6 +73,12 @@ public struct TextStyle {
 
     /// Stroke color for underlined text.
     public var underlineColor: Color?
+
+    /// Font for displaying links.
+    public var linkFont: Font?
+
+    /// Text color for links.
+    public var linkColor: Color?
     
     /// Text transform.
     public var textTransform: TextTransform
@@ -133,31 +139,32 @@ public struct TextStyle {
     }
     
     // MARK: - Init/Deinit
-    
-    /**
-     Initializes a text style object with given parameters.
-     
-     - parameter font:                   Regualar font.
-     - parameter emFont:                 Emphasis font.
-     - parameter strongFont:             Strong font.
-     - parameter textColor:              Text color.
-     - parameter characterSpacing:       Character spacing (kerning).
-     - parameter lineSpacing:            Line spacing.
-     - parameter lineHeightMultiple:     Line height mulitple.
-     - parameter minimumLineHeight:      Minimum line height.
-     - parameter maximumLineHeight:      Maximum line height.
-     - parameter paragraphSpacing:       Paragraph spacing.
-     - parameter paragraphSpacingBefore: Paragraph spacing before.
-     - parameter textAlignment:          Text alignment.
-     - parameter lineBreakMode:          Line break node.
-     - parameter strikethroughStyle:     Strikethrough style.
-     - parameter strikethroughColor:     Strikethrough color.
-     - parameter underlineStyle:         Underline style.
-     - parameter underlineColor:         Underline color.
-     - parameter textTransform:          Text transform option.
-     
-     - returns: An initialized text style object.
-     */
+
+    /// Initializes and returns a text style object with given parameters.
+    ///
+    /// - Parameters:
+    ///   - font: Regualar font.
+    ///   - emFont: Emphasis font.
+    ///   - strongFont: Strong font.
+    ///   - textColor: Text color.
+    ///   - characterSpacing: Character spacing (kerning).
+    ///   - lineSpacing: Line spacing.
+    ///   - lineHeightMultiple: Line height mulitple.
+    ///   - minimumLineHeight: Minimum line height.
+    ///   - maximumLineHeight: Maximum line height.
+    ///   - firstLineHeadIndent: First line head indent.
+    ///   - headIndent: Head indent.
+    ///   - paragraphSpacing: Paragraph spacing.
+    ///   - paragraphSpacingBefore: Paragraph spacing before.
+    ///   - textAlignment: Text alignment.
+    ///   - lineBreakMode: Line break mode.
+    ///   - strikethroughStyle: Strikethrough style.
+    ///   - strikethroughColor: Strikethrough color.
+    ///   - underlineStyle: Underline style.
+    ///   - underlineColor: Underline color.
+    ///   - linkFont: Link style.
+    ///   - linkColor: Link color.
+    ///   - textTransform: Text transform option.
     public init(font: Font,
                 emFont: Font? = nil,
                 strongFont: Font? = nil,
@@ -177,6 +184,8 @@ public struct TextStyle {
                 strikethroughColor: Color? = nil,
                 underlineStyle: NSUnderlineStyle? = nil,
                 underlineColor: Color? = nil,
+                linkFont: Font? = nil,
+                linkColor: Color? = nil,
                 textTransform: TextTransform = .none) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
@@ -197,6 +206,8 @@ public struct TextStyle {
         self.strikethroughColor = strikethroughColor
         self.underlineStyle = underlineStyle
         self.underlineColor = underlineColor
+        self.linkFont = linkFont
+        self.linkColor = linkColor
         self.textTransform = textTransform
     }
 }

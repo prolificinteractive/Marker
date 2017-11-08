@@ -37,6 +37,12 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                               paragraphSpacingBefore: 9,
                               textAlignment: .left,
                               lineBreakMode: .byWordWrapping,
+                              strikethroughStyle: .styleSingle,
+                              strikethroughColor: Color.red,
+                              underlineStyle: .styleSingle,
+                              underlineColor: Color.red,
+                              linkFont: Font(name: "Helvetica-Bold", size: 10)!,
+                              linkColor: Color.blue,
                               textTransform: .lowercased)
     }
     
@@ -68,6 +74,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -95,6 +103,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -122,6 +132,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -149,6 +161,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -176,6 +190,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -203,6 +219,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -230,6 +248,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -257,6 +277,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -284,6 +306,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -311,6 +335,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -338,6 +364,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -365,6 +393,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -392,6 +422,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -419,6 +451,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -446,6 +480,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -473,6 +509,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -500,6 +538,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: newStrikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -527,6 +567,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: newUnderlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -554,8 +596,69 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: newUnderlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
+        XCTAssertEqual(newTextStyle, expectedTextStyle)
+    }
+
+
+    func testTextStyleFactory_whenNewLinkFont_newLinkFontIsUsed() {
+        let newLinkFont = Font(name: textStyle.linkFont!.fontName, size: textStyle.linkFont!.pointSize + 10)!
+        let newTextStyle = textStyle.with(newLinkFont: newLinkFont)
+        let expectedTextStyle = TextStyle(font: textStyle.font,
+                                          emFont: textStyle.emFont,
+                                          strongFont: textStyle.strongFont,
+                                          textColor: textStyle.textColor,
+                                          characterSpacing: textStyle.characterSpacing,
+                                          lineSpacing: textStyle.lineSpacing,
+                                          lineHeightMultiple: textStyle.lineHeightMultiple,
+                                          minimumLineHeight: textStyle.minimumLineHeight,
+                                          maximumLineHeight: textStyle.maximumLineHeight,
+                                          firstLineHeadIndent: textStyle.firstLineHeadIndent,
+                                          headIndent: textStyle.headIndent,
+                                          paragraphSpacing: textStyle.paragraphSpacing,
+                                          paragraphSpacingBefore: textStyle.paragraphSpacingBefore,
+                                          textAlignment: textStyle.textAlignment,
+                                          lineBreakMode: textStyle.lineBreakMode,
+                                          strikethroughStyle: textStyle.strikethroughStyle,
+                                          strikethroughColor: textStyle.strikethroughColor,
+                                          underlineStyle: textStyle.underlineStyle,
+                                          underlineColor: textStyle.underlineColor,
+                                          linkFont: newLinkFont,
+                                          linkColor: textStyle.linkColor,
+                                          textTransform: textStyle.textTransform)
+
+        XCTAssertEqual(newTextStyle, expectedTextStyle)
+    }
+
+    func testTextStyleFactory_whenNewLinkColor_NewLinkColorIsUsed() {
+        let newLinkColor = Color.red
+        let newTextStyle = textStyle.with(newLinkColor: newLinkColor)
+        let expectedTextStyle = TextStyle(font: textStyle.font,
+                                          emFont: textStyle.emFont,
+                                          strongFont: textStyle.strongFont,
+                                          textColor: textStyle.textColor,
+                                          characterSpacing: textStyle.characterSpacing,
+                                          lineSpacing: textStyle.lineSpacing,
+                                          lineHeightMultiple: textStyle.lineHeightMultiple,
+                                          minimumLineHeight: textStyle.minimumLineHeight,
+                                          maximumLineHeight: textStyle.maximumLineHeight,
+                                          firstLineHeadIndent: textStyle.firstLineHeadIndent,
+                                          headIndent: textStyle.headIndent,
+                                          paragraphSpacing: textStyle.paragraphSpacing,
+                                          paragraphSpacingBefore: textStyle.paragraphSpacingBefore,
+                                          textAlignment: textStyle.textAlignment,
+                                          lineBreakMode: textStyle.lineBreakMode,
+                                          strikethroughStyle: textStyle.strikethroughStyle,
+                                          strikethroughColor: textStyle.strikethroughColor,
+                                          underlineStyle: textStyle.underlineStyle,
+                                          underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: newLinkColor,
+                                          textTransform: textStyle.textTransform)
+
         XCTAssertEqual(newTextStyle, expectedTextStyle)
     }
     
@@ -581,6 +684,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: newTextTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -609,6 +714,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: strikethroughColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
 
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -637,6 +744,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: expectedColor,
                                           underlineStyle: textStyle.underlineStyle,
                                           underlineColor: textStyle.underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
 
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -665,6 +774,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: underlineStyle,
                                           underlineColor: underlineColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
@@ -693,6 +804,8 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                                           strikethroughColor: textStyle.strikethroughColor,
                                           underlineStyle: expectedStyle,
                                           underlineColor: expectedColor,
+                                          linkFont: textStyle.linkFont,
+                                          linkColor: textStyle.linkColor,
                                           textTransform: textStyle.textTransform)
         
         XCTAssertEqual(newTextStyle, expectedTextStyle)
