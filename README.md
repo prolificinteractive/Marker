@@ -5,6 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Marker.svg?style=flat-square)](http://cocoadocs.org/docsets/Marker)
 [![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/Marker.svg?style=flat-square)](http://cocoadocs.org/docsets/Marker)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Swift Version](https://img.shields.io/badge/Swift-4.2-orange.svg)
 
 ## Description
 
