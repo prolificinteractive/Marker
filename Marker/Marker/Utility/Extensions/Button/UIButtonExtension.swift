@@ -20,7 +20,7 @@ public extension UIButton {
     func setTitleText(_ text: String,
                       using textStyle: TextStyle,
                       customMarkup markups: Markup = [:],
-                      forState state: UIControlState = .normal) {
+                      forState state: UIControl.State = .normal) {
         setAttributedTitle(attributedMarkupString(from: text, using: textStyle, customMarkup: markups), for: state)
     }
     
@@ -34,7 +34,7 @@ public extension UIButton {
     ///   - state: The button state to set.
     func setMarkdownTitleText(_ markdownText: String,
                               using textStyle: TextStyle,
-                              forState state: UIControlState = .normal) {
+                              forState state: UIControl.State = .normal) {
         setAttributedTitle(attributedMarkdownString(from: markdownText, using: textStyle), for: state)
     }
     
