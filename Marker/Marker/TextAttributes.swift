@@ -14,19 +14,19 @@
 
 #if swift(>=4.0)
     /// Text attributes.
-    public typealias TextAttributes = [NSAttributedStringKey: Any]
+public typealias TextAttributes = [NSAttributedString.Key: Any]
 
     struct AttributedStringKey {
 
-        static let font = NSAttributedStringKey.font
-        static let foregroundColor = NSAttributedStringKey.foregroundColor
-        static let kern = NSAttributedStringKey.kern
-        static let link = NSAttributedStringKey.link
-        static let paragraphStyle = NSAttributedStringKey.paragraphStyle
-        static let strikethroughStyle = NSAttributedStringKey.strikethroughStyle
-        static let strikethroughColor = NSAttributedStringKey.strikethroughColor
-        static let underlineStyle = NSAttributedStringKey.underlineStyle
-        static let underlineColor = NSAttributedStringKey.underlineColor
+        static let font = NSAttributedString.Key.font
+        static let foregroundColor = NSAttributedString.Key.foregroundColor
+        static let kern = NSAttributedString.Key.kern
+        static let link = NSAttributedString.Key.link
+        static let paragraphStyle = NSAttributedString.Key.paragraphStyle
+        static let strikethroughStyle = NSAttributedString.Key.strikethroughStyle
+        static let strikethroughColor = NSAttributedString.Key.strikethroughColor
+        static let underlineStyle = NSAttributedString.Key.underlineStyle
+        static let underlineColor = NSAttributedString.Key.underlineColor
 
     }
 #else

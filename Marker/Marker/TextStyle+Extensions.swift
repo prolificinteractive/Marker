@@ -116,7 +116,7 @@ public extension TextStyle {
     ///   - color: Strikethrough color. Defaults to textColor.
     ///   - style: Strikethrough style. Defaults to single line.
     /// - Returns: New TextStyle with strikethrough.
-    public func strikethrough(color: Color? = nil, style: NSUnderlineStyle = .styleSingle) -> TextStyle {
+    public func strikethrough(color: Color? = nil, style: NSUnderlineStyle = .single) -> TextStyle {
         return self.with(
             newStrikethroughStyle: style,
             newStrikethroughColor: color ?? textColor
@@ -128,7 +128,7 @@ public extension TextStyle {
     /// - Parameter color: Underline color. Defaults to textColor.
     /// - Parameter style: Underline style. Defaults to single line.
     /// - Returns: New TextStyle with underline.
-    public func underlined(color: Color? = nil, style: NSUnderlineStyle = .styleSingle) -> TextStyle {
+    public func underlined(color: Color? = nil, style: NSUnderlineStyle = .single) -> TextStyle {
         return self.with(
             newUnderlineStyle: style,
             newUnderlineColor: color ?? textColor

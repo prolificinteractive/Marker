@@ -77,11 +77,11 @@ internal final class ViewController: UIViewController {
     private func registerForNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(ViewController.updateViews),
-                                               name: NSNotification.Name.UIContentSizeCategoryDidChange,
+                                               name: UIContentSizeCategory.didChangeNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(ViewController.updateViews),
-                                               name: NSNotification.Name(rawValue: AppTheme.Constants.fontThemeDidChangeNotification),
+                                               name: Notification.Name(rawValue: AppTheme.Constants.fontThemeDidChangeNotification),
                                                object: nil)
     }
     

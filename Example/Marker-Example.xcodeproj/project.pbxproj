@@ -182,7 +182,6 @@
 				271C85D21ED4E40800F8BBBB /* Frameworks */,
 				271C85D31ED4E40800F8BBBB /* Resources */,
 				FAF73D195B963F0D4B5861A5 /* [CP] Embed Pods Frameworks */,
-				2C97776FB52214BDCF7F7BD2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,7 +201,6 @@
 				272D862D1ED62E9C00CE29EB /* Frameworks */,
 				272D862E1ED62E9C00CE29EB /* Resources */,
 				40B7CC52E028A1EB1F9E75FE /* [CP] Embed Pods Frameworks */,
-				99D7069AFB3C7D29D4F26C07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1000;
 				TargetAttributes = {
 					271C85D41ED4E40800F8BBBB = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -313,21 +311,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2C97776FB52214BDCF7F7BD2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		40B7CC52E028A1EB1F9E75FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,21 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marker-Example-macOS/Pods-Marker-Example-macOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99D7069AFB3C7D29D4F26C07 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marker-Example-macOS/Pods-Marker-Example-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAF73D195B963F0D4B5861A5 /* [CP] Embed Pods Frameworks */ = {
@@ -509,7 +477,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -560,7 +528,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};

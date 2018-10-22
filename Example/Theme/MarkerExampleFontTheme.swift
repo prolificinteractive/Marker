@@ -28,7 +28,7 @@ internal struct MarkerExampleFontTheme: FontTheme {
                          emFont: emFont,
                          strongFont: strongFont,
                          characterSpacing: characterSpacing,
-                         strikethroughStyle: .styleThick,
+                         strikethroughStyle: .thick,
                          strikethroughColor: .white,
                          textTransform: .uppercased)
     }
