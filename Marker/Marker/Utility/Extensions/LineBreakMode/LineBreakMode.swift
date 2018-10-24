@@ -11,5 +11,5 @@
     public typealias LineBreakMode = NSLineBreakMode
 #elseif os(macOS)
     import AppKit
-    public typealias LineBreakMode = NSParagraphStyle.LineBreakMode
+    public typealias LineBreakMode = NSLineBreakMode
 #endif
