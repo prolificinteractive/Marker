@@ -8,5 +8,5 @@ before_install:
 script:
     - set -o pipefail && xcodebuild test -project Marker/Marker.xcodeproj -scheme Marker-iOS -destination 'name=iPhone 8,OS=12.0' | xcpretty
     - set -o pipefail && xcodebuild test -project Marker/Marker.xcodeproj -scheme Marker-macOS -destination 'arch=x86_64' | xcpretty
-    - set -o pipefail && xcodebuild test -project Marker/Marker.xcodeproj -scheme Marker-tvOS -destination 'name=Apple TV 1080p,OS=11.0' | xcpretty
+    - set -o pipefail && xcodebuild test -project Marker/Marker.xcodeproj -scheme Marker-tvOS -destination 'name=Apple TV 4K,OS=12.2' | xcpretty
     - pod lib lint 
