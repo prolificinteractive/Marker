@@ -554,13 +554,13 @@
 					27C4E5E21ED5ED3000DDE387 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5ZZ7W4SB26;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					27C4E5EA1ED5ED3100DDE387 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5ZZ7W4SB26;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1085,7 +1085,7 @@
 				PRODUCT_NAME = Marker;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1110,7 +1110,7 @@
 				PRODUCT_NAME = Marker;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1127,7 +1127,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1144,7 +1144,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prolificinteractive.Marker-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
