@@ -37,9 +37,9 @@ class TextStyleFactoryFunctionTests: XCTestCase {
                               paragraphSpacingBefore: 9,
                               textAlignment: .left,
                               lineBreakMode: .byWordWrapping,
-                              strikethroughStyle: .styleSingle,
+                              strikethroughStyle: .single,
                               strikethroughColor: Color.red,
-                              underlineStyle: .styleSingle,
+                              underlineStyle: .single,
                               underlineColor: Color.red,
                               linkFont: Font(name: "Helvetica-Bold", size: 10)!,
                               linkColor: Color.blue,
@@ -488,7 +488,7 @@ class TextStyleFactoryFunctionTests: XCTestCase {
     }
     
     func testTextStyleFactory_whenNewStrikethroughStyle_newStrikethroughStyleIsUsed() {
-        let newStrikethroughStyle: NSUnderlineStyle = .styleDouble
+        let newStrikethroughStyle: NSUnderlineStyle = .double
         let newTextStyle = textStyle.with(newStrikethroughStyle: newStrikethroughStyle)
         let expectedTextStyle = TextStyle(font: textStyle.font,
                                           emFont: textStyle.emFont,
@@ -546,7 +546,7 @@ class TextStyleFactoryFunctionTests: XCTestCase {
     }
     
     func testTextStyleFactory_whenNewUnderlineStyle_newUnderlineStyleIsUsed() {
-        let newUnderlineStyle: NSUnderlineStyle = .styleDouble
+        let newUnderlineStyle: NSUnderlineStyle = .double
         let newTextStyle = textStyle.with(newUnderlineStyle: newUnderlineStyle)
         let expectedTextStyle = TextStyle(font: textStyle.font,
                                           emFont: textStyle.emFont,
@@ -692,7 +692,7 @@ class TextStyleFactoryFunctionTests: XCTestCase {
     }
 
     func testTextStyleFactory_whenStrikethrough_strikethroughPropertiesAreSet() {
-        let strikethroughStyle: NSUnderlineStyle = .styleDouble
+        let strikethroughStyle: NSUnderlineStyle = .double
         let strikethroughColor = Color.green
         let newTextStyle = textStyle.strikethrough(color: strikethroughColor, style: strikethroughStyle)
         let expectedTextStyle = TextStyle(font: textStyle.font,
@@ -722,7 +722,7 @@ class TextStyleFactoryFunctionTests: XCTestCase {
     }
 
     func testTextStyleFactory_whenStrikethrough_defaultsToSingleLineOfSameColor() {
-        let expectedStyle: NSUnderlineStyle = .styleSingle
+        let expectedStyle: NSUnderlineStyle = .single
         let expectedColor = textStyle.textColor
         let newTextStyle = textStyle.strikethrough()
         let expectedTextStyle = TextStyle(font: textStyle.font,
@@ -752,7 +752,7 @@ class TextStyleFactoryFunctionTests: XCTestCase {
     }
 
     func testTextStyleFactory_whenUnderlined_underlinePropertiesAreSet() {
-        let underlineStyle: NSUnderlineStyle = .styleDouble
+        let underlineStyle: NSUnderlineStyle = .double
         let underlineColor = Color.green
         let newTextStyle = textStyle.underlined(color: underlineColor, style: underlineStyle)
         let expectedTextStyle = TextStyle(font: textStyle.font,
@@ -782,7 +782,7 @@ class TextStyleFactoryFunctionTests: XCTestCase {
     }
     
     func testTextStyleFactory_whenUnderlined_defaultsToSingleLineOfSameColor() {
-        let expectedStyle: NSUnderlineStyle = .styleSingle
+        let expectedStyle: NSUnderlineStyle = .single
         let expectedColor = textStyle.textColor
         let newTextStyle = textStyle.underlined()
         let expectedTextStyle = TextStyle(font: textStyle.font,
