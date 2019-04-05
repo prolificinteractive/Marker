@@ -25,6 +25,7 @@ TODO: Add long description of the pod here.
   s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true
+  s.swift_version = '4.2'
 
   s.source_files = 'Marker/Marker/**/*.{h,swift}'
 
