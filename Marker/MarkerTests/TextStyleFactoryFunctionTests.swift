@@ -459,7 +459,7 @@ class TextStyleFactoryFunctionTests: XCTestCase {
     }
     
     func testTextStyleFactory_whenNewLineBreakMode_newLineBreakModeIsUsed() {
-        let newLineBreakMode: LineBreakMode = .byCharWrapping
+        let newLineBreakMode: NSLineBreakMode = .byCharWrapping
         let newTextStyle = textStyle.with(newLineBreakMode: newLineBreakMode)
         let expectedTextStyle = TextStyle(font: textStyle.font,
                                           emFont: textStyle.emFont,

@@ -60,7 +60,7 @@ public struct TextStyle {
     public var textAlignment: NSTextAlignment?
     
     /// Line break mode.
-    public var lineBreakMode: LineBreakMode?
+    public var lineBreakMode: NSLineBreakMode?
     
     /// Underline style for strikethrough text.
     public var strikethroughStyle: NSUnderlineStyle?
@@ -179,7 +179,7 @@ public struct TextStyle {
                 paragraphSpacing: CGFloat? = nil,
                 paragraphSpacingBefore: CGFloat? = nil,
                 textAlignment: NSTextAlignment? = nil,
-                lineBreakMode: LineBreakMode? = nil,
+                lineBreakMode: NSLineBreakMode? = nil,
                 strikethroughStyle: NSUnderlineStyle? = nil,
                 strikethroughColor: Color? = nil,
                 underlineStyle: NSUnderlineStyle? = nil,
