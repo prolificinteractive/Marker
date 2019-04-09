@@ -37,9 +37,9 @@ class TextStyleEquatableTests: XCTestCase {
                               paragraphSpacingBefore: 9,
                               textAlignment: .left,
                               lineBreakMode: .byWordWrapping,
-                              strikethroughStyle: .styleSingle,
+                              strikethroughStyle: .single,
                               strikethroughColor: Color.red,
-                              underlineStyle: .styleSingle,
+                              underlineStyle: .single,
                               underlineColor: Color.red,
                               linkFont: Font(name: "Helvetica-Bold", size: 10)!,
                               linkColor: Color.blue,
@@ -95,9 +95,9 @@ class TextStyleEquatableTests: XCTestCase {
         let differentParagraphSpacingBefore = textStyle.with(newParagraphSpacingBefore: textStyle.paragraphSpacingBefore! + 10)
         let differentTextAlignment = textStyle.with(newTextAlignment: .right)
         let differentLineBreakMode = textStyle.with(newLineBreakMode: .byCharWrapping)
-        let differentStrikethroughStyle = textStyle.with(newStrikethroughStyle: .styleDouble)
+        let differentStrikethroughStyle = textStyle.with(newStrikethroughStyle: .double)
         let differentStrikethroughColor = textStyle.with(newStrikethroughColor: Color.blue)
-        let differentUnderlineStyle = textStyle.with(newUnderlineStyle: .styleDouble)
+        let differentUnderlineStyle = textStyle.with(newUnderlineStyle: .double)
         let differentUnderlineColor = textStyle.with(newUnderlineColor: Color.blue)
         let differentLinkFont = textStyle.with(newLinkFont: Font(name: textStyle.linkFont!.fontName, size: textStyle.linkFont!.pointSize + 10)!)
         let differentLinkColor = textStyle.with(newLinkColor: Color.red)
