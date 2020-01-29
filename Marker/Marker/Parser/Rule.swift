@@ -51,8 +51,10 @@ extension Rule: Equatable {
 // MARK: Hashable
 
 extension Rule: Hashable {
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(openingSymbol)
         hasher.combine(closingSymbol)
     }
+
 }
