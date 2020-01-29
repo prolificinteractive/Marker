@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Marker"
-  s.version          = "1.2.1"
+  s.version          = "1.2.2"
   s.summary          = "A light wrapper around NSAttributedString."
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true
-  s.swift_version = '4.2'
+  s.swift_version = '5.1.2'
 
   s.source_files = 'Marker/Marker/**/*.{h,swift}'
 

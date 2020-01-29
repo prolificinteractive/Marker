@@ -102,8 +102,8 @@ struct Symbol: RawRepresentable, Equatable {
 
 extension Symbol: Hashable {
 
-    var hashValue: Int {
-        return rawValue.hashValue
+    func hash(into hasher: inout Hasher) {
+      hasher.combine(rawValue)
     }
 
 }
