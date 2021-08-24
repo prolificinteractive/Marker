@@ -32,6 +32,7 @@ struct MarkdownParser {
     private static let linkTextClosingSymbol = Symbol(character: "]")
     private static let linkURLOpeningSymbol = Symbol(character: "(")
     private static let linkURLClosingSymbol = Symbol(character: ")")
+    private static let inAppLinkSymbol = Symbol(rawValue: "--")
     
     // MARK: - Static functions
     
@@ -45,7 +46,8 @@ struct MarkdownParser {
             let underscoreStrongSymbol = underscoreStrongSymbol,
             let asteriskStrongSymbol = asteriskStrongSymbol,
             let tildeStrikethroughSymbol = tildeStrikethroughSymbol,
-            let equalUnderlineSymbol = equalUnderlineSymbol else {
+            let equalUnderlineSymbol = equalUnderlineSymbol,
+            let inAppLinkSymbol = inAppLinkSymbol else {
                 return (string, [])
         }
 
@@ -57,6 +59,7 @@ struct MarkdownParser {
         let equalUnderlineRule = Rule(symbol: equalUnderlineSymbol)
         let linkTextRule = Rule(openingSymbol: linkTextOpeningSymbol, closingSymbol: linkTextClosingSymbol)
         let linkURLRule = Rule(openingSymbol: linkURLOpeningSymbol, closingSymbol: linkURLClosingSymbol)
+        let inAppLinkRule = Rule(symbol: inAppLinkSymbol)
 
         let tokens = try TokenParser.parse(string,
                                            using: [underscoreEmRule,
@@ -66,7 +69,8 @@ struct MarkdownParser {
                                                    tildeStrikethroughRule,
                                                    equalUnderlineRule,
                                                    linkTextRule,
-                                                   linkURLRule])
+                                                   linkURLRule,
+                                                   inAppLinkRule])
 
         guard tokens.count > 0 else {
             return (string, [])
@@ -105,6 +109,9 @@ struct MarkdownParser {
                 elements.append(.link(range: range,urlString: tokens[i + 1].string))
 
                 i += 1
+            case .some(inAppLinkRule):
+                let range = strippedString.append(contentOf: token)
+                elements.append(.inAppLink(range: range))
             default:
                 strippedString += token.stringWithRuleSymbols
             }
