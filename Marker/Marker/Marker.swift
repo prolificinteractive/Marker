@@ -98,6 +98,13 @@ public func parsedMarkdownString(from markdownText: String,
                                               value: linkFont,
                                               range: NSRange(range, in: parsedString))
             }
+        case .inAppLink(let range):
+            font = textStyle.strongFont
+            if let linkColor = textStyle.linkColor {
+                attributedString.addAttribute(AttributedStringKey.foregroundColor,
+                                              value: linkColor,
+                                              range: NSRange(range, in: parsedString))
+            }
         }
         
         if let font = font {
