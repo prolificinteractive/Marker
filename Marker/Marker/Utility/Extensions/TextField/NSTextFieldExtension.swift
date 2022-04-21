@@ -6,6 +6,8 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+#if os(macOS)
+
 import AppKit
 
 public extension NSTextField {
@@ -32,3 +34,5 @@ public extension NSTextField {
     }
 
 }
+
+#endif

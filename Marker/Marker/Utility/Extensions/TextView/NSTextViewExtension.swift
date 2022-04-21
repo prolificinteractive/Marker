@@ -6,6 +6,8 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+#if os(macOS)
+
 import AppKit
 
 public extension NSTextView {
@@ -38,3 +40,5 @@ public extension NSTextView {
     }
     
 }
+
+#endif

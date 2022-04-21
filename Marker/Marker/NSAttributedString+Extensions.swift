@@ -6,6 +6,8 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+import Foundation
+
 extension NSAttributedString {
     
     /// Initializes `NSAttributedString` instance with given string and text style.

@@ -6,6 +6,8 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 public extension UITextView {
@@ -36,3 +38,5 @@ public extension UITextView {
     }
 
 }
+
+#endif

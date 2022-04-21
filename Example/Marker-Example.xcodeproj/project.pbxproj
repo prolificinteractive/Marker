@@ -57,6 +57,7 @@
 		482D111D1F192059004FFCDD /* MarkerExampleFontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerExampleFontTheme.swift; sourceTree = "<group>"; };
 		482D111F1F192059004FFCDD /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
 		482D11201F192059004FFCDD /* FontTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTheme.swift; sourceTree = "<group>"; };
+		62C15A392811B35400D673FE /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		6E0E5053CCCC25964EA84B2A /* Pods-Marker-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		70010596CDFDF2A41B708669 /* Pods-Marker-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marker-Example-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marker-Example-iOS/Pods-Marker-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E9EBCAC481930708F9EBF1F8 /* Pods_Marker_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marker_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +95,7 @@
 		271C85CA1ED4E3F000F8BBBB = {
 			isa = PBXGroup;
 			children = (
+				62C15A392811B35400D673FE /* Package.swift */,
 				271C85D71ED4E40800F8BBBB /* Marker-Example-iOS */,
 				272D86311ED62E9C00CE29EB /* Marker-Example-macOS */,
 				482D11191F192059004FFCDD /* Theme */,
