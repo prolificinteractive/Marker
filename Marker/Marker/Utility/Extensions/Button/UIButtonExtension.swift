@@ -6,6 +6,8 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 public extension UIButton {
@@ -39,3 +41,5 @@ public extension UIButton {
     }
     
 }
+
+#endif

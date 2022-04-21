@@ -17,11 +17,15 @@ Marker is a light wrapper for creating and setting `NSAttributedString` values.
 
 ## Installation
 
+### Cocoapods (Deprecated 1.2.2)
 Marker is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your `Podfile`:
 
 ```ruby
 pod "Marker"
 ```
+### Swift Package Manager
+
+Releases >1.2.2 are available through SPM.
 
 ## Usage
 

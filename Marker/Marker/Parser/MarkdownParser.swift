@@ -6,6 +6,8 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
+import Foundation
+
 /// Markdown parser.
 struct MarkdownParser {
     
